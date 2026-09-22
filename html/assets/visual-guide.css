@@ -66,3 +66,29 @@
 
 .visual-slide-link{display:block;cursor:zoom-in;}
 .visual-slide-link:focus-visible{outline:3px solid var(--accent-ink);outline-offset:-4px;}
+
+/* 핵심은 슬라이드로, 세부 기준은 펼쳐 읽기 */
+.guide-slide{margin:26px 0 18px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper-raised);}
+.guide-slide img{display:block;width:100%;height:auto;background:#F1F2EC;}
+.guide-slide figcaption{padding:16px 20px;border-top:1px solid var(--line);}
+.slide-caption-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.slide-caption-row b{font-size:13px;color:var(--accent-ink);}
+.slide-caption-row span{font-size:12px;color:var(--ink-soft);}
+.guide-slide figcaption p{margin:7px 0 0;font-size:14px;line-height:1.75;color:var(--ink);word-break:keep-all;overflow-wrap:anywhere;}
+.slide-transcript{border-top:1px solid var(--line);}
+.slide-transcript summary,.reading-details summary{display:list-item;padding:16px 20px;cursor:pointer;font-size:14px;font-weight:650;line-height:1.6;color:var(--ink);word-break:keep-all;overflow-wrap:anywhere;}
+.slide-transcript summary::marker,.reading-details summary::marker{color:var(--accent-ink);}
+.slide-transcript summary:hover,.reading-details summary:hover{background:var(--paper-sunken);}
+.slide-transcript summary:focus-visible,.reading-details summary:focus-visible{outline:3px solid var(--accent-ink);outline-offset:-4px;}
+.slide-transcript[open] summary,.reading-details[open]>summary{border-bottom:1px solid var(--line);}
+.slide-transcript-body{padding:14px 20px 20px;font-size:14px;line-height:1.8;color:var(--ink-soft);}
+.slide-transcript-body ol{margin:0;padding-left:22px;}
+.slide-transcript-body li+li{margin-top:8px;}
+.reading-details{margin:18px 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-raised);overflow:hidden;}
+.reading-details-body{padding:20px;min-width:0;}
+.reading-details-body>:first-child{margin-top:0;}
+.reading-details .table-scroll{max-width:100%;}
+@media(max-width:520px){.guide-slide figcaption,.slide-transcript summary,.reading-details summary{padding:14px 16px;}.slide-transcript-body,.reading-details-body{padding:16px;}}
+@media print{.guide-slide{break-inside:avoid;}.reading-details::details-content,.slide-transcript::details-content{content-visibility:visible;display:block;}.reading-details-body,.slide-transcript-body{display:block!important;}}
+
+#topic h2,#method h2,#structure h2,#measure h2,#audit h2,#topic .section-lede,#method .section-lede,#structure .section-lede,#measure .section-lede,#audit .section-lede{word-break:keep-all;overflow-wrap:anywhere;}
