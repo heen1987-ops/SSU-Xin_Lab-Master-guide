@@ -92,3 +92,11 @@
 @media print{.guide-slide{break-inside:avoid;}.reading-details::details-content,.slide-transcript::details-content{content-visibility:visible;display:block;}.reading-details-body,.slide-transcript-body{display:block!important;}}
 
 #topic h2,#method h2,#structure h2,#measure h2,#audit h2,#topic .section-lede,#method .section-lede,#structure .section-lede,#measure .section-lede,#audit .section-lede{word-break:keep-all;overflow-wrap:anywhere;}
+
+.semester-plan{margin:0;padding-left:22px;font-size:14px;line-height:1.8;color:var(--ink-soft);}
+.semester-plan li+li{margin-top:22px;}
+.semester-plan b,.semester-plan strong{color:var(--ink);}
+.semester-plan p{margin:4px 0 0;}
+#roadmap h2,#roadmap .section-lede{word-break:keep-all;overflow-wrap:anywhere;}
+
+#roadmap .roadmap-note{color:var(--ink-soft);}
