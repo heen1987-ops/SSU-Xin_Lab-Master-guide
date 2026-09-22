@@ -63,3 +63,6 @@
 @media print{.visual-story,.visual-panel{break-inside:avoid;box-shadow:none;}}
 
 .visual-story figcaption>b,.visual-panel figcaption>b,.visual-lane h3,.visual-lane>b,.visual-root b,.visual-merge>b{word-break:keep-all;overflow-wrap:anywhere;}
+
+.visual-slide-link{display:block;cursor:zoom-in;}
+.visual-slide-link:focus-visible{outline:3px solid var(--accent-ink);outline-offset:-4px;}
