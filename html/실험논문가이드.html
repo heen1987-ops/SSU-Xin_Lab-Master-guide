@@ -331,8 +331,8 @@
 
 <header class="hero"><div class="wrap">
   <span class="eyebrow">실험 트랙 전용 심화 가이드</span>
-  <h1>비교실험으로<br>성능·효과를 입증하는 논문.</h1>
-  <p class="lede">제안한 알고리즘·모델·시스템이 <b>어떤 조건에서 기존보다 나은지</b>를 비교실험으로 입증하는 트랙입니다. 이 문서는 <span class="mono">02_실험트랙_공학컴공/</span> 폴더와 단계별 지침 라이브러리의 실험 관련 문서를 바탕으로, 실험 트랙에서 실제로 확인해야 할 것만 모았습니다.</p>
+  <h1>비교실험으로<br>성능과 한계를 평가하는 논문.</h1>
+  <p class="lede">제안한 알고리즘·모델·시스템이 <b>어떤 조건에서 어떤 차이를 보이는지</b>를 비교실험으로 평가하는 트랙입니다. 성능 향상뿐 아니라 차이가 없거나 성능이 낮아지는 조건도 함께 보고합니다. 이 문서는 <span class="mono">02_실험트랙_공학컴공/</span> 폴더와 단계별 지침 라이브러리의 실험 관련 문서를 바탕으로, 실험 트랙에서 실제로 확인해야 할 것만 모았습니다.</p>
   <div class="badges">
     <span class="pill">비교실험 · Baseline</span>
     <span class="pill">IEEE 인용</span>
@@ -351,10 +351,10 @@
 <section id="overview"><div class="wrap">
   <span class="eyebrow">Overview</span>
   <h2>실험 트랙, 언제 선택하는가</h2>
-  <p class="section-lede">"제안한 방법이 이 조건에서 기존보다 낫다"는 주장을 세우고, 비교실험으로 그 주장을 검증하려는 목적일 때 이 트랙입니다.</p>
+  <p class="section-lede">비교 조건과 평가지표를 미리 정하고, 제안 방법의 성능·비용·한계를 평가하려는 연구에 활용합니다. 우수한 결과를 전제로 두지 않고 관찰한 차이를 보고합니다.</p>
   <div class="pm-table">
     <div class="pm-row"><div>목적 문장이 확인하려는 것</div><div>핵심 도구</div></div>
-    <div class="pm-row"><div>제안한 알고리즘·시스템이 어떤 조건에서 기존보다 나은지 입증</div><div>벤치마크 데이터셋 · 비교 기준(baseline) · 평가지표</div></div>
+    <div class="pm-row"><div>정해진 조건에서 알고리즘·시스템의 성능·비용·한계 비교</div><div>벤치마크 데이터셋 · 비교 기준(baseline) · 평가지표</div></div>
     <div class="pm-row"><div>처치·조건에 따라 성능·효과가 달라지는지 확인</div><div>실험 설계 · 반복측정 · 통계 검정</div></div>
   </div>
   <p class="roadmap-note">아직 트랙을 정하지 못했다면 공통 허브의 "방법 선택" 절에서 먼저 목적 문장을 세우세요 — 이 문서는 실험 트랙으로 정한 뒤부터 필요한 내용입니다.</p>
@@ -362,24 +362,24 @@
 
 <section id="structure"><div class="wrap">
   <span class="eyebrow">Structure</span>
-  <h2>실험논문 구성 — 5장이 이 랩의 실제 관행</h2>
-  <p class="section-lede"><b>2026년(20.5기) 이 랩에서 실제로 통과한 실험 트랙 석사논문 2편은 모두 5장으로 구성되어 있었습니다.</b> 일반적인 공학 논문 관행은 6장(제안 방법과 실험 설계를 분리)이지만, 이 학과의 최근 실제 사례는 5장입니다.</p>
+  <h2>실험논문 구성 — 최근 사례를 바탕으로 한 5장 예시</h2>
+  <p class="section-lede"><b>2026년(20.5기) 이 랩에서 실제로 통과한 실험 트랙 석사논문 2편은 모두 5장으로 구성되어 있었습니다.</b> 이 사례를 참고해 5장 구성을 소개합니다. 제안 방법과 구현·실험 설계를 분리하는 등 장 수를 조정할 수 있으며, 사례의 장 수가 학교의 필수 기준을 뜻하지는 않습니다.</p>
   <p class="purpose-strip">이 절의 목적 — 장별로 무엇을 답해야 하고, 분량을 어떻게 배분할지 미리 보기 위해.</p>
 
   <div class="chapters" style="grid-template-columns:1fr;">
     <div class="chapter-list b">
-      <div class="head">실험 · 기본 5장</div>
+      <div class="head">실험 · 5장 구성 예시</div>
       <li><span class="n">1</span> 서론 — 어떤 문제이며 왜 중요한가. 연구 범위·목적·방법·논문 구성</li>
       <li><span class="n">2</span> 관련 연구 — 개념/기술 개요, 기존 방법의 한계, 본 연구와의 차이</li>
-      <li><span class="n">3</span> 제안하는 방법(가장 두꺼운 장) — 전체 구조, 데이터 수집·전처리, 모델/파이프라인 설계, 학습 프로세스, 판별/추론 로직</li>
+      <li><span class="n">3</span> 제안하는 방법 — 전체 구조, 데이터 수집·전처리, 모델/파이프라인 설계, 학습 프로세스, 판별/추론 로직</li>
       <li><span class="n">4</span> 실험 및 성능 평가 — 평가환경·데이터셋, 정확도/성능 지표 분석, 비교·검증 결과</li>
       <li><span class="n">5</span> 결론 — 결과 요약, 학술적·기술적·실무적 시사점, 한계 및 향후 연구</li>
     </div>
   </div>
-  <p class="roadmap-note">3장이 "설계"와 "구현"을 모두 흡수해 분량이 가장 많아집니다(실제 사례에서도 본문의 절반 가까이). 부담이 크면 3장을 "제안 방법"과 "시스템 구현"으로 나눠 6장으로 확장하는 것도 선택지입니다 — 필요조건은 아닙니다.</p>
+  <p class="roadmap-note">3장에서는 제안 방법의 설계와 구현을 재현할 수 있도록 설명합니다. 내용이 많으면 별도 장으로 나눌 수 있습니다. 어느 장이 가장 길어야 하는지는 정해져 있지 않으며, 방법과 결과를 설명하는 데 필요한 분량을 배정합니다.</p>
 
   <div class="status-now">
-    <span><b>신용태 교수님은 80쪽 내외 분량을 실제로 선호하십니다(학술총무 확인).</b> 학교가 정한 공식 분량 기준은 아니지만, 이 랩에서는 실제 지도 기준에 가깝습니다. 아래는 그 80쪽을 장별로 어떻게 배분할지의 예시입니다.</span>
+    <span><b>아래는 전체 80쪽 안팎을 가정한 분량 배분 예시입니다.</b> 학교의 공식 분량 기준이 아니며, 실제 분량은 연구질문·방법·결과에 필요한 설명을 기준으로 지도교수와 정합니다.</span>
   </div>
 
   <div class="ratio-bar">
@@ -417,7 +417,7 @@
 <section id="methodpack"><div class="wrap">
   <span class="eyebrow">Method Pack</span>
   <h2>연구 성격에 맞는 방법론 팩 고르기</h2>
-  <p class="section-lede">전공명이 아니라 <b>내가 하려는 주장의 종류와 그 주장에 필요한 근거</b>로 고릅니다. 대부분의 컴퓨터공학 연구는 P03만으로 충분합니다.</p>
+  <p class="section-lede">전공명이 아니라 <b>내가 하려는 주장의 종류와 그 주장에 필요한 근거</b>로 고릅니다. 모델·시스템 비교는 P03을 출발점으로 삼고, 증명·장치·시뮬레이션·인간 대상 연구가 포함되면 해당 항목을 함께 확인합니다.</p>
   <div class="table-scroll">
   <table class="data-table">
     <thead><tr><th>연구 성격</th><th>팩</th><th>핵심 점검 사항</th></tr></thead>
@@ -466,11 +466,11 @@
 <section id="citation"><div class="wrap">
   <span class="eyebrow">Citation</span>
   <h2>인용 스타일 — IEEE</h2>
-  <p class="section-lede">실험 트랙은 일반적으로 <b>IEEE</b>(번호형 본문 인용, 등장순서 기반 참고문헌 배열)를 표준으로 씁니다. 숭실대 학위논문 자체의 참고문헌 규정이 IEEE와 다를 수 있으니 서식 안내서와 대조하세요.</p>
+  <p class="section-lede">이 가이드는 번호형 인용 방식인 <b>IEEE</b>를 예시로 설명합니다. 연구방법만으로 인용 스타일이 정해지는 것은 아닙니다. 학위논문은 학교·학과 지침을, 학술논문은 제출처 규정을 확인하세요.</p>
   <div class="mcm" style="grid-template-columns:1fr 1fr;">
     <div class="card">
       <h3>본문 인용</h3>
-      <p>등장 순서대로 번호를 매기고 대괄호로 표기합니다: <span class="mono">[1]</span>, <span class="mono">[2], [3]</span>. 저자명은 본문에 직접 쓰지 않는 것이 원칙입니다.</p>
+      <p>등장 순서대로 번호를 매기고 대괄호로 표기합니다: <span class="mono">[1]</span>, <span class="mono">[2], [3]</span>. 저자명이 문장의 의미에 필요한 경우에는 이름과 인용번호를 함께 쓸 수 있습니다.</p>
     </div>
     <div class="card">
       <h3>참고문헌 배열</h3>
@@ -483,7 +483,7 @@
 <section id="resources"><div class="wrap">
   <span class="eyebrow">Learn more</span>
   <h2>실험 트랙 학습자료</h2>
-  <p class="section-lede">실제 웹 검색·채널 확인으로 존재를 확인한 자료만 골랐습니다. (확인일 2026-09-21)</p>
+  <p class="section-lede">연구방법을 더 공부할 때 참고할 자료입니다. 이용 전 최신 판본과 운영 여부를 확인하세요. (확인일 2026-09-21)</p>
   <div class="res-groups">
     <div class="res-group b">
       <h4>도서</h4>
@@ -560,7 +560,7 @@
 
 <footer><div class="wrap">
   <p>이 자료는 신랩의 석사과정생들의 논문작성을 돕고자 만든 기초자료입니다.</p>
-  <p>작성일 2026-09-21</p>
+  <p>작성일 2026-09-21 · 내용 정리 2026-09-22</p>
 </div></footer>
 
 <script>

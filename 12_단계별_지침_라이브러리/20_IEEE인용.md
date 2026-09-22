@@ -51,5 +51,5 @@ IEEE 공식 Reference Guide의 최신 예처럼 복수 번호는 각각 표기�
 공식 참고: https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE_Reference_Guide.pdf
 
 ## 관련 문서
-- [08_공공데이터포털과RefWorks.md](../08_공공데이터포털과RefWorks.md) — 3절에서 실험 트랙 기본 스타일로 IEEE를 안내하고 인용 스타일 비교표를 제공합니다.
+- [08_공공데이터포털과RefWorks.md](../08_공공데이터포털과RefWorks.md) — 3절에서 IEEE를 번호형 인용의 예시로 안내하고 인용 스타일 비교표를 제공합니다.
 - [02_실험트랙_공학컴공/04_학회지투고와전환.md](../02_실험트랙_공학컴공/04_학회지투고와전환.md) — 목표 학회지가 IEEE 스타일을 변형한 자체 편집양식을 요구할 수 있어 학회별 스킬로 최종 형식을 재확인하도록 안내합니다.
