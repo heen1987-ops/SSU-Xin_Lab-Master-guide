@@ -1,5 +1,13 @@
 # 석사논문 작성 가이드 (신입 원우용 교보재)
 
+## 바로 보기 (GitHub Pages)
+
+파일을 내려받지 않고 브라우저에서 바로 볼 수 있습니다.
+
+- [공통 허브](https://hskim0911.github.io/SSU_Xin-Lab_Master-guide/) — 의의·주제와 목적·방법 선택·전체 일정
+- [실증논문 작성가이드](https://hskim0911.github.io/SSU_Xin-Lab_Master-guide/실증논문가이드.html)
+- [실험논문 작성가이드](https://hskim0911.github.io/SSU_Xin-Lab_Master-guide/실험논문가이드.html)
+
 ## 이 자료는 무엇인가
 
 논문을 처음 써보는 석사과정 원우를 위해 만든 오리엔테이션 교보재입니다. 랩에서 쓰는 두 개의 논문작성 지원 체계 — **SSU_실증**(경영·정보시스템 계열 설문/SEM 실증연구)과 **SSU_실험논문**(공학·컴퓨터공학 학회지·학위논문 체계) — 의 내용을 바탕으로, AI 도구(Claude)를 활용해 학술총무가 재구성한 자료입니다.
