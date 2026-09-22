@@ -4,9 +4,9 @@
 
 파일을 내려받지 않고 브라우저에서 바로 볼 수 있습니다.
 
-- [공통 허브](https://hskim0911.github.io/SSU_Xin-Lab_Master-guide/) — 의의·주제와 목적·방법 선택·전체 일정
-- [실증논문 작성가이드](https://hskim0911.github.io/SSU_Xin-Lab_Master-guide/실증논문가이드.html)
-- [실험논문 작성가이드](https://hskim0911.github.io/SSU_Xin-Lab_Master-guide/실험논문가이드.html)
+- [공통 허브](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/) — 의의·주제와 목적·방법 선택·전체 일정
+- [실증논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실증논문가이드.html)
+- [실험논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실험논문가이드.html)
 
 ## 이 자료는 무엇인가
 
