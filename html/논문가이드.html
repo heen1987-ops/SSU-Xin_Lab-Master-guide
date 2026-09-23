@@ -493,6 +493,58 @@
       </table>
     </div>
   </figure>
+
+  <details class="reading-details"><summary>WBS·상세 간트차트 보기 (17개 작업 · 임계경로)</summary><div class="reading-details-body">
+  <p class="section-lede">작업분류체계(WBS)를 시간 축에 배치한 상세 간트차트입니다. 절대 날짜 대신 <b>학기 시작 후 몇 주차인지</b>로 표시해, 실제 개강일이 언제든 그대로 대입해 쓸 수 있습니다. 항목·완료기준·선행조건 전체 목록은 <span class="mono">10_예상일정_2027년2학기_간트차트.md</span>에 있습니다.</p>
+  <div class="gb-intro">
+    <article><b>WBS</b><span>1~4학기 17개 작업을 번호·완료기준·선행조건으로 정리</span></article>
+    <article><b>GANTT</b><span>학기 시작 후 주차 기준(달력 날짜 아님)</span></article>
+    <article><b>WRITING ORDER</b><span>3장 → 4장 → 5장 → 2장 → 1장</span></article>
+    <article><b>DECISION SCOPE</b><span>연구지도와 공식 심사권한을 구분</span></article>
+  </div>
+  <div class="gb-legend">
+    <span class="critical">임계경로(늦어지면 전체 일정이 밀림)</span>
+    <span class="support">병행 지원작업(여유 있음)</span>
+    <span class="branch">실증·실험 분기</span>
+    <span class="approval">지도교수 결정·승인</span>
+  </div>
+  <div class="gb-scroll"><div class="gb-board">
+    <div class="gb-groups">
+      <b>WORKSTREAM</b>
+      <span style="grid-column:2 / span 4">1학기 · 탐색</span>
+      <span style="grid-column:6 / span 4">2학기 · 설계</span>
+      <span style="grid-column:10 / span 4">3학기 · 수행</span>
+      <span style="grid-column:14 / span 4">4학기 · 완성</span>
+    </div>
+    <div class="gb-head">
+      <b>WBS · 핵심 산출물</b>
+      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
+      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
+      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
+      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
+    </div>
+    <div class="gb-row"><div class="gb-label"><b>1.1–1.2 · 주제·문헌 탐색</b><span>후보 주제 → 문헌표·Gap 정리</span></div><span class="gb-bar critical" style="grid-column:2 / span 2">탐색·검토</span></div>
+    <div class="gb-row"><div class="gb-label"><b>1.3 · 연구질문·목적 확정</b><span>마일스톤: 주제 확정</span></div><span class="gb-bar approval" style="grid-column:4 / span 1">목적 문장 1개</span></div>
+    <div class="gb-row phase-break"><div class="gb-label"><b>2.1–2.2 · 연구설계 초안</b><span>모형/실험설계, 측정도구·환경</span></div><span class="gb-bar critical" style="grid-column:6 / span 2">설계 초안</span></div>
+    <div class="gb-row"><div class="gb-label"><b>2.3 · 연구계획서 승인</b><span>마일스톤: 계획서 승인</span></div><span class="gb-bar approval" style="grid-column:8 / span 1">지도교수 승인</span></div>
+    <div class="gb-row"><div class="gb-label"><b>2.4 · 파일럿·사전점검</b><span>프로토콜 수정본</span></div><span class="gb-bar critical" style="grid-column:9 / span 1">파일럿</span></div>
+    <div class="gb-row phase-break"><div class="gb-label"><b>3.1 · 본 수집·실험 수행</b><span>원자료(raw data)</span></div><span class="gb-bar critical" style="grid-column:10 / span 3">수집·실험·기록</span></div>
+    <div class="gb-row"><div class="gb-label"><b>실증 트랙 분기</b><span>설문·척도 → 측정검증 → 주 분석</span></div><span class="gb-bar branch" style="grid-column:10 / span 3">표본·척도·모형</span></div>
+    <div class="gb-row"><div class="gb-label"><b>실험 트랙 분기</b><span>Baseline·Metric → 반복·Ablation</span></div><span class="gb-bar branch" style="grid-column:10 / span 3">비교·반복·오류분석</span></div>
+    <div class="gb-row"><div class="gb-label"><b>3.2 · 자료 정제·분석</b><span>마일스톤: 분석 완료</span></div><span class="gb-bar critical" style="grid-column:12 / span 2">결과표·그림</span></div>
+    <div class="gb-row"><div class="gb-label"><b>3.3 · 3·4장 초안 작성</b><span>본문 초안</span></div><span class="gb-bar critical" style="grid-column:13 / span 1">초안 작성</span></div>
+    <div class="gb-row phase-break"><div class="gb-label"><b>4.1 · 전체 원고 v1</b><span>1~5장·초록·참고문헌</span></div><span class="gb-bar critical" style="grid-column:14 / span 1">완성 초고</span></div>
+    <div class="gb-row"><div class="gb-label"><b>4.2 · 수료생 연구등록</b><span>공식 절차 · 마일스톤</span></div><span class="gb-bar milestone" style="grid-column:14 / span 1">등록</span></div>
+    <div class="gb-row"><div class="gb-label"><b>4.3 · 공개발표·심사위원 구성</b><span>공식 절차 · 마일스톤</span></div><span class="gb-bar approval" style="grid-column:14 / span 2">발표 → 위원 위촉</span></div>
+    <div class="gb-row"><div class="gb-label"><b>4.4 · 가제본·카피킬러 제출</b><span>공식 절차</span></div><span class="gb-bar critical" style="grid-column:15 / span 2">검사결과 제출</span></div>
+    <div class="gb-row"><div class="gb-label"><b>4.5 · 심사비 납부</b><span>공식 절차 · 4.4와 병행</span></div><span class="gb-bar support" style="grid-column:15 / span 1">납부</span></div>
+    <div class="gb-row"><div class="gb-label"><b>4.6 · 최종심사</b><span>공식 절차 · 마일스톤</span></div><span class="gb-bar critical" style="grid-column:16 / span 2">심사 통과</span></div>
+    <div class="gb-row"><div class="gb-label"><b>4.7 · 최종서류 제출</b><span>마일스톤: 학위논문 완성</span></div><span class="gb-bar milestone" style="grid-column:17 / span 1">제출</span></div>
+  </div></div>
+  <div class="gb-note"><b>일정 보호 원칙</b><p>1.1→1.2→1.3→2.1→2.2→2.3→2.4→3.1→3.2→3.3→4.1→4.2→4.3→4.4→4.6→4.7로 이어지는 임계경로가 늦어지면 전체 일정이 그만큼 밀립니다. 4.5(심사비 납부)처럼 임계경로 밖에 있는 항목부터 조정하고, 지도교수의 전체 원고 검토시간과 공식 마감은 줄이지 않습니다.</p></div>
+  <p class="roadmap-note">4학기(제출학기)의 주차는 실제로 확인된 2026학년도 봄·가을 두 학기의 공식 일정을 환산한 것이며, 1~3학기는 일반적인 진행 예시입니다. 완료기준·선행조건까지 담은 전체 표는 <span class="mono">10_예상일정_2027년2학기_간트차트.md</span>를 참고하세요.</p>
+  </div></details>
+
   <p class="roadmap-note">개인 진도에 맞춰 조정하세요. 공식 기한·서류는 <a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/06_%EB%85%BC%EB%AC%B8%EC%A0%9C%EC%B6%9C%EC%A0%88%EC%B0%A8%EC%99%80%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8.md">논문 제출 절차</a>에서 확인하세요.</p>
 </div></section>
 
