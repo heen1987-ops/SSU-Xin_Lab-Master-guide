@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>박사과정 학위논문</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -91,10 +92,146 @@
   .dc-row > div:first-child{font-weight:600; color:var(--ink-faint); font-size:12.5px;}
   @media (max-width:640px){
     .dc-row{grid-template-columns:1fr;}
+    .dc-row.head{display:none;}
     .dc-row > div:not(:first-child){border-left:none; border-top:1px dashed var(--line);}
     .dc-row > div:first-child{padding-bottom:4px;}
+    .dc-row > div:nth-child(2)::before,
+    .dc-row > div:nth-child(3)::before{display:block; margin-bottom:4px; font-size:11px; font-weight:700; letter-spacing:.03em; color:var(--ink-faint);}
+    .dc-row > div:nth-child(2)::before{content:"석사과정";}
+    .dc-row > div:nth-child(3)::before{content:"박사과정";}
   }
   .degree-compare .dc-note{padding:14px 22px 20px; font-size:12.5px; color:var(--ink-faint); border-top:1px dashed var(--line); margin-top:4px;}
+
+  /* ---- 도식 블록 ---- */
+  .dg{margin:26px 0; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
+  .dg-head{padding:16px 20px 14px; border-bottom:1px solid var(--line);}
+  .dg-head h3{font-family:var(--font-body); font-size:15.5px; font-weight:700;}
+  .dg-head p{font-size:12.5px; line-height:1.7; color:var(--ink-soft); margin-top:5px;}
+  .dg-body{padding:16px 20px 18px;}
+  .dg-flow{display:grid; gap:10px;}
+  .dg-flow.c2{grid-template-columns:repeat(2,1fr);}
+  .dg-flow.c3{grid-template-columns:repeat(3,1fr);}
+  .dg-flow.c4{grid-template-columns:repeat(4,1fr);}
+  .dg-flow.c5{grid-template-columns:repeat(5,1fr);}
+  .dg-step{position:relative; background:var(--paper-sunken); border-radius:var(--radius-sm); padding:12px 13px 13px;}
+  .dg-flow > .dg-step + .dg-step::before{content:""; position:absolute; left:-13px; top:50%; transform:translateY(-50%); border-left:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
+  .dg-n{display:inline-block; min-width:18px; height:18px; line-height:18px; text-align:center; padding:0 4px; border-radius:5px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--font-mono); font-size:11px; font-weight:700; margin-bottom:7px;}
+  .dg-step h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:5px;}
+  .dg-step p{font-size:12.5px; line-height:1.65; color:var(--ink-soft);}
+  .dg-back{position:relative; margin-top:10px; padding:9px 14px 9px 32px; border:1px dashed var(--line); border-radius:var(--radius-sm); font-size:12.5px; color:var(--ink-faint); background:var(--paper-sunken);}
+  .dg-back::before{content:""; position:absolute; left:14px; top:50%; transform:translateY(-50%); border-right:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
+  .dg-note{margin-top:10px; padding:10px 13px; border-radius:var(--radius-sm); background:var(--track-b-soft); color:var(--track-b-ink); font-size:12.5px; line-height:1.7;}
+  @media (max-width:760px){
+    .dg-flow.c2,.dg-flow.c3,.dg-flow.c4,.dg-flow.c5{grid-template-columns:1fr;}
+    .dg-flow > .dg-step + .dg-step::before{left:50%; top:-13px; transform:translateX(-50%); border-left:5px solid transparent; border-right:5px solid transparent; border-top:6px solid var(--ink-faint); border-bottom:none;}
+  }
+
+  .dg-trunk{position:relative; background:var(--ink); color:var(--paper); border-radius:var(--radius-sm); padding:12px 14px; margin-bottom:17px;}
+  .dg-trunk h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:4px;}
+  .dg-trunk p{font-size:12.5px; line-height:1.65; opacity:.82;}
+  .dg-trunk::after{content:""; position:absolute; left:50%; bottom:-11px; transform:translateX(-50%); border-top:6px solid var(--ink); border-left:5px solid transparent; border-right:5px solid transparent;}
+  .dg-flow.nb > .dg-step + .dg-step::before{display:none;}
+  .dg-step.ta{background:var(--track-a-soft);}
+  .dg-step.ta h4{color:var(--track-a-ink);}
+  .dg-step.tb{background:var(--track-b-soft);}
+  .dg-step.tb h4{color:var(--track-b-ink);}
+  .dg-step.ta p,.dg-step.tb p{color:var(--ink);}
+  .dg-slide{margin-top:12px; border-top:1px dashed var(--line); padding-top:10px;}
+  .dg-slide summary{cursor:pointer; font-size:12px; color:var(--ink-faint); list-style:none; user-select:none;}
+  .dg-slide summary::-webkit-details-marker{display:none;}
+  .dg-slide summary::before{content:""; display:inline-block; vertical-align:middle; margin-right:7px; border-left:5px solid var(--ink-faint); border-top:4px solid transparent; border-bottom:4px solid transparent;}
+  .dg-slide[open] summary::before{border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid var(--ink-faint); border-bottom:none; margin-right:5px;}
+  .dg-slide summary:focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px; border-radius:3px;}
+  .dg-slide img{width:100%; height:auto; margin-top:10px; border:1px solid var(--line); border-radius:var(--radius-sm); display:block;}
+  .dg-src{padding:10px 20px 13px; border-top:1px dashed var(--line); font-size:11.5px; line-height:1.75; color:var(--ink-faint);}
+  .dg-foot{margin-top:10px; padding:9px 13px; border-radius:var(--radius-sm); background:var(--paper-sunken); font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
+
+  /* ---- 용어 정의 블록 ---- */
+  .defs{margin-bottom:32px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
+  .defs-head{padding:18px 22px 16px;}
+  .defs-head .tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; padding:3px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent-ink); margin-bottom:10px;}
+  .defs-head p{font-size:14px; line-height:1.75; color:var(--ink);}
+  .defs-grid{display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line);}
+  .def-card{padding:16px 20px 18px; border-left:1px solid var(--line);}
+  .def-card:first-child{border-left:none;}
+  .def-kicker{display:block; font-size:10.5px; font-weight:700; letter-spacing:.06em; margin-bottom:8px;}
+  .def-card.m .def-kicker{color:var(--accent-ink);}
+  .def-card.d .def-kicker{color:var(--track-b-ink);}
+  .def-card h4{font-family:var(--font-body); font-size:17px; font-weight:700; margin-bottom:2px;}
+  .def-card h4 span{font-size:11.5px; font-weight:500; color:var(--ink-faint); margin-left:7px;}
+  .def-lead{font-size:13.5px; line-height:1.7; padding:10px 12px; border-radius:var(--radius-sm); margin:10px 0 12px;}
+  .def-card.m .def-lead{background:var(--accent-soft); color:var(--accent-ink);}
+  .def-card.d .def-lead{background:var(--track-b-soft); color:var(--track-b-ink);}
+  .def-card dl{margin:0;}
+  .def-card dl > div{display:grid; grid-template-columns:82px 1fr; gap:10px; padding:7px 0; border-top:1px dashed var(--line); font-size:12.5px; line-height:1.65;}
+  .def-card dl > div:first-child{border-top:none; padding-top:0;}
+  .def-card dt{font-weight:700; color:var(--ink-faint); font-size:11.5px;}
+  .def-card dd{margin:0; color:var(--ink);}
+  .defs-circle{display:grid; grid-template-columns:118px 1fr; gap:18px; align-items:center; padding:16px 22px; border-top:1px solid var(--line); background:var(--paper-sunken);}
+  .dc-svg{width:118px; height:118px; display:block;}
+  .dc-items{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .dc-items > div{background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius-sm); padding:9px 11px;}
+  .dc-items b{display:block; font-size:12.5px; margin-bottom:3px;}
+  .dc-items > div:nth-child(1) b{color:var(--ink-faint);}
+  .dc-items > div:nth-child(2) b{color:var(--accent-ink);}
+  .dc-items > div:nth-child(3) b{color:var(--track-b-ink);}
+  .dc-items span{display:block; font-size:11.5px; line-height:1.6; color:var(--ink-soft);}
+  .defs-src{padding:12px 22px 16px; border-top:1px dashed var(--line); font-size:11.5px; line-height:1.75; color:var(--ink-faint);}
+  @media (max-width:760px){
+    .defs-grid{grid-template-columns:1fr;}
+    .def-card{border-left:none; border-top:1px solid var(--line);}
+    .def-card:first-child{border-top:none;}
+    .defs-circle{grid-template-columns:1fr; justify-items:center; gap:14px;}
+    .dc-items{grid-template-columns:1fr; width:100%;}
+  }
+
+  /* ---- 논문 양식 블록 ---- */
+  .fmt{margin-top:28px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
+  .fmt-band{border-top:1px solid var(--line); padding:18px 22px 20px;}
+  .fmt-band:first-child{border-top:none;}
+  .fmt-band > h3{font-size:12px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:14px;}
+  .fmt-band > h3 span{text-transform:none; letter-spacing:0; font-weight:400; color:var(--ink-faint); margin-left:8px;}
+  .fmt-order{display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden;}
+  .fmt-col{padding:13px 14px 15px; border-left:1px solid var(--line); background:var(--paper);}
+  .fmt-col:first-child{border-left:none;}
+  .fmt-chip{display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:11px;}
+  .fmt-col.n .fmt-chip{background:var(--paper-sunken); color:var(--ink-faint);}
+  .fmt-col.r .fmt-chip{background:var(--accent-soft); color:var(--accent-ink);}
+  .fmt-col.a .fmt-chip{background:var(--ink); color:var(--paper);}
+  .fmt-col ol{list-style:none; margin:0; padding:0;}
+  .fmt-col li{display:flex; align-items:baseline; gap:8px; padding:6px 9px; border-radius:var(--radius-sm); font-size:13px; background:var(--paper-sunken); margin-bottom:5px;}
+  .fmt-col li:last-child{margin-bottom:0;}
+  .fmt-col li b{font-family:var(--font-mono); font-size:11px; color:var(--ink-faint); font-weight:600; min-width:15px;}
+  .fmt-col li i{font-style:normal; margin-left:auto; padding-left:8px; font-size:10.5px; color:var(--ink-faint); text-align:right;}
+  .fmt-col li.key{background:var(--track-b-soft);}
+  .fmt-col li.key b,.fmt-col li.key i{color:var(--track-b-ink);}
+  .fmt-col li.key em{font-style:normal; font-weight:700; color:var(--track-b-ink);}
+  .fmt-spec{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:0;}
+  .fmt-spec > div{background:var(--paper-sunken); border-radius:var(--radius-sm); padding:10px 13px;}
+  .fmt-spec dt{font-size:10.5px; font-weight:700; letter-spacing:.03em; color:var(--ink-faint); margin-bottom:4px;}
+  .fmt-spec dd{font-size:13px; margin:0;}
+  .fmt-rows{display:grid; grid-template-columns:repeat(2,1fr); gap:0 24px;}
+  .fmt-rows > div{display:grid; grid-template-columns:92px 1fr; gap:12px; padding:8px 0; border-top:1px dashed var(--line); font-size:12.5px; line-height:1.65;}
+  .fmt-rows > div > b{font-weight:700; color:var(--ink-faint); font-size:11.5px;}
+  .fmt-split{display:grid; grid-template-columns:1.15fr 1fr; gap:20px; align-items:start;}
+  .fmt-split h4{font-size:11.5px; font-weight:700; letter-spacing:.03em; color:var(--ink-faint); margin-bottom:9px;}
+  .fmt-warn > div{background:var(--track-b-soft); border-radius:var(--radius-sm); padding:10px 13px; font-size:12.5px; color:var(--track-b-ink); margin-bottom:7px;}
+  .fmt-warn > div:last-child{margin-bottom:0;}
+  .fmt-warn b{display:block; font-size:10.5px; letter-spacing:.03em; margin-bottom:3px;}
+  .fmt-toc{background:var(--paper-sunken); border-radius:var(--radius-sm); padding:12px 15px; font-family:var(--font-mono); font-size:12.5px; line-height:1.95; margin:0; white-space:pre; overflow-x:auto;}
+  .fmt-foot{padding:13px 22px 17px; border-top:1px dashed var(--line); font-size:12.5px; color:var(--ink-faint);}
+  @media (max-width:820px){
+    .fmt-order{grid-template-columns:1fr;}
+    .fmt-col{border-left:none; border-top:1px solid var(--line);}
+    .fmt-col:first-child{border-top:none;}
+    .fmt-spec{grid-template-columns:repeat(2,1fr);}
+    .fmt-rows{grid-template-columns:1fr;}
+    .fmt-split{grid-template-columns:1fr;}
+  }
+  @media (max-width:520px){
+    .fmt-spec{grid-template-columns:1fr;}
+    .fmt-col li i{font-size:10px;}
+  }
 
   /* ---- meaning cards ---- */
   .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px;}
@@ -193,8 +330,8 @@
   .gb-legend .approval{background:var(--paper-raised); color:var(--ink); border:2px solid var(--ink); padding:3px 8px;}
 
   .gb-scroll{margin-top:14px; overflow-x:auto; border:1px solid var(--line); background:var(--paper-raised); border-radius:var(--radius-sm);}
-  .gb-board{min-width:1040px;}
-  .gb-groups,.gb-head,.gb-row{display:grid; grid-template-columns:190px repeat(16,minmax(52px,1fr));}
+  .gb-board{min-width:1100px;}
+  .gb-groups,.gb-head,.gb-row{display:grid; grid-template-columns:190px repeat(17,minmax(52px,1fr));}
   .gb-groups{border-bottom:1px solid var(--line); background:var(--ink); color:var(--paper);}
   .gb-groups b{grid-column:1; padding:8px 10px; border-right:1px solid color-mix(in srgb, var(--paper) 25%, transparent); font-size:10px;}
   .gb-groups span{padding:8px 5px; border-right:1px solid color-mix(in srgb, var(--paper) 25%, transparent); text-align:center; font-size:9.5px; font-weight:800; letter-spacing:.03em;}
@@ -205,7 +342,7 @@
   .gb-head span:last-child{border-right:0;}
   .gb-row{position:relative; min-height:44px; border-bottom:1px solid var(--line); isolation:isolate;}
   .gb-row:last-child{border-bottom:0;}
-  .gb-row:after{content:""; position:absolute; z-index:-1; left:190px; right:0; top:0; bottom:0; background:repeating-linear-gradient(to right, transparent 0 calc(100% / 16 - 1px), var(--paper-sunken) calc(100% / 16 - 1px) calc(100% / 16));}
+  .gb-row:after{content:""; position:absolute; z-index:-1; left:190px; right:0; top:0; bottom:0; background:repeating-linear-gradient(to right, transparent 0 calc(100% / 17 - 1px), var(--paper-sunken) calc(100% / 17 - 1px) calc(100% / 17));}
   .gb-row.phase-break{border-top:3px solid var(--line);}
   .gb-label{grid-column:1; grid-row:1; padding:7px 9px; border-right:1px solid var(--line); background:var(--paper-raised);}
   .gb-label b{display:block; color:var(--ink); font-size:10.5px;}
@@ -221,53 +358,29 @@
   .gb-note b{display:grid; place-items:center; padding:10px; background:var(--accent-ink); color:var(--paper); font-size:10.5px; text-align:center;}
   .gb-note p{margin:0; padding:10px 12px; background:var(--accent-soft); color:var(--accent-ink); font-size:11.5px; line-height:1.6;}
 
-  /* ---- 도식 블록 ---- */
-  .dg{margin:26px 0; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
-  .dg-head{padding:16px 20px 14px; border-bottom:1px solid var(--line);}
-  .dg-head h3{font-family:var(--font-body); font-size:15.5px; font-weight:700;}
-  .dg-head p{font-size:12.5px; line-height:1.7; color:var(--ink-soft); margin-top:5px;}
-  .dg-body{padding:16px 20px 18px;}
-  .dg-flow{display:grid; gap:10px;}
-  .dg-flow.c2{grid-template-columns:repeat(2,1fr);}
-  .dg-flow.c3{grid-template-columns:repeat(3,1fr);}
-  .dg-flow.c4{grid-template-columns:repeat(4,1fr);}
-  .dg-flow.c5{grid-template-columns:repeat(5,1fr);}
-  .dg-step{position:relative; background:var(--paper-sunken); border-radius:var(--radius-sm); padding:12px 13px 13px;}
-  .dg-flow > .dg-step + .dg-step::before{content:""; position:absolute; left:-13px; top:50%; transform:translateY(-50%); border-left:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
-  .dg-n{display:inline-block; min-width:18px; height:18px; line-height:18px; text-align:center; padding:0 4px; border-radius:5px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--font-mono); font-size:11px; font-weight:700; margin-bottom:7px;}
-  .dg-flow.neutral .dg-n{background:var(--ink); color:var(--paper);}
-  .dg-step h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:5px;}
-  .dg-step p{font-size:12.5px; line-height:1.65; color:var(--ink-soft);}
-  .dg-back{position:relative; margin-top:10px; padding:9px 14px 9px 32px; border:1px dashed var(--line); border-radius:var(--radius-sm); font-size:12.5px; color:var(--ink-faint); background:var(--paper-sunken);}
-  .dg-back::before{content:""; position:absolute; left:14px; top:50%; transform:translateY(-50%); border-right:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
-  .dg-note{margin-top:10px; padding:10px 13px; border-radius:var(--radius-sm); background:var(--track-b-soft); color:var(--track-b-ink); font-size:12.5px; line-height:1.7;}
-  .dg-trunk{position:relative; background:var(--ink); color:var(--paper); border-radius:var(--radius-sm); padding:12px 14px; margin-bottom:17px;}
-  .dg-trunk h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:4px;}
-  .dg-trunk p{font-size:12.5px; line-height:1.65; opacity:.82;}
-  .dg-trunk::after{content:""; position:absolute; left:50%; bottom:-11px; transform:translateX(-50%); border-top:6px solid var(--ink); border-left:5px solid transparent; border-right:5px solid transparent;}
-  .dg-flow.nb > .dg-step + .dg-step::before{display:none;}
-  .dg-step.ta{background:var(--track-a-soft);}
-  .dg-step.ta h4{color:var(--track-a-ink);}
-  .dg-step.tb{background:var(--track-b-soft);}
-  .dg-step.tb h4{color:var(--track-b-ink);}
-  .dg-step.ta p,.dg-step.tb p{color:var(--ink);}
-  .dg-join{position:relative; margin-top:17px; background:var(--paper-sunken); border:1px solid var(--line); border-radius:var(--radius-sm); padding:12px 14px;}
-  .dg-join::before{content:""; position:absolute; left:50%; top:-11px; transform:translateX(-50%); border-top:6px solid var(--ink-faint); border-left:5px solid transparent; border-right:5px solid transparent;}
-  .dg-join h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:4px;}
-  .dg-join p{font-size:12.5px; line-height:1.65; color:var(--ink-soft);}
-  .dg-slide{margin-top:12px; border-top:1px dashed var(--line); padding-top:10px;}
-  .dg-slide summary{cursor:pointer; font-size:12px; color:var(--ink-faint); list-style:none; user-select:none;}
-  .dg-slide summary::-webkit-details-marker{display:none;}
-  .dg-slide summary::before{content:""; display:inline-block; vertical-align:middle; margin-right:7px; border-left:5px solid var(--ink-faint); border-top:4px solid transparent; border-bottom:4px solid transparent;}
-  .dg-slide[open] summary::before{border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid var(--ink-faint); border-bottom:none; margin-right:5px;}
-  .dg-slide summary:focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px; border-radius:3px;}
-  .dg-slide img{width:100%; height:auto; margin-top:10px; border:1px solid var(--line); border-radius:var(--radius-sm); display:block;}
-  .dg-src{padding:10px 20px 13px; border-top:1px dashed var(--line); font-size:11.5px; line-height:1.75; color:var(--ink-faint);}
-  .dg-foot{margin-top:10px; padding:9px 13px; border-radius:var(--radius-sm); background:var(--paper-sunken); font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
-  @media (max-width:760px){
-    .dg-flow.c2,.dg-flow.c3,.dg-flow.c4,.dg-flow.c5{grid-template-columns:1fr;}
-    .dg-flow > .dg-step + .dg-step::before{left:50%; top:-13px; transform:translateX(-50%); border-left:5px solid transparent; border-right:5px solid transparent; border-top:6px solid var(--ink-faint); border-bottom:none;}
-  }
+  /* ---- gantt board: interactive additions (React) ---- */
+  .gb-legend span{cursor:pointer; transition:opacity .15s, box-shadow .15s;}
+  .gb-legend span:hover{opacity:.8;}
+  .gb-legend span.is-filter-active{box-shadow:0 0 0 2px var(--accent);}
+  .gb-filter-hint{margin-top:8px; font-size:11.5px; color:var(--accent-ink); font-weight:700;}
+  .gb-semester-jump{display:flex; gap:6px; margin-top:12px;}
+  .gb-jump-btn{font-family:var(--font-mono); font-size:11px; font-weight:700; padding:5px 11px; border-radius:999px; border:1px solid var(--line); background:var(--paper-sunken); color:var(--ink-soft); cursor:pointer;}
+  .gb-jump-btn:hover{border-color:var(--accent); color:var(--accent-ink);}
+  .gb-row{cursor:pointer;}
+  .gb-row.is-dimmed .gb-label,.gb-row.is-dimmed .gb-bar{opacity:.3;}
+  .gb-row.is-selected{background:var(--accent-soft);}
+  .gb-row.is-selected .gb-label{background:var(--accent-soft);}
+  .gb-detail,.gb-detail-hint{margin-top:14px; border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px 16px; background:var(--paper-raised);}
+  .gb-detail-hint{color:var(--ink-faint); font-size:12.5px; text-align:center;}
+  .gb-detail b{display:block; font-family:var(--font-mono); font-size:13px; margin-bottom:8px;}
+  .gb-detail dl{display:grid; grid-template-columns:88px 1fr; gap:6px 12px; margin:0;}
+  .gb-detail dt{color:var(--ink-faint); font-size:11.5px; font-weight:700;}
+  .gb-detail dd{margin:0; font-size:13px; color:var(--ink);}
+  .gb-fallback{color:var(--ink-faint); font-size:13px; padding:16px 0;}
+  .gb-legend .milestone{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .gb-bar.has-milestone{box-shadow:inset 3px 0 0 var(--accent-ink);}
+  .gb-live{margin-top:8px; font-size:11.5px; font-weight:700; color:var(--accent-ink); min-height:1em;}
+  .gb-row:focus-visible,.gb-legend span:focus-visible,.gb-jump-btn:focus-visible,.gb-scroll:focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px;}
 
   /* ---- structure chapters ---- */
   .chapters{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px;}
@@ -324,379 +437,291 @@
   footer{padding-block:36px calc(36px + env(safe-area-inset-bottom,0px)); font-size:12.5px; color:var(--ink-faint);}
   footer .wrap{display:flex; flex-direction:column; gap:6px;}
 
-  /* ---- data table (장별 분량 등 표 데이터) ---- */
-  .data-table{margin-top:20px; width:100%; border-collapse:collapse; font-size:13.5px; background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
-  .data-table thead th{background:var(--paper-sunken); color:var(--ink-faint); font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.03em; font-weight:700; text-align:left; padding:10px 12px; border-bottom:1px solid var(--line);}
-  .data-table td{padding:10px 12px; border-top:1px solid var(--line); vertical-align:top;}
-  .data-table tbody tr:first-child td{border-top:none;}
-  .data-table td:first-child{font-weight:700; white-space:nowrap;}
-  .table-scroll{overflow-x:auto; border-radius:var(--radius);}
-  .table-scroll .data-table{border-radius:0; min-width:520px;}
-
-  /* ---- ratio bar (장별 분량 비율 시각화) ---- */
-  .ratio-bar{display:flex; height:38px; border-radius:8px; overflow:hidden; margin-top:22px; border:1px solid var(--line);}
-  .ratio-bar span{display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:11px; font-weight:700; overflow:hidden; white-space:nowrap; border-right:1px solid var(--paper);}
-  .ratio-bar span:last-child{border-right:none;}
-  .ratio-legend{display:flex; flex-wrap:wrap; gap:10px 16px; margin-top:12px;}
-  .ratio-legend div{display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-soft);}
-  .ratio-legend i{display:inline-block; width:10px; height:10px; border-radius:2px; flex:none;}
-
-  /* ---- benchmarking case cards ---- */
-  .case-grid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:22px;}
-  .case-card{border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); padding:18px 20px; box-shadow:var(--shadow);}
-  .case-card .who{font-family:var(--font-mono); font-size:11.5px; color:var(--accent-ink); background:var(--accent-soft); display:inline-block; padding:3px 9px; border-radius:999px; font-weight:700;}
-  .case-card h4{font-size:16px; margin-top:10px; font-family:var(--font-body); font-weight:700;}
-  .case-card p{font-size:13.5px; color:var(--ink-soft); margin-top:6px;}
-
   /* ---- cross-guide nav pills (hub <-> track guides) ---- */
   .guide-links{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
   .guide-links a{font-size:12.5px; font-weight:600; padding:7px 14px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); text-decoration:none; transition:background .15s,color .15s;}
   .guide-links a:hover{background:var(--paper-sunken); color:var(--ink);}
-  .guide-links a.self{background:var(--ink); color:var(--paper); border-color:var(--ink);}
 
-  /* ---- hub: track-guide CTA cards ---- */
+  /* ---- track-guide CTA cards ---- */
   .guide-cta-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px;}
   @media (max-width:720px){.guide-cta-grid{grid-template-columns:1fr;}}
-  .guide-cta{display:block; border-radius:var(--radius); padding:24px; border:1px solid var(--line); background:var(--paper-raised); box-shadow:var(--shadow); text-decoration:none; color:inherit; transition:transform .15s, box-shadow .15s;}
+  .guide-cta{display:block; border-radius:var(--radius); padding:24px; border:1px solid var(--line); background:var(--paper-raised); box-shadow:var(--shadow); text-decoration:none; color:inherit; transition:transform .15s;}
   .guide-cta:hover{transform:translateY(-2px);}
   .guide-cta.a{border-top:4px solid var(--track-a);}
   .guide-cta.b{border-top:4px solid var(--track-b);}
   .guide-cta h3{font-size:19px; margin-top:12px; font-family:var(--font-body); font-weight:700;}
   .guide-cta p{font-size:13.5px; color:var(--ink-soft); margin-top:8px;}
-  .guide-cta .go{margin-top:14px; font-family:var(--font-mono); font-size:12.5px; font-weight:700; color:var(--accent-ink);}
+  .guide-cta .go{margin-top:14px; display:block; font-family:var(--font-mono); font-size:12.5px; font-weight:700; color:var(--accent-ink);}
 </style>
-<link rel="stylesheet" href="assets/visual-guide.css">
-<title>실증논문 작성가이드</title>
+<link rel="stylesheet" href="assets/visual-guide.css?v=four-semesters">
+<style>
+  .phd-warn{margin-top:26px; border:1px solid var(--track-b); border-radius:var(--radius); background:var(--track-b-soft); padding:16px 20px;}
+  .phd-warn h3{font-family:var(--font-body); font-size:14px; font-weight:700; color:var(--track-b-ink); margin-bottom:6px;}
+  .phd-warn p{font-size:13px; line-height:1.75; color:var(--track-b-ink);}
+  .phd-open{margin-top:26px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); overflow:hidden;}
+  .phd-open h3{padding:16px 20px 4px; font-family:var(--font-body); font-size:15px; font-weight:700;}
+  .phd-open > p{padding:0 20px 14px; font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
+  .phd-open ul{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
+  .phd-open li{padding:11px 20px; border-top:1px dashed var(--line); font-size:13px; line-height:1.7;}
+  .phd-open li:first-child{border-top:none;}
+  .phd-open li b{display:block; font-size:12.5px; color:var(--ink); margin-bottom:2px;}
+  .phd-open li span{color:var(--ink-faint); font-size:12px;}
+  .q-tab{display:grid; grid-template-columns:76px 1fr 1.2fr; border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden;}
+  .q-tab > div{padding:10px 13px; border-top:1px solid var(--line); font-size:13px; display:flex; align-items:center;}
+  .q-tab > div:nth-child(-n+3){border-top:none; background:var(--paper-sunken); font-size:11px; font-weight:700; letter-spacing:.03em; color:var(--ink-faint);}
+  .q-tab b{font-family:var(--font-mono); font-weight:700;}
+  .q-tab .q1 b{color:var(--track-b-ink);} .q-tab .q2 b{color:var(--accent-ink);}
+  .q-tab .q3 b{color:var(--ink-soft);} .q-tab .q4 b{color:var(--ink-faint);}
+  .q-bar{display:flex; height:10px; border-radius:999px; overflow:hidden; margin:14px 0 4px; border:1px solid var(--line);}
+  .q-bar span{flex:1;}
+  .q-bar .s1{background:var(--track-b);} .q-bar .s2{background:var(--accent);}
+  .q-bar .s3{background:color-mix(in srgb, var(--ink-faint) 55%, var(--paper));}
+  .q-bar .s4{background:color-mix(in srgb, var(--ink-faint) 22%, var(--paper));}
+  .q-bar-lab{display:flex; font-size:10.5px; color:var(--ink-faint); margin-bottom:6px;}
+  .q-bar-lab span{flex:1;}
+  .q-bar-lab span:last-child{text-align:right; flex:0 0 auto;}
+  .no-list{list-style:none; margin:0; padding:0;}
+  .no-list li{position:relative; padding:7px 0 7px 22px; border-top:1px dashed var(--line); font-size:12.5px; line-height:1.7;}
+  .no-list li:first-child{border-top:none;}
+  .no-list li::before{content:""; position:absolute; left:4px; top:14px; width:9px; height:2px; background:var(--track-b);}
+  .backlink{display:inline-block; margin-bottom:10px; font-size:12.5px; color:var(--ink-faint); text-decoration:none;}
+  .backlink:hover{color:var(--accent-ink);}
+</style>
 
 <nav class="nav"><div class="nav-inner" id="navlinks">
-  <a href="#overview">트랙 개요</a>
-  <a href="#structure">논문 구성</a>
-  <a href="#theory">이론과 가설</a>
-  <a href="#measure">측정·표본</a>
-  <a href="#analysis">자료분석</a>
-  <a href="#cases">최근 사례</a>
-  <a href="#citation">인용(APA7)</a>
-  <a href="#resources">학습자료</a>
-  <a href="#checklist">체크리스트</a>
-  <a href="#more">더 보기</a>
+  <a href="index.html">과정 선택</a>
+  <a href="#diff">석사와 다른 점</a>
+  <a href="#record">연구실적 요건</a>
+  <a href="#quartile">학술지 사분위</a>
+  <a href="#review">심사</a>
+  <a href="#format">서식에서 다른 것</a>
+  <a href="#open">확인이 필요한 것</a>
+  <a href="석사과정.html">석사과정 가이드</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <span class="eyebrow">실증 트랙 전용 심화 가이드</span>
-  <h1>설문과 관찰자료로<br>현상과 관계를 분석하는 논문.</h1>
-  <p class="lede">사람들이 <b>왜·어떻게 특정 인식·태도·행동의도를 갖는지</b>를 설문·관찰자료와 통계 모형으로 살펴보는 트랙입니다. SEM은 연구질문과 자료 조건에 따라 선택하는 분석 방법 중 하나입니다. 이 문서는 <span class="mono">01_실증트랙_경영IS/</span> 폴더와 단계별 지침 라이브러리의 실증 관련 문서를 바탕으로, 실증 트랙에서 실제로 확인해야 할 것만 모았습니다.</p>
-  <div class="badges">
-    <span class="pill">설문 · SEM</span>
-    <span class="pill">APA 7 인용</span>
-    <span class="pill">5장 구성</span>
-  </div>
-  <div class="guide-links">
-    <a href="석사과정.html">← 공통 허브로</a>
-    <a href="실험논문가이드.html">실험논문 작성가이드</a>
-    <a class="self" href="#overview">실증논문 작성가이드</a>
-  </div>
+  <a class="backlink" href="index.html">&#8592; 과정 선택으로</a>
+  <span class="eyebrow">숭실대학교 IT정책경영학과</span>
+  <h1>박사 학위논문</h1>
+  <p class="lede">이 페이지는 <b>박사라서 다른 것</b>만 다룹니다. 주제 정하기, 연구설계, 집필, 논문 양식, 제출 절차처럼 두 과정이 같은 내용은 <a href="석사과정.html">석사과정 가이드</a>에 있습니다.</p>
   <div class="disclaimer">
-    <span>이 자료는 석사과정 원우의 논문작성을 돕고자 만든 기초자료입니다.</span>
+    <span>학사요건과 제출서식은 학기마다 바뀝니다. 아래 수치는 확인일 기준이며 제출 직전에는 본인 학기의 공식 공지를 다시 확인하세요.</span>
   </div>
 </div></header>
 
-<section id="overview"><div class="wrap">
-  <span class="eyebrow">Overview</span>
-  <h2>실증 트랙, 언제 선택하는가</h2>
-  <p class="section-lede">사람들의 인식·태도·행동의도가 특정 요인들에 의해 어떻게 형성되는지 설명하려는 목적일 때 이 트랙입니다.</p>
-  <div class="pm-table">
-    <div class="pm-row"><div>목적 문장이 확인하려는 것</div><div>핵심 도구</div></div>
-    <div class="pm-row"><div>사람들이 왜·어떻게 특정 인식·태도·행동의도를 갖는지 설명</div><div>설문지 · Cronbach's α · CFA/SEM · PLS-SEM</div></div>
-    <div class="pm-row"><div>변수 간 관계가 매개·조절되는지 확인</div><div>연구모형 · 가설검정 · 구조방정식</div></div>
+<section id="diff"><div class="wrap">
+  <span class="eyebrow">What changes</span>
+  <h2>논문이 증명해야 하는 것</h2>
+
+  <div class="phd-warn">
+    <h3>석사와 박사를 가르는 한 문장</h3>
+    <p>석사는 <b>연구방법론을 처음부터 끝까지 한 번 제대로 수행했음</b>을 보이면 됩니다. 박사는 <b>그 분야에 아직 없던 독자적인 학술적 기여를 실제로 만들어냈음</b>을 증명해야 합니다. 방법을 올바르게 적용했는가가 아니라, 새로운 지식을 실제로 더했는가를 묻습니다. 아래의 수치 차이는 전부 이 하나에서 나옵니다.</p>
   </div>
-  <p class="roadmap-note">아직 트랙을 정하지 못했다면 공통 허브의 "방법 선택" 절에서 먼저 목적 문장을 세우세요 — 이 문서는 실증 트랙으로 정한 뒤부터 필요한 내용입니다.</p>
+
+  <div class="degree-compare">
+    <div class="dc-head">
+      <h3>규정상 수치가 다른 항목</h3>
+      <p>구조 자체는 두 과정이 같습니다. 학점·종합시험·연구윤리교육을 채우고 학위논문 심사를 거칩니다. 아래는 그 안에서 값이 다른 것만 모은 것입니다.</p>
+    </div>
+    <div class="dc-row head"><div></div><div>석사과정</div><div>박사과정</div></div>
+    <div class="dc-row"><div>취득 학점</div><div>24학점 이상</div><div>36학점 이상</div></div>
+    <div class="dc-row"><div>종합시험 응시자격</div><div>18학점 이상 + 3학기 이상 등록</div><div>27학점 이상 + 3학기 이상 등록</div></div>
+    <div class="dc-row"><div>논문지도 기간</div><div>2개학기 이상</div><div>3개학기 이상</div></div>
+    <div class="dc-row"><div>연구실적 요건</div><div>적용 학과 내규 확인</div><div>계열별 게재 요건 있음 (아래 참고)</div></div>
+    <div class="dc-row"><div>심사위원</div><div>3명 전원 내부</div><div>5명, 외부위원 1명 이상 필수</div></div>
+    <div class="dc-row"><div>심사 횟수</div><div>2회 이상(공개발표 포함)</div><div>3회 이상</div></div>
+    <div class="dc-row"><div>합격 판정</div><div>2인 이상이 70점 이상</div><div>4인 이상이 80점 이상</div></div>
+    <div class="dc-row"><div>가제본 제출 부수</div><div>3부</div><div>5부</div></div>
+    <div class="dc-row"><div>완본 하드커버</div><div>4부</div><div>5부</div></div>
+    <div class="dc-row"><div>제출가능연한</div><div>입학일로부터 6년 이내</div><div>10년 이내</div></div>
+    <p class="dc-note">지도교수 배정 시기(3월 초 / 9월 초), 연구윤리교육, 논문 구비 순서와 쪽번호 체계, 제출 절차 6단계는 두 과정이 같습니다. 출처는 <span class="mono">06_논문제출절차와체크리스트.md</span>·<span class="mono">11_심사위원_후보와_구성.md</span>·<span class="mono">04_석사와_박사의_차이.md</span>에서 <span class="mono">grad.ssu.ac.kr</span> 공지 원문, 학과 "학위논문 심사방법"·"학위논문 진행순서" 페이지, 학칙시행세칙(대학원)으로 확인한 값입니다(확인일 2026-09-22).</p>
+  </div>
 </div></section>
 
-<section id="structure"><div class="wrap">
-  <span class="eyebrow">Structure</span>
-  <h2>실증논문은 어떻게 구성할까?</h2>
-  <p class="section-lede">각 장의 역할을 먼저 파악하고, 내 연구질문에 맞게 목차를 구성하세요. 아래는 5장 구성 예시입니다.</p>
-<div class="dg">
-  <div class="dg-head">
-    <h3>논문 구성 <span style="font-weight:400; color:var(--ink-faint); font-size:12.5px;">5장 예시</span></h3>
-    <p>각 장이 답하는 질문입니다. 장 수와 제목은 고정 요건이 아닙니다.</p>
-  </div>
-  <div class="dg-body">
-    <div class="dg-flow c5 neutral">
-      <div class="dg-step"><span class="dg-n">1장</span><h4>서론</h4><p>어떤 문제인가?</p></div>
-      <div class="dg-step"><span class="dg-n">2장</span><h4>선행연구</h4><p>무엇이 남아 있는가?</p></div>
-      <div class="dg-step"><span class="dg-n">3장</span><h4>연구방법</h4><p>어떻게 확인할 것인가?</p></div>
-      <div class="dg-step"><span class="dg-n">4장</span><h4>결과·논의</h4><p>무엇을 확인했는가?</p></div>
-      <div class="dg-step"><span class="dg-n">5장</span><h4>결론</h4><p>무엇을 기여했는가?</p></div>
-    </div>
-    <p class="dg-foot">다섯 장은 <b>같은 연구질문</b>으로 연결됩니다. 실제 장 제목과 수는 연구 내용과 학과 지침에 맞춰 조정하세요.</p>
-    <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/thesis-chapters-slide.webp" target="_blank" rel="noopener"><img src="assets/thesis-chapters-slide.webp" width="1672" height="941" alt="하나의 연구질문으로 연결된 다섯 장. 서론, 선행연구, 연구방법, 결과·논의, 결론의 역할을 보여 줍니다." loading="lazy" decoding="async"></a></details>
-  </div>
-  <p class="dg-src">근거: <span class="mono">05_최근논문벤치마킹.md</span>에서 확인한 최근 통과 논문의 장 구성입니다. <b>대학원 공식 안내와 학칙에서 "본문을 반드시 5장으로 구성하라"는 규정은 확인되지 않았습니다</b> — 사례이지 요건이 아닙니다. 장 수는 연구 내용과 학과 지침에 맞춰 조정합니다.</p>
-</div>
-<details class="reading-details"><summary>장별 상세 역할·분량 예시·연결 점검</summary><div class="reading-details-body">
-<p class="section-lede">대학원 공식 안내와 학칙에서 "본문을 반드시 5장으로 구성하라"는 규정은 확인되지 않았지만, 설문/SEM 기반 논문들의 실제 사례는 5장 구성입니다. 학과·지도교수가 별도로 요구할 수 있습니다.</p>
+<section id="record"><div class="wrap">
+  <span class="eyebrow">Publication</span>
+  <h2>연구실적 요건</h2>
+  <p class="section-lede">석사에는 없고 <b>박사에만 있는 관문</b>입니다. 논문을 다 써도 이 요건을 못 채우면 학위청구논문을 제출할 수 없습니다.</p>
 
-
-
-  <div class="chapters" style="grid-template-columns:1fr;">
-    <div class="chapter-list a">
-      <div class="head">실증 · 5장 구성 예시</div>
-      <li><span class="n">1</span> 서론 — 어떤 현상이 문제이며 선행연구로 해결되지 않은 질문은 무엇인가</li>
-      <li><span class="n">2</span> 이론적 배경 — 개념의 경계와 선택한 이론, 선행연구의 일치·충돌</li>
-      <li><span class="n">3</span> 연구모형 및 연구설계 — 관계 가정, 조작적 정의, 표집·윤리·분석계획</li>
-      <li><span class="n">4</span> 실증분석 및 논의 — 자료로 확인한 결과, 질문·이론에 대한 답</li>
-      <li><span class="n">5</span> 결론 — 이 연구가 추가한 설명, 적용 범위와 한계</li>
-    </div>
-  </div>
-  <p class="roadmap-note">데이터가 아직 없다면 4·5장은 빈 결과표, 논의를 위한 질문, 기여 후보까지만 만들어 둡니다.</p>
-
-  <div class="status-now">
-    <span><b>아래는 전체 80쪽 안팎을 가정한 분량 배분 예시입니다.</b> 학교의 공식 분량 기준이 아니며, 실제 분량은 연구질문·방법·결과에 필요한 설명을 기준으로 지도교수와 정합니다.</span>
-  </div>
-
-  <div class="ratio-bar">
-    <span style="flex-grow:8.75; background:color-mix(in srgb, var(--track-a) 35%, var(--paper-raised)); color:var(--track-a-ink);">1장 8.75%</span>
-    <span style="flex-grow:15; background:color-mix(in srgb, var(--track-a) 55%, var(--paper-raised)); color:var(--track-a-ink);">2장 15%</span>
-    <span style="flex-grow:21.25; background:color-mix(in srgb, var(--track-a) 80%, var(--paper-raised)); color:var(--paper);">3장 21.25%</span>
-    <span style="flex-grow:30; background:var(--track-a); color:var(--paper);">4장 30%</span>
-    <span style="flex-grow:11.25; background:color-mix(in srgb, var(--track-a) 55%, var(--paper-raised)); color:var(--track-a-ink);">5장 11.25%</span>
-  </div>
-  <p class="roadmap-note" style="margin-top:10px;">위 비율은 전체 80쪽을 기준으로 한 각 장의 비중입니다. 본문 1~5장은 합계 86.25%이며, 앞부분·초록 6.25%, 참고문헌 5%, 부록 2.5%를 포함하면 100%입니다. 아래 쪽수 범위는 조정 가능한 예시입니다.</p>
-
-  <div class="table-scroll">
-  <table class="data-table">
-    <thead><tr><th>장</th><th>실증·설문형 쪽수</th><th>작성 초점</th></tr></thead>
-    <tbody>
-      <tr><td>제1장</td><td>6–8쪽</td><td>배경보다 문제·목적·RQ를 빠르게 제시</td></tr>
-      <tr><td>제2장</td><td>10–13쪽</td><td>연구모형·방법과 직접 연결</td></tr>
-      <tr><td>제3장</td><td>15–20쪽</td><td>재현 가능한 절차와 조건 설명</td></tr>
-      <tr><td>제4장</td><td>22–26쪽</td><td>연구질문에 답하는 핵심 증거</td></tr>
-      <tr><td>제5장</td><td>8–10쪽</td><td>RQ별 답과 의의를 명확히 제시</td></tr>
-    </tbody>
-  </table>
-  </div>
-
-  <h3 class="sub-h">제2장과 제3장을 한 세트로 점검</h3>
-  <p class="section-lede sub-lede">제2장은 지식을 나열하는 장이 아니라 제3장의 선택을 설명하는 근거이고, 제3장은 그 논리를 검증 가능한 절차로 바꾸는 장입니다.</p>
-  <div class="table-scroll">
-  <table class="data-table">
-    <thead><tr><th>제2장 근거</th><th>제3장 구현</th><th>검토 질문</th></tr></thead>
-    <tbody>
-      <tr><td>핵심 개념 정의</td><td>조작적 정의·측정문항</td><td>같은 의미로 측정하는가?</td></tr>
-      <tr><td>이론·선행모형</td><td>연구모형·가설</td><td>모든 경로에 근거가 있는가?</td></tr>
-      <tr><td>기존 연구의 한계</td><td>대상·맥락·방법의 차별성</td><td>설계가 한계를 보완하는가?</td></tr>
-      <tr><td>연구 Gap</td><td>연구질문·검증항목</td><td>결과로 Gap에 답할 수 있는가?</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p class="roadmap-note">전체 5장 내용과 형식 요건(인준서·쪽번호)은 <span class="mono">01_실증트랙_경영IS/06_숭실대논문구조.md</span>에 정리했습니다.</p>
-</div></details>
-</div></section>
-
-<section id="theory"><div class="wrap">
-  <span class="eyebrow">Theory</span>
-  <h2>이론과 가설</h2>
-  <p class="section-lede">개념 정의와 구분, 이론의 역할, 선행연구의 일치/불일치, 현재 맥락에의 적용을 설명합니다. 가설표에는 있는데 본문에서 논리적으로 도출되지 않은 경로가 없는지 확인합니다.</p>
-  <div class="mcm" style="grid-template-columns:1fr 1fr;">
-    <div class="card">
-      <h3>이론 후보표</h3>
-      <p>TAM, UTAUT/UTAUT2, D&amp;M IS Success, 신뢰 모형(Mayer, McKnight) 등 — 최근 실제 사례(김승연, 2026)에서도 이 후보군과 겹칩니다.</p>
-    </div>
-    <div class="card">
-      <h3>가설 판정 용어</h3>
-      <p>기본적으로 "지지/미지지/판정 불가"를 쓰고 추정치·CI·p·설계 조건을 함께 적습니다. 비유의 결과를 "효과가 없다"로 바꿔 쓰지 않습니다.</p>
-    </div>
-  </div>
-  <p class="roadmap-note">이론 후보와 선정 기준의 전체 표는 <span class="mono">01_실증트랙_경영IS/02_이론과가설.md</span>에 있습니다.</p>
-</div></section>
-
-<section id="measure"><div class="wrap">
-  <span class="eyebrow">Measurement</span>
-  <h2>측정과 표본설계</h2>
-  <p class="section-lede">개념을 정의하고, 측정과 자료 수집을 설계한 뒤, 결과를 해석합니다.</p>
-<div class="dg">
-  <div class="dg-head">
-    <h3>측정과 표본 설계</h3>
-    <p>개념을 정의하고, 측정과 자료 수집을 설계한 뒤, 결과를 해석합니다.</p>
-  </div>
-  <div class="dg-body">
-    <div class="dg-flow c4">
-      <div class="dg-step"><span class="dg-n">1</span><h4>개념 정의</h4><p>문헌을 바탕으로 개념의 뜻과 범위를 정합니다.</p></div>
-      <div class="dg-step"><span class="dg-n">2</span><h4>측정 설계</h4><p>척도·문항을 검토하고 파일럿으로 점검합니다.</p></div>
-      <div class="dg-step"><span class="dg-n">3</span><h4>자료 수집</h4><p>표집과 동의 절차를 정하고 자료 품질을 확인합니다.</p></div>
-      <div class="dg-step"><span class="dg-n">4</span><h4>분석·해석</h4><p>신뢰도·타당도, 변수 간 관계와 해석의 한계를 검토합니다.</p></div>
-    </div>
-    <p class="dg-note"><b>설문은 SEM과 같은 뜻이 아니고, 관찰된 관계가 곧 인과를 뜻하지도 않습니다.</b> 분석방법은 연구질문과 자료의 성격에 맞춰 선택합니다.</p>
-    <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/empirical-process-slide.webp" target="_blank" rel="noopener"><img src="assets/empirical-process-slide.webp" width="1672" height="941" alt="개념 정의, 측정 설계, 자료 수집, 분석·해석으로 이어지는 네 단계. 설문과 SEM, 관계와 인과를 구분합니다." loading="lazy" decoding="async"></a></details>
-  </div>
-  <p class="dg-src">근거: <span class="mono">01_실증트랙_경영IS/03_측정과표본설계.md</span>와 <span class="mono">12_단계별_지침_라이브러리/09_설문측정척도품질.md</span>·<span class="mono">05_표본_검정력_수집종료설계.md</span>의 단계 구성을 옮긴 것입니다.</p>
-</div>
-<details class="reading-details"><summary>표본 설계 원칙과 상세 자료</summary><div class="reading-details-body">
-<p class="section-lede">척도 선택부터 번역·문항작성·파일럿·본조사·측정품질 검증까지, 설문을 "문항 모음"이 아니라 타당성 있는 측정도구로 설계합니다.</p>
-<div class="template-card">
-    <span class="tag">표본 설계 원칙</span>
-    <p>표본수를 관행이나 편의에 맞추지 않고, 추론목표·최소의미효과·설계효과에 근거해 사전에 정하고 수집 종료규칙까지 미리 세웁니다.</p>
-  </div>
-  <p class="roadmap-note">척도·표본 설계의 전체 절차는 <span class="mono">01_실증트랙_경영IS/03_측정과표본설계.md</span>, <span class="mono">12_단계별_지침_라이브러리/09_설문측정척도품질.md</span>·<span class="mono">05_표본_검정력_수집종료설계.md</span>에 있습니다.</p>
-</div></details>
-</div></section>
-
-<section id="analysis"><div class="wrap">
-  <span class="eyebrow">Analysis</span>
-  <h2>자료분석 — 인과추론과 강건성</h2>
-  <p class="section-lede">연구설계별로 어디까지 인과를 주장할 수 있는지 구분합니다. 통계적 유의성과 인과 주장을 혼동하지 않습니다.</p>
-  <div class="mistakes">
-    <div class="mistake"><span class="idx">01</span><div class="body"><h4>단일요인 설명비율만 보고 동일방법편의 없음이라 단정</h4><p>절 제목만 보고 그 논리를 그대로 복사하지 않습니다.</p></div></div>
-    <div class="mistake"><span class="idx">02</span><div class="body"><h4>경로 크기와 통계적 유의성 혼동</h4><p>한 집단에서의 유의성과 집단 간 차이, 표본 내 설명력과 표본 밖 예측력을 구분합니다.</p></div></div>
-    <div class="mistake"><span class="idx">03</span><div class="body"><h4>횡단 설문 결과를 인과관계로 단정</h4><p>유의한 경로 하나만으로 "원인이다"라고 쓰지 않습니다. 대안설명·경계조건을 함께 논의합니다.</p></div></div>
-  </div>
-  <p class="roadmap-note">통제변수 선정·모형점검·강건성 메뉴는 <span class="mono">01_실증트랙_경영IS/04_자료분석.md</span>, <span class="mono">12_단계별_지침_라이브러리/10_실증분석_인과추론_강건성.md</span>에 정리했습니다.</p>
-</div></section>
-
-<section id="cases"><div class="wrap">
-  <span class="eyebrow">Benchmarking</span>
-  <h2>최근 사례로 확인하기 (2026, 20.5기)</h2>
-  <p class="section-lede">가장 최근에, 같은 학과·같은 지도교수 아래 실제로 통과한 실증 트랙 논문입니다.</p>
-  <div class="case-grid">
-    <div class="case-card">
-      <span class="who">김승연 · 2026.06</span>
-      <h4>생성형 AI 기반 축제큐레이터 서비스의 사용의도에 영향을 미치는 요인에 관한 연구</h4>
-      <p>공개발표 자료(목차·참고문헌 48건)로 확인. 목차는 실증 5장 구성과 정확히 일치하며, 이론적 기반은 TAM·UTAUT·D&amp;M IS Success·신뢰 모형과 겹칩니다. 본문 전체는 확인하지 못했습니다.</p>
-    </div>
-  </div>
-  <p class="roadmap-note">김승연의 심사결과보고서도 "학칙시행세칙(대학원) 제48조"를 인용해 논문 구비 순서를 확인하고 있습니다. 상세 비교와 심사결과보고서 확인 내용은 <span class="mono">05_최근논문벤치마킹.md</span>를 참고하세요.</p>
-</div></section>
-
-<section id="citation"><div class="wrap">
-  <span class="eyebrow">Citation</span>
-  <h2>인용 스타일 — APA 7</h2>
-  <p class="section-lede">이 가이드는 저자-연도 인용 방식인 <b>APA 7판</b>을 예시로 설명합니다. 연구방법만으로 인용 스타일이 정해지는 것은 아닙니다. <b>APA 규칙과 학교 서식 규정이 다를 수 있습니다</b> — <span class="mono">07_논문서식_필수안내서.md</span> 6절은 저자가 4인 이상이어도 전원 기입하도록 정합니다. 충돌하면 학위논문은 학교 규정을, 학술논문은 제출처 규정을 따릅니다.</p>
-  <div class="mcm" style="grid-template-columns:1fr 1fr;">
-    <div class="card">
-      <h3>본문 인용</h3>
-      <p>저자-연도 방식: <span class="mono">(Davis, 1989)</span>, 2인은 <span class="mono">&amp;</span>로 연결, 3인 이상은 <span class="mono">et al.</span>을 씁니다.</p>
-    </div>
-    <div class="card">
-      <h3>참고문헌 정렬</h3>
-      <p>저자 성(surname) 알파벳순으로 정렬하고 확인한 DOI를 기재합니다. 참고문헌은 저자 20명까지 모두 표기하며, 21명 이상은 앞의 19명·생략부호·마지막 저자를 씁니다. 본문 인용의 et al. 규칙과 구분하세요.</p>
-    </div>
-  </div>
-  <p class="roadmap-note">완료기준과 흔한 실수까지 정리한 전체 지침은 <span class="mono">12_단계별_지침_라이브러리/19_APA7인용.md</span>에 있습니다. RefWorks·Zotero 활용법은 <span class="mono">08_공공데이터포털과RefWorks.md</span>를, 서식 자체는 <span class="mono">07_논문서식_필수안내서.md</span> 6절과 대조하세요.</p>
-</div></section>
-
-<section id="resources"><div class="wrap">
-  <span class="eyebrow">Learn more</span>
-  <h2>실증 트랙 학습자료</h2>
-  <p class="section-lede">연구방법을 더 공부할 때 참고할 자료입니다. <b>가입·결제 없이 바로 볼 수 있는 것만</b> 실었습니다. 이용 전 최신 판본과 운영 여부를 확인하세요. (확인일 2026-09-21)</p>
-  <div class="res-groups">
-    <div class="res-group a">
-      <h4>유튜브</h4>
-      <div class="res-list">
-        <div class="res-item"><a href="https://www.youtube.com/channel/UCPtO0YQ0P57wmjtsFnbNDFg" target="_blank" rel="noopener">논문쓰는남자 [논쓰남]</a><span class="res-note">SPSS 매개·조절 실습</span></div>
-        <div class="res-item"><a href="https://www.youtube.com/@bbaknon" target="_blank" rel="noopener">논문의신_빡논특강</a><span class="res-note">통계표 작성법</span></div>
-        <div class="res-item"><a href="https://www.youtube.com/@신데랩" target="_blank" rel="noopener">신데랩 논문통계분석연구원</a><span class="res-note">PLS-SEM 단계별 강의</span></div>
-        <div class="res-item"><a href="https://www.youtube.com/@quickdata7" target="_blank" rel="noopener">퀵데이터 | 논문통계</a><span class="res-note">UTAUT 등 모형 적용 사례</span></div>
+  <div class="fmt">
+    <div class="fmt-band">
+      <h3>계열별 최소 요건 <span>학과 "학위논문 진행순서" 페이지, 확인일 2026-09-22</span></h3>
+      <div class="fmt-rows">
+        <div><b>인문사회계열</b><span>한국연구재단 <b>등재후보지 이상에 1건 이상</b> 게재 또는 게재 확정</span></div>
+        <div><b>자연과학·공학계열</b><span><b>SCI(E)급 1건 이상</b>, 또는 등재후보지 이상에 <b>2건 이상</b> 게재 또는 게재 확정</span></div>
       </div>
     </div>
-    <div class="res-group a">
-      <h4>웹사이트</h4>
-      <div class="res-list">
-        <div class="res-item"><a href="https://www.smartpls.com/" target="_blank" rel="noopener">SmartPLS</a><span class="res-note">PLS-SEM 공식 툴</span></div>
-        <div class="res-item"><a href="https://www.pls-sem.net/" target="_blank" rel="noopener">PLS-SEM Companion Site</a><span class="res-note">데이터셋·사례연구 자료</span></div>
-        <div class="res-item"><a href="https://apastyle.apa.org/" target="_blank" rel="noopener">APA Style (공식)</a><span class="res-note">인용·서식 공식 출처</span></div>
-        <div class="res-item"><a href="https://www.riss.kr/" target="_blank" rel="noopener">RISS 학술연구정보서비스</a><span class="res-note">국내 선행연구 검색</span></div>
-        <div class="res-item"><a href="https://www.dbpia.co.kr/" target="_blank" rel="noopener">DBpia</a><span class="res-note">경영·IS 학회지 원문</span></div>
+    <div class="fmt-band">
+      <h3>이 요건을 다룰 때 주의할 것</h3>
+      <div class="fmt-rows">
+        <div><b>최소 요건임</b><span>이 위에 더 강화된 학과 내규가 있으면 그 내규를 따릅니다</span></div>
+        <div><b>역산이 필요함</b><span>게재까지 심사·수정에 시간이 걸립니다. 제출 학기에서 거꾸로 세어 투고 시점을 잡으세요</span></div>
+        <div><b>투고처 확인</b><span>등재후보지 여부는 KCI에서, SCI(E) 등재와 사분위는 JCR에서 확인합니다. 학회 이름만 보고 짐작하지 마세요</span></div>
+        <div><b>학위논문과의 관계</b><span>같은 데이터로 학위논문과 학술논문을 함께 냈다면 그 관계를 밝혀야 합니다. 분량 증가나 문장 재서술은 실질적 확장이 아닙니다</span></div>
       </div>
     </div>
-  </div>
-  <p class="roadmap-note">위 자료는 모두 <b>가입이나 결제 없이 바로 볼 수 있는 것</b>만 골랐습니다. 구매가 필요한 도서 목록은 <span class="mono">03_학습자료_추천.md</span> 맨 뒤에 따로 모아 두었습니다 - 도서관 대출이 되는지 먼저 확인하세요.</p>
-  <p class="roadmap-note">전체 목록과 제외한 후보는 <span class="mono">03_학습자료_추천.md</span>에 정리했습니다.</p>
-</div></section>
-
-<section id="checklist"><div class="wrap">
-  <span class="eyebrow">Before you submit</span>
-  <h2>실증 트랙 자가 점검</h2>
-  <p class="section-lede">체크 상태는 이 브라우저에만 저장됩니다.</p>
-  <div class="checklist">
-    <div class="check-item"><input type="checkbox" id="m1"><label for="m1">척도의 원출처와 신뢰도(Cronbach's α)·타당도를 확인했다</label></div>
-    <div class="check-item"><input type="checkbox" id="m2"><label for="m2">표본수를 추론목표·최소의미효과에 근거해 사전에 정했다</label></div>
-    <div class="check-item"><input type="checkbox" id="m3"><label for="m3">동일방법편의·공통방법분산 검토를 절 제목만 보고 복사하지 않았다</label></div>
-    <div class="check-item"><input type="checkbox" id="m4"><label for="m4">지지되지 않은 가설도 빠짐없이 보고했다(사후 삭제하지 않았다)</label></div>
-    <div class="check-item"><input type="checkbox" id="m5"><label for="m5">인과 표현의 수위가 연구설계(횡단/종단/실험)가 허용하는 범위 안에 있다</label></div>
-    <div class="check-item"><input type="checkbox" id="m6"><label for="m6">적용할 인용 스타일을 확인하고 본문 인용과 참고문헌을 대조했다</label></div>
+    <p class="fmt-foot">투고처 선정·검증 절차는 <span class="mono">12_단계별_지침_라이브러리/23_학술지_학술대회투고처선정검증.md</span>, 사분위 판정 기록은 <span class="mono">24_JCR_Scopus_Q1Q2판정기록.md</span>, 학위논문을 학술논문으로 전환할 때의 중복·확장 판정은 <span class="mono">26_중복확장저작권.md</span>에 있습니다.</p>
   </div>
 </div></section>
 
-<section id="more"><div class="wrap">
-  <span class="eyebrow">Go deeper</span>
-  <h2>더 깊이 들어가기</h2>
-  <div class="more-grid">
-    <div class="more-card">
-      <h4>실증 트랙 실무 가이드 폴더</h4>
-      <p>주제·목적 정하기부터 이론·측정·분석·집필 단계별로 바로 쓸 수 있는 표 양식입니다.</p>
-      <span class="path">01_실증트랙_경영IS/</span>
+
+<section id="quartile"><div class="wrap">
+  <span class="eyebrow">Quartile</span>
+  <h2>학술지 사분위 Q1~Q4</h2>
+  <p class="section-lede">박사 연구실적을 채울 때 <b>어느 학술지에 내는가</b>가 곧 점수가 됩니다. 그런데 "Q1 저널"이라는 말 하나로는 증빙이 되지 않습니다. 같은 학술지가 지표에 따라, 분야에 따라, 연도에 따라 다른 Quartile을 가집니다.</p>
+
+  <div class="fmt">
+    <div class="fmt-band">
+      <h3>Q1~Q4가 뜻하는 것 <span>분야 안에서의 상대적 위치</span></h3>
+      <p style="font-size:12.5px; line-height:1.75; color:var(--ink-soft); margin-bottom:12px;">Quartile은 <b>개별 논문의 품질등급이 아니고 학술대회 등급도 아닙니다.</b> 특정 연도·데이터베이스·주제분야에서 계산된 <b>학술지의 순위비율</b>(Rank / 그 분야 전체 학술지 수)이 어느 구간에 들어가는지를 나타냅니다.</p>
+
+      <div class="q-bar"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+      <div class="q-bar-lab"><span>순위비율 0 (가장 높음)</span><span>1.00 (가장 낮음)</span></div>
+
+      <div class="q-tab">
+        <div>구간</div><div>순위비율</div><div>뜻</div>
+        <div class="q1"><b>Q1</b></div><div>0 초과 0.25 이하</div><div>그 분야 상위 25% 안에 드는 학술지</div>
+        <div class="q2"><b>Q2</b></div><div>0.25 초과 0.50 이하</div><div>상위 25~50% 구간</div>
+        <div class="q3"><b>Q3</b></div><div>0.50 초과 0.75 이하</div><div>상위 50~75% 구간</div>
+        <div class="q4"><b>Q4</b></div><div>0.75 초과 1.00 이하</div><div>하위 25% 구간</div>
+      </div>
+      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;"><b>동률 때문에 각 구간에 정확히 25%씩 들어가지 않을 수 있습니다.</b> 경계값에 걸린 학술지는 특히 주의하세요. Q1·Q2의 구간 정의는 <span class="mono">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</span> 2절에서 확인한 것이고, Q3·Q4는 같은 규칙을 이어서 적용한 것입니다.</p>
     </div>
-    <div class="more-card">
-      <h4>단계별 지침 라이브러리 — 실증 관련</h4>
-      <p>실증논문 지침, 설문·측정척도 품질, 실증분석·인과추론·강건성, APA7 인용 등 실행 단계별 상세 점검표입니다.</p>
-      <span class="path">12_단계별_지침_라이브러리/07, 09, 10, 19</span>
+
+    <div class="fmt-band">
+      <h3>Quartile은 하나가 아니다 <span>지표를 밝히지 않으면 증빙이 안 됩니다</span></h3>
+      <div class="fmt-rows">
+        <div><b>JIF Quartile</b><span>Clarivate Journal Citation Reports가 Journal Impact Factor로 매긴 주제분야별 위치</span></div>
+        <div><b>JCI Quartile</b><span>같은 JCR이 Journal Citation Indicator로 매긴 별도의 위치. JIF Quartile과 다른 값</span></div>
+        <div><b>CiteScore Quartile</b><span>Scopus Sources의 CiteScore Percentile 기반 위치</span></div>
+        <div><b>SJR Quartile</b><span>SCImago 지표 기반. <b>JCR·CiteScore와 같은 값으로 간주하면 안 됩니다</b></span></div>
+        <div><b>KCI 등재구분</b><span>국내 학술지의 등재·등재후보 상태. Q1~Q4와는 <b>완전히 별개 체계</b>입니다</span></div>
+      </div>
+      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;">같은 학술지가 여러 주제분야에 속하면 <b>분야마다 Rank와 Quartile이 다릅니다.</b> 최신 표시값과 본인 논문의 게재연도에 대응하는 값도 다를 수 있습니다. JCR은 연간 스냅샷이고 CiteScore Tracker는 월별 갱신값이라 확정 연간 값과 구분해야 합니다.</p>
     </div>
-    <div class="more-card">
-      <h4>차별성 검증·학술논문 전환</h4>
-      <p>이 논문이 기존 연구·실무와 무엇이 다른지 증거로 판정하고, 학술지 투고로 확장하는 절차입니다.</p>
-      <span class="path">12_단계별_지침_라이브러리/22, 23, 27</span>
+
+    <div class="fmt-band">
+      <h3>확인 순서</h3>
+      <div class="fmt-rows">
+        <div><b>1</b><span>학술지 공식명과 ISSN을 확인한다</span></div>
+        <div><b>2</b><span>JCR, Scopus Sources 또는 KCI 공식 검색에서 직접 찾는다</span></div>
+        <div><b>3</b><span>기준연도와 주제분야를 선택한다</span></div>
+        <div><b>4</b><span>Rank, Percentile, Quartile을 함께 기록한다</span></div>
+        <div><b>5</b><span>화면 또는 내보낸 자료를 날짜가 포함된 증빙파일로 보존한다</span></div>
+        <div><b>6</b><span>졸업·장학·실적 공고가 요구하는 데이터베이스와 판정연도를 대조한다</span></div>
+        <div><b>7</b><span>다중 분야·경계값·색인변경은 담당부서에 공식 판정을 확인하고 지도교수와 일정을 조정한다</span></div>
+      </div>
+      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;">기록할 항목은 <b>학술지명 · ISSN · 데이터베이스 · 지표명 · 기준연도 · 주제분야 · Rank/전체 수 · Percentile · Quartile · 확인일 · 공식 URL · 증빙파일 · 적용 공고</b>입니다. 표 양식은 <span class="mono">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</span> 3절에 있습니다.</p>
     </div>
-    <div class="more-card">
-      <h4>공통 허브 · 실험논문 작성가이드</h4>
-      <p>1~4학기 일정·WBS·간트차트는 공통 허브에 있습니다. 제출 실무(카피킬러·서식·RefWorks)는 06·07·08번 문서, 심사위원 후보 명단은 11번 문서를 보세요.</p>
-      <div class="guide-links" style="margin-top:10px;">
-        <a href="석사과정.html">공통 허브</a>
-        <a href="실험논문가이드.html">실험논문 작성가이드</a>
+
+    <div class="fmt-band">
+      <h3>이렇게 쓰면 증빙으로 인정받지 못합니다</h3>
+      <ul class="no-list">
+        <li>출판사 홈페이지의 홍보문구만으로 Quartile을 확정하는 것</li>
+        <li>JCR Quartile과 CiteScore Quartile을 구분하지 않고 혼용하는 것</li>
+        <li>여러 분야 중 <b>가장 높은 Quartile만</b> 근거 없이 제출하는 것</li>
+        <li>Scopus 검색의 Highest percentile만 제출하고 적용 주제분야를 생략하는 것</li>
+        <li>CiteScore Tracker를 확정 연간 Quartile처럼 쓰는 것</li>
+        <li>현재 Quartile을 과거 게재연도의 값처럼 쓰는 것</li>
+        <li>학술대회의 순위나 채택률을 Q1·Q2로 표현하는 것</li>
+        <li>색인중단·저널명 변경·ISSN 변경을 확인하지 않는 것</li>
+      </ul>
+      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;"><b>지표명과 연도를 생략한 "Q1 저널"이라는 표현 자체가 증빙으로 불충분합니다.</b> "2024년 JCR JIF Quartile 기준, Computer Science, Information Systems 분야 Q1"처럼 적어야 합니다.</p>
+    </div>
+
+    <div class="fmt-band">
+      <h3>졸업요건인가, 장학·성과평가 기준인가</h3>
+      <div class="fmt-rows">
+        <div><b>분리해 읽기</b><span>Q1·Q2가 졸업요건인지 장학·성과평가 기준인지 해당 공고에서 구분하세요. 같은 학교 안에서도 다릅니다</span></div>
+        <div><b>최소요건과 내규</b><span>일반대학원의 박사 연구실적 최소요건은 계열별 색인·게재건수 기준입니다. 더 강화된 학과 내규가 있으면 학과 기준이 적용됩니다</span></div>
+        <div><b>사업마다 다른 것</b><span>주저자·교신저자 인정 범위, 숭실대 소속 표기, 게재확정 인정 여부, 게재일 기준은 사업마다 다를 수 있습니다</span></div>
+        <div><b>최종 확정</b><span>전공계열과 개별 적용기준은 현행 규정·학과 내규와 적용 공고의 담당부서 판정으로 확정하고, 지도교수와 준비계획을 조정하세요</span></div>
       </div>
     </div>
+
+    <div class="fmt-band">
+      <h3>공식 확인처</h3>
+      <div class="fmt-rows">
+        <div><b>JCR</b><span><a href="https://clarivate.com/products/journal-citation-reports/" target="_blank" rel="noopener">Clarivate Journal Citation Reports</a> · <a href="https://journalcitationreports.zendesk.com/hc/en-gb/articles/28351666061457-Glossary" target="_blank" rel="noopener">JCR Glossary</a></span></div>
+        <div><b>색인 확인</b><span><a href="https://mjl.clarivate.com/home" target="_blank" rel="noopener">Clarivate Master Journal List</a> - SCI(E) 등재 여부를 여기서 확인합니다</span></div>
+        <div><b>Scopus</b><span><a href="https://www.scopus.com/sources" target="_blank" rel="noopener">Scopus Sources</a> · <a href="https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/" target="_blank" rel="noopener">CiteScore 설명</a></span></div>
+        <div><b>SJR</b><span><a href="https://www.scimagojr.com/" target="_blank" rel="noopener">SCImago Journal Rank</a> - 로그인 없이 열립니다</span></div>
+        <div><b>국내 학술지</b><span><a href="https://www.kci.go.kr/kciportal/landing/journalList.kci" target="_blank" rel="noopener">KCI 학술지 검색</a> - 등재·등재후보 상태 확인</span></div>
+      </div>
+      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;">JCR과 Scopus는 기관 구독이 필요할 수 있습니다. 숭실대 도서관을 통해 접근하세요. SCImago와 KCI, Master Journal List는 로그인 없이 열립니다(확인일 2026-09-23).</p>
+    </div>
+
+    <p class="fmt-foot">전체 판정 절차와 기록표는 <span class="mono">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</span>, 투고처 선정과 검증은 <span class="mono">23_학술지_학술대회투고처선정검증.md</span>에 있습니다.</p>
   </div>
+</div></section>
+
+<section id="review"><div class="wrap">
+  <span class="eyebrow">Committee</span>
+  <h2>심사</h2>
+  <p class="section-lede">위원 수, 외부위원 유무, 심사 횟수, 합격 기준이 모두 석사와 다릅니다.</p>
+
+  <div class="dg">
+    <div class="dg-head">
+      <h3>박사 심사위원회 5명</h3>
+      <p>석사는 3명 전원 내부지만, 박사는 5명이고 <b>외부위원이 1명 이상 필수</b>입니다.</p>
+    </div>
+    <div class="dg-body">
+      <div class="dg-flow c3">
+        <div class="dg-step"><span class="dg-n">1</span><h4>지도교수</h4><p>본인의 논문지도교수. 심사위원장은 맡을 수 없습니다.</p></div>
+        <div class="dg-step"><span class="dg-n">2</span><h4>내부위원</h4><p>본교 전임교원 또는 박사학위를 가진 겸임교원. 5명 중 최소 2인은 본교 전임교원이어야 합니다.</p></div>
+        <div class="dg-step"><span class="dg-n">3</span><h4>외부위원</h4><p>타 기관 소속. <b>1명 이상 필수</b>입니다. 위촉 시 학위논문 외부심사위원 자격확인서를 제출합니다.</p></div>
+      </div>
+      <p class="dg-foot"><b>심사 3회 이상</b>을 거치고, <b>5명 중 4인 이상이 100점 만점에 80점 이상</b>을 주어야 합격입니다. 불합격하면 1학기 이상 경과 후 1회에 한해 재심사할 수 있습니다. 심사방법은 논문심사와 구술시험이며 심사위원장이 정한 장소·시간에 시행합니다.</p>
+    </div>
+    <p class="dg-src">근거: <span class="mono">11_심사위원_후보와_구성.md</span> 0절이 학과 <a href="https://itpm.ssu.ac.kr/page/thesis_evaluation.php" target="_blank" rel="noopener">학위논문 심사방법</a> 페이지와 <span class="mono">grad.ssu.ac.kr</span> 공지 원문에서 확인한 내용입니다(확인일 2026-09-22). 후보 명단은 석사 기준으로 정리되어 있어 박사 외부위원 후보는 포함되어 있지 않습니다.</p>
+  </div>
+</div></section>
+
+<section id="format"><div class="wrap">
+  <span class="eyebrow">Format</span>
+  <h2>서식에서 다른 것</h2>
+  <p class="section-lede">구비 순서와 쪽번호 체계는 두 과정이 같습니다. <a href="석사과정.html#format">석사과정 가이드의 논문 양식 절</a>을 그대로 쓰고, 아래 네 가지만 바꿉니다.</p>
+
+  <div class="fmt">
+    <div class="fmt-band">
+      <div class="fmt-spec">
+        <div><dt>겉표지 색상</dt><dd>흑색 (석사는 감청색)</dd></div>
+        <div><dt>표지 문구</dt><dd>"박사학위 논문"으로 명확히. "석(박)사"를 그대로 두면 반송</dd></div>
+        <div><dt>인준서 심사위원</dt><dd>5명으로 인쇄. 전원 도장 또는 서명</dd></div>
+        <div><dt>ISNI</dt><dd>박사 졸업자는 논문 검증 완료 후 국제표준 이름 식별자 신청 가능</dd></div>
+      </div>
+    </div>
+    <p class="fmt-foot">판형(4&#215;6배판), 지질(70파운드 이상 백상지), 제본형식, 초록 3페이지 이내, 목차 번호 체계, 졸업 년/월 기재 규칙은 석사와 같습니다. 전체 규정은 <span class="mono">07_논문서식_필수안내서.md</span>에 있습니다.</p>
+  </div>
+</div></section>
+
+<section id="open"><div class="wrap">
+  <span class="eyebrow">Ask</span>
+  <h2>확인이 필요한 것</h2>
+  <p class="section-lede">아래는 이 가이드의 조사 범위에서 <b>확인하지 못한</b> 항목입니다. 없다는 뜻이 아니라 확인하지 못했다는 뜻이니, 해당 단계에 들어가기 전에 지도교수·학과에 직접 물어서 채우세요.</p>
+
+  <div class="phd-open">
+    <h3>학과에 물어야 할 목록</h3>
+    <p>박사과정은 석사보다 규정이 세분화되어 있는데, 공개된 문서만으로는 다음이 확인되지 않았습니다.</p>
+    <ul>
+      <li><b>박사 종합시험의 과목 수와 범위</b><span>응시자격(27학점 + 3학기)은 확인했으나 시험 과목 구성과 응시 횟수 제한은 확인하지 못했습니다</span></li>
+      <li><b>예비심사(예심)의 위치</b><span>이 가이드 자료에 한 번 등장하는데, 공식 절차인지 최종심사와 어떤 관계인지 정의되어 있지 않습니다</span></li>
+      <li><b>게재 확정의 인정 범위</b><span>게재 확정 증빙으로 무엇을 인정하는지, 온라인 선공개를 게재로 보는지 확인하지 못했습니다</span></li>
+      <li><b>제1저자 요건 여부</b><span>연구실적 요건에서 본인이 제1저자여야 하는지, 교신저자도 인정되는지 확인하지 못했습니다</span></li>
+      <li><b>외부 심사위원의 자격 요건</b><span>위촉 가능한 소속·직위 범위와 자격확인서의 구체적 항목은 확인하지 못했습니다</span></li>
+      <li><b>공동지도교수 위촉 요건</b><span>속표지 표기법(책임지도교수 다음에 공동지도교수)은 확인했으나 위촉 조건은 확인하지 못했습니다</span></li>
+      <li><b>심사비와 등록비 금액</b><span>납부 일정은 확인했으나 금액은 어느 문서에도 없습니다</span></li>
+    </ul>
+  </div>
+
+  <p class="roadmap-note" style="margin-top:20px;">확인되지 않은 것을 확인된 것처럼 적어 두면 제출 직전에 문제가 됩니다. 물어서 답을 얻으면 학술총무에게 알려 주세요 - 이 목록에서 지우고 근거를 붙이겠습니다. 용어 전반은 <span class="mono">14_학위논문_용어정의.md</span>에 확인 등급과 함께 정리되어 있습니다.</p>
 </div></section>
 
 <footer><div class="wrap">
-  <p>이 자료는 석사과정 원우의 논문작성을 돕고자 만든 기초자료입니다.</p>
-  <p>작성일 2026-09-21 · 내용 정리 2026-09-22</p>
+  <div class="guide-links">
+    <a href="index.html">과정 선택</a>
+    <a href="석사과정.html">석사과정 가이드</a>
+  </div>
+  <p style="margin-top:14px;">이 페이지는 박사과정에서 석사와 달라지는 부분만 다룹니다. 공통 내용은 석사과정 가이드를 함께 보세요.</p>
+  <p>작성일 2026-09-23</p>
 </div></footer>
-
-<script>
-(function(){
-  try{
-    var links = Array.prototype.slice.call(document.querySelectorAll('#navlinks a'));
-    var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        var id = '#' + entry.target.id;
-        var link = links.find(function(a){ return a.getAttribute('href') === id; });
-        if(!link) return;
-        if(entry.isIntersecting){
-          links.forEach(function(a){ a.classList.remove('active'); });
-          link.classList.add('active');
-        }
-      });
-    }, {rootMargin:'-40% 0px -50% 0px'});
-    sections.forEach(function(s){ io.observe(s); });
-  }catch(e){}
-
-  try{
-    var boxes = document.querySelectorAll('#checklist input[type=checkbox]');
-    var KEY = 'emp-guide-checklist-v1';
-    var saved = {};
-    try{ saved = JSON.parse(localStorage.getItem(KEY) || '{}'); }catch(e){ saved = {}; }
-    boxes.forEach(function(b){
-      if(saved[b.id]) b.checked = true;
-      b.addEventListener('change', function(){
-        try{
-          var s = JSON.parse(localStorage.getItem(KEY) || '{}');
-          s[b.id] = b.checked;
-          localStorage.setItem(KEY, JSON.stringify(s));
-        }catch(e){}
-      });
-    });
-  }catch(e){}
-})();
-</script>

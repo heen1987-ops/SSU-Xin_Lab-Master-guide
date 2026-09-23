@@ -4,9 +4,11 @@
 
 파일을 내려받지 않고 브라우저에서 바로 볼 수 있습니다.
 
-- [공통 허브](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/) — 의의·주제와 목적·방법 선택·전체 일정
-- [실증논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실증논문가이드.html)
-- [실험논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실험논문가이드.html)
+- **[과정 선택](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/)** — 석사과정과 박사과정 중 고르는 첫 화면. 규정상 수치가 다른 항목을 나란히 보여줍니다
+- [석사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/석사과정.html) — 의의·주제와 목적·방법 선택·전체 일정·논문 양식
+- [박사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/박사과정.html) — 석사와 다른 점, 연구실적 요건, 학술지 사분위 Q1~Q4, 심사
+- [실증논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실증논문가이드.html) — 설문·SEM 트랙
+- [실험논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실험논문가이드.html) — 비교실험 트랙
 
 ## 이 자료는 무엇인가
 
@@ -22,7 +24,9 @@
 
 | 위치 | 내용 | 대상 |
 |---|---|---|
-| [html/논문가이드.html](html/논문가이드.html) → [공통 허브](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/) | 학위논문의 의의, 주제·방법(실증/실험) 선택, 1~4학기 준비 일정 (처음 읽을 자료) | 전체 신입 원우 |
+| [html/index.html](html/index.html) → [과정 선택](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/) | 석사·박사 갈림 화면. 학점·지도기간·심사위원·합격판정·제출연한 등 규정상 수치가 다른 항목 비교 | 처음 들어오는 모든 원우 |
+| [html/석사과정.html](html/석사과정.html) → [석사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/%EC%84%9D%EC%82%AC%EA%B3%BC%EC%A0%95.html) | 학위논문의 의의, 주제·방법(실증/실험) 선택, 1~4학기 준비 일정, 논문 양식 | 석사과정 원우 |
+| [html/박사과정.html](html/박사과정.html) → [박사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/%EB%B0%95%EC%82%AC%EA%B3%BC%EC%A0%95.html) | 박사라서 다른 것만. 규정 수치 비교, 계열별 연구실적 요건, 학술지 사분위 Q1~Q4 판정, 심사위원 5명 구성, 확인이 필요한 항목 | 박사과정 원우, 진학을 고민하는 석사과정 원우 |
 | [html/실증논문가이드.html](html/실증논문가이드.html) → [실증논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/%EC%8B%A4%EC%A6%9D%EB%85%BC%EB%AC%B8%EA%B0%80%EC%9D%B4%EB%93%9C.html) | 실증 트랙 5장 구성·분량 배분·이론과 가설·측정/표본·인과추론·APA7 인용·최근 사례 | 실증(설문·SEM) 트랙으로 정한 원우 |
 | [html/실험논문가이드.html](html/실험논문가이드.html) → [실험논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/%EC%8B%A4%ED%97%98%EB%85%BC%EB%AC%B8%EA%B0%80%EC%9D%B4%EB%93%9C.html) | 실험 트랙 5장 구성·분량 배분·방법론 팩·설계 감사·IEEE 인용·최근 사례 | 실험(비교실험) 트랙으로 정한 원우 |
 | [01_실증트랙_경영IS/](01_실증트랙_경영IS/) | 설문·SEM 기반 경영·IS 실증연구 실무 가이드 7편 | 경영학과, IT정책경영학과 등 설문 기반 연구자 |
