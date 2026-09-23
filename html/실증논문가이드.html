@@ -221,6 +221,46 @@
   .gb-note b{display:grid; place-items:center; padding:10px; background:var(--accent-ink); color:var(--paper); font-size:10.5px; text-align:center;}
   .gb-note p{margin:0; padding:10px 12px; background:var(--accent-soft); color:var(--accent-ink); font-size:11.5px; line-height:1.6;}
 
+  /* ---- 도식 블록 ---- */
+  .dg{margin:26px 0; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
+  .dg-head{padding:16px 20px 14px; border-bottom:1px solid var(--line);}
+  .dg-head h3{font-family:var(--font-body); font-size:15.5px; font-weight:700;}
+  .dg-head p{font-size:12.5px; line-height:1.7; color:var(--ink-soft); margin-top:5px;}
+  .dg-body{padding:16px 20px 18px;}
+  .dg-flow{display:grid; gap:10px;}
+  .dg-flow.c2{grid-template-columns:repeat(2,1fr);}
+  .dg-flow.c3{grid-template-columns:repeat(3,1fr);}
+  .dg-flow.c4{grid-template-columns:repeat(4,1fr);}
+  .dg-flow.c5{grid-template-columns:repeat(5,1fr);}
+  .dg-step{position:relative; background:var(--paper-sunken); border-radius:var(--radius-sm); padding:12px 13px 13px;}
+  .dg-flow > .dg-step + .dg-step::before{content:""; position:absolute; left:-13px; top:50%; transform:translateY(-50%); border-left:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
+  .dg-n{display:inline-block; min-width:18px; height:18px; line-height:18px; text-align:center; padding:0 4px; border-radius:5px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--font-mono); font-size:11px; font-weight:700; margin-bottom:7px;}
+  .dg-flow.neutral .dg-n{background:var(--ink); color:var(--paper);}
+  .dg-step h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:5px;}
+  .dg-step p{font-size:12.5px; line-height:1.65; color:var(--ink-soft);}
+  .dg-back{position:relative; margin-top:10px; padding:9px 14px 9px 32px; border:1px dashed var(--line); border-radius:var(--radius-sm); font-size:12.5px; color:var(--ink-faint); background:var(--paper-sunken);}
+  .dg-back::before{content:""; position:absolute; left:14px; top:50%; transform:translateY(-50%); border-right:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
+  .dg-note{margin-top:10px; padding:10px 13px; border-radius:var(--radius-sm); background:var(--track-b-soft); color:var(--track-b-ink); font-size:12.5px; line-height:1.7;}
+  .dg-trunk{position:relative; background:var(--ink); color:var(--paper); border-radius:var(--radius-sm); padding:12px 14px; margin-bottom:17px;}
+  .dg-trunk h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:4px;}
+  .dg-trunk p{font-size:12.5px; line-height:1.65; opacity:.82;}
+  .dg-trunk::after{content:""; position:absolute; left:50%; bottom:-11px; transform:translateX(-50%); border-top:6px solid var(--ink); border-left:5px solid transparent; border-right:5px solid transparent;}
+  .dg-flow.nb > .dg-step + .dg-step::before{display:none;}
+  .dg-step.ta{background:var(--track-a-soft);}
+  .dg-step.ta h4{color:var(--track-a-ink);}
+  .dg-step.tb{background:var(--track-b-soft);}
+  .dg-step.tb h4{color:var(--track-b-ink);}
+  .dg-step.ta p,.dg-step.tb p{color:var(--ink);}
+  .dg-join{position:relative; margin-top:17px; background:var(--paper-sunken); border:1px solid var(--line); border-radius:var(--radius-sm); padding:12px 14px;}
+  .dg-join::before{content:""; position:absolute; left:50%; top:-11px; transform:translateX(-50%); border-top:6px solid var(--ink-faint); border-left:5px solid transparent; border-right:5px solid transparent;}
+  .dg-join h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:4px;}
+  .dg-join p{font-size:12.5px; line-height:1.65; color:var(--ink-soft);}
+  .dg-foot{margin-top:10px; padding:9px 13px; border-radius:var(--radius-sm); background:var(--paper-sunken); font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
+  @media (max-width:760px){
+    .dg-flow.c2,.dg-flow.c3,.dg-flow.c4,.dg-flow.c5{grid-template-columns:1fr;}
+    .dg-flow > .dg-step + .dg-step::before{left:50%; top:-13px; transform:translateX(-50%); border-left:5px solid transparent; border-right:5px solid transparent; border-top:6px solid var(--ink-faint); border-bottom:none;}
+  }
+
   /* ---- structure chapters ---- */
   .chapters{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px;}
   @media (max-width:720px){.chapters{grid-template-columns:1fr;}}
@@ -368,11 +408,22 @@
   <span class="eyebrow">Structure</span>
   <h2>실증논문은 어떻게 구성할까?</h2>
   <p class="section-lede">각 장의 역할을 먼저 파악하고, 내 연구질문에 맞게 목차를 구성하세요. 아래는 5장 구성 예시입니다.</p>
-<figure class="guide-slide" aria-labelledby="chapter-slide-title" lang="ko">
-  <a class="visual-slide-link" href="assets/thesis-chapters-slide.webp" target="_blank" rel="noopener" aria-label="논문 구성 · 5장 예시 슬라이드 크게 보기 (새 탭)"><img src="assets/thesis-chapters-slide.webp" width="1672" height="941" alt="하나의 연구질문으로 연결된 다섯 장. 서론, 선행연구, 연구방법, 결과·논의, 결론의 역할을 보여 줍니다." loading="lazy" decoding="async"></a>
-  <figcaption id="chapter-slide-title"><div class="slide-caption-row"><b>논문 구성 · 5장 예시</b><span aria-hidden="true">이미지 눌러 확대 ↗</span></div><p>장 수와 제목은 고정 요건이 아닙니다. 연구 내용과 학과 지침에 맞춰 조정하세요.</p></figcaption>
-  <details class="slide-transcript"><summary>그림 설명을 텍스트로 읽기</summary><div class="slide-transcript-body"><ol><li>1장 서론: 어떤 문제인가?</li><li>2장 선행연구: 무엇이 남아 있는가?</li><li>3장 연구방법: 어떻게 확인할 것인가?</li><li>4장 결과·논의: 무엇을 확인했는가?</li><li>5장 결론: 무엇을 기여했는가?</li><li>각 장은 같은 연구질문으로 연결됩니다. 실제 장 제목과 수는 연구 내용과 학과 지침에 맞춰 조정합니다.</li></ol></div></details>
-</figure>
+<div class="dg">
+  <div class="dg-head">
+    <h3>논문 구성 <span style="font-weight:400; color:var(--ink-faint); font-size:12.5px;">5장 예시</span></h3>
+    <p>각 장이 답하는 질문입니다. 장 수와 제목은 고정 요건이 아닙니다.</p>
+  </div>
+  <div class="dg-body">
+    <div class="dg-flow c5 neutral">
+      <div class="dg-step"><span class="dg-n">1장</span><h4>서론</h4><p>어떤 문제인가?</p></div>
+      <div class="dg-step"><span class="dg-n">2장</span><h4>선행연구</h4><p>무엇이 남아 있는가?</p></div>
+      <div class="dg-step"><span class="dg-n">3장</span><h4>연구방법</h4><p>어떻게 확인할 것인가?</p></div>
+      <div class="dg-step"><span class="dg-n">4장</span><h4>결과·논의</h4><p>무엇을 확인했는가?</p></div>
+      <div class="dg-step"><span class="dg-n">5장</span><h4>결론</h4><p>무엇을 기여했는가?</p></div>
+    </div>
+    <p class="dg-foot">다섯 장은 <b>같은 연구질문</b>으로 연결됩니다. 실제 장 제목과 수는 연구 내용과 학과 지침에 맞춰 조정하세요.</p>
+  </div>
+</div>
 <details class="reading-details"><summary>장별 상세 역할·분량 예시·연결 점검</summary><div class="reading-details-body">
 <p class="section-lede">대학원 공식 안내와 학칙에서 "본문을 반드시 5장으로 구성하라"는 규정은 확인되지 않았지만, 설문/SEM 기반 논문들의 실제 사례는 5장 구성입니다. 학과·지도교수가 별도로 요구할 수 있습니다.</p>
 
@@ -454,11 +505,21 @@
   <span class="eyebrow">Measurement</span>
   <h2>측정과 표본설계</h2>
   <p class="section-lede">개념을 정의하고, 측정과 자료 수집을 설계한 뒤, 결과를 해석합니다.</p>
-<figure class="guide-slide" aria-labelledby="measurement-visual-title" lang="ko">
-  <a class="visual-slide-link" href="assets/empirical-process-slide.webp" target="_blank" rel="noopener" aria-label="측정과 표본 설계 슬라이드 크게 보기 (새 탭)"><img src="assets/empirical-process-slide.webp" width="1672" height="941" alt="개념 정의, 측정 설계, 자료 수집, 분석·해석으로 이어지는 네 단계. 설문과 SEM, 관계와 인과를 구분합니다." loading="lazy" decoding="async"></a>
-  <figcaption id="measurement-visual-title"><div class="slide-caption-row"><b>측정과 표본 설계</b><span aria-hidden="true">이미지 눌러 확대 ↗</span></div><p>설문은 SEM과 같은 뜻이 아니며, 관찰된 관계만으로 인과를 단정하지 않습니다.</p></figcaption>
-  <details class="slide-transcript"><summary>그림 설명을 텍스트로 읽기</summary><div class="slide-transcript-body"><ol><li>개념 정의: 문헌을 바탕으로 개념의 뜻과 범위를 정합니다.</li><li>측정 설계: 척도·문항을 검토하고 파일럿으로 점검합니다.</li><li>자료 수집: 표집과 동의 절차를 정하고 자료 품질을 확인합니다.</li><li>분석·해석: 신뢰도·타당도, 변수 간 관계와 해석의 한계를 검토합니다.</li><li>설문과 SEM은 같지 않으며 관계가 곧 인과를 뜻하지 않습니다. 분석방법은 연구질문과 자료의 성격에 맞춰 선택합니다.</li></ol></div></details>
-</figure>
+<div class="dg">
+  <div class="dg-head">
+    <h3>측정과 표본 설계</h3>
+    <p>개념을 정의하고, 측정과 자료 수집을 설계한 뒤, 결과를 해석합니다.</p>
+  </div>
+  <div class="dg-body">
+    <div class="dg-flow c4">
+      <div class="dg-step"><span class="dg-n">1</span><h4>개념 정의</h4><p>문헌을 바탕으로 개념의 뜻과 범위를 정합니다.</p></div>
+      <div class="dg-step"><span class="dg-n">2</span><h4>측정 설계</h4><p>척도·문항을 검토하고 파일럿으로 점검합니다.</p></div>
+      <div class="dg-step"><span class="dg-n">3</span><h4>자료 수집</h4><p>표집과 동의 절차를 정하고 자료 품질을 확인합니다.</p></div>
+      <div class="dg-step"><span class="dg-n">4</span><h4>분석·해석</h4><p>신뢰도·타당도, 변수 간 관계와 해석의 한계를 검토합니다.</p></div>
+    </div>
+    <p class="dg-note"><b>설문은 SEM과 같은 뜻이 아니고, 관찰된 관계가 곧 인과를 뜻하지도 않습니다.</b> 분석방법은 연구질문과 자료의 성격에 맞춰 선택합니다.</p>
+  </div>
+</div>
 <details class="reading-details"><summary>표본 설계 원칙과 상세 자료</summary><div class="reading-details-body">
 <p class="section-lede">척도 선택부터 번역·문항작성·파일럿·본조사·측정품질 검증까지, 설문을 "문항 모음"이 아니라 타당성 있는 측정도구로 설계합니다.</p>
 <div class="template-card">

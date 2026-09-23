@@ -102,6 +102,81 @@
   }
   .degree-compare .dc-note{padding:14px 22px 20px; font-size:12.5px; color:var(--ink-faint); border-top:1px dashed var(--line); margin-top:4px;}
 
+  /* ---- 도식 블록 ---- */
+  .dg{margin:26px 0; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
+  .dg-head{padding:16px 20px 14px; border-bottom:1px solid var(--line);}
+  .dg-head h3{font-family:var(--font-body); font-size:15.5px; font-weight:700;}
+  .dg-head p{font-size:12.5px; line-height:1.7; color:var(--ink-soft); margin-top:5px;}
+  .dg-body{padding:16px 20px 18px;}
+  .dg-flow{display:grid; gap:10px;}
+  .dg-flow.c2{grid-template-columns:repeat(2,1fr);}
+  .dg-flow.c3{grid-template-columns:repeat(3,1fr);}
+  .dg-flow.c4{grid-template-columns:repeat(4,1fr);}
+  .dg-flow.c5{grid-template-columns:repeat(5,1fr);}
+  .dg-step{position:relative; background:var(--paper-sunken); border-radius:var(--radius-sm); padding:12px 13px 13px;}
+  .dg-flow > .dg-step + .dg-step::before{content:""; position:absolute; left:-13px; top:50%; transform:translateY(-50%); border-left:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
+  .dg-n{display:inline-block; min-width:18px; height:18px; line-height:18px; text-align:center; padding:0 4px; border-radius:5px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--font-mono); font-size:11px; font-weight:700; margin-bottom:7px;}
+  .dg-step h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:5px;}
+  .dg-step p{font-size:12.5px; line-height:1.65; color:var(--ink-soft);}
+  .dg-back{position:relative; margin-top:10px; padding:9px 14px 9px 32px; border:1px dashed var(--line); border-radius:var(--radius-sm); font-size:12.5px; color:var(--ink-faint); background:var(--paper-sunken);}
+  .dg-back::before{content:""; position:absolute; left:14px; top:50%; transform:translateY(-50%); border-right:6px solid var(--ink-faint); border-top:5px solid transparent; border-bottom:5px solid transparent;}
+  .dg-note{margin-top:10px; padding:10px 13px; border-radius:var(--radius-sm); background:var(--track-b-soft); color:var(--track-b-ink); font-size:12.5px; line-height:1.7;}
+  @media (max-width:760px){
+    .dg-flow.c2,.dg-flow.c3,.dg-flow.c4,.dg-flow.c5{grid-template-columns:1fr;}
+    .dg-flow > .dg-step + .dg-step::before{left:50%; top:-13px; transform:translateX(-50%); border-left:5px solid transparent; border-right:5px solid transparent; border-top:6px solid var(--ink-faint); border-bottom:none;}
+  }
+
+  .dg-trunk{position:relative; background:var(--ink); color:var(--paper); border-radius:var(--radius-sm); padding:12px 14px; margin-bottom:17px;}
+  .dg-trunk h4{font-family:var(--font-body); font-size:13.5px; font-weight:700; margin-bottom:4px;}
+  .dg-trunk p{font-size:12.5px; line-height:1.65; opacity:.82;}
+  .dg-trunk::after{content:""; position:absolute; left:50%; bottom:-11px; transform:translateX(-50%); border-top:6px solid var(--ink); border-left:5px solid transparent; border-right:5px solid transparent;}
+  .dg-flow.nb > .dg-step + .dg-step::before{display:none;}
+  .dg-step.ta{background:var(--track-a-soft);}
+  .dg-step.ta h4{color:var(--track-a-ink);}
+  .dg-step.tb{background:var(--track-b-soft);}
+  .dg-step.tb h4{color:var(--track-b-ink);}
+  .dg-step.ta p,.dg-step.tb p{color:var(--ink);}
+  .dg-foot{margin-top:10px; padding:9px 13px; border-radius:var(--radius-sm); background:var(--paper-sunken); font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
+
+  /* ---- 용어 정의 블록 ---- */
+  .defs{margin-bottom:32px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
+  .defs-head{padding:18px 22px 16px;}
+  .defs-head .tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; padding:3px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent-ink); margin-bottom:10px;}
+  .defs-head p{font-size:14px; line-height:1.75; color:var(--ink);}
+  .defs-grid{display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line);}
+  .def-card{padding:16px 20px 18px; border-left:1px solid var(--line);}
+  .def-card:first-child{border-left:none;}
+  .def-kicker{display:block; font-size:10.5px; font-weight:700; letter-spacing:.06em; margin-bottom:8px;}
+  .def-card.m .def-kicker{color:var(--accent-ink);}
+  .def-card.d .def-kicker{color:var(--track-b-ink);}
+  .def-card h4{font-family:var(--font-body); font-size:17px; font-weight:700; margin-bottom:2px;}
+  .def-card h4 span{font-size:11.5px; font-weight:500; color:var(--ink-faint); margin-left:7px;}
+  .def-lead{font-size:13.5px; line-height:1.7; padding:10px 12px; border-radius:var(--radius-sm); margin:10px 0 12px;}
+  .def-card.m .def-lead{background:var(--accent-soft); color:var(--accent-ink);}
+  .def-card.d .def-lead{background:var(--track-b-soft); color:var(--track-b-ink);}
+  .def-card dl{margin:0;}
+  .def-card dl > div{display:grid; grid-template-columns:82px 1fr; gap:10px; padding:7px 0; border-top:1px dashed var(--line); font-size:12.5px; line-height:1.65;}
+  .def-card dl > div:first-child{border-top:none; padding-top:0;}
+  .def-card dt{font-weight:700; color:var(--ink-faint); font-size:11.5px;}
+  .def-card dd{margin:0; color:var(--ink);}
+  .defs-circle{display:grid; grid-template-columns:118px 1fr; gap:18px; align-items:center; padding:16px 22px; border-top:1px solid var(--line); background:var(--paper-sunken);}
+  .dc-svg{width:118px; height:118px; display:block;}
+  .dc-items{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .dc-items > div{background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius-sm); padding:9px 11px;}
+  .dc-items b{display:block; font-size:12.5px; margin-bottom:3px;}
+  .dc-items > div:nth-child(1) b{color:var(--ink-faint);}
+  .dc-items > div:nth-child(2) b{color:var(--accent-ink);}
+  .dc-items > div:nth-child(3) b{color:var(--track-b-ink);}
+  .dc-items span{display:block; font-size:11.5px; line-height:1.6; color:var(--ink-soft);}
+  .defs-src{padding:12px 22px 16px; border-top:1px dashed var(--line); font-size:11.5px; line-height:1.75; color:var(--ink-faint);}
+  @media (max-width:760px){
+    .defs-grid{grid-template-columns:1fr;}
+    .def-card{border-left:none; border-top:1px solid var(--line);}
+    .def-card:first-child{border-top:none;}
+    .defs-circle{grid-template-columns:1fr; justify-items:center; gap:14px;}
+    .dc-items{grid-template-columns:1fr; width:100%;}
+  }
+
   /* ---- 논문 양식 블록 ---- */
   .fmt{margin-top:28px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
   .fmt-band{border-top:1px solid var(--line); padding:18px 22px 20px;}
@@ -397,20 +472,66 @@
     <span>이 자료는 신랩의 석사과정생들의 논문작성을 돕고자 만든 기초자료입니다.</span>
   </div>
 
-  <figure class="guide-slide" aria-labelledby="research-story-title" lang="ko">
-  <a class="visual-slide-link" href="assets/research-journey-slide.webp" target="_blank" rel="noopener" aria-label="논문 준비 한눈에 보기 슬라이드 크게 보기 (새 탭)"><img src="assets/research-journey-slide.webp" width="1672" height="941" alt="연구질문 정하기, 근거 모으기, 논문으로 설명하기의 세 단계와 앞 단계로 돌아가는 화살표." loading="lazy" decoding="async"></a>
-  <figcaption id="research-story-title"><div class="slide-caption-row"><b>논문 준비 한눈에 보기</b><span aria-hidden="true">이미지 눌러 확대 ↗</span></div><p>연구질문 → 근거 확인 → 결과 설명. 필요하면 앞 단계로 돌아가 범위를 조정합니다.</p></figcaption>
-  <details class="slide-transcript"><summary>그림 설명을 텍스트로 읽기</summary><div class="slide-transcript-body"><ol><li>연구질문 정하기: 관심사와 문제를 찾고 선행연구를 검토해 질문과 범위를 구체화합니다.</li><li>근거 모으기: 자료와 방법을 선택해 수집·분석·평가하고 근거의 한계를 확인합니다.</li><li>논문으로 설명하기: 결과를 연구질문과 연결하고 의미·기여·한계·후속연구를 정리합니다.</li></ol></div></details>
-</figure>
+  <div class="dg">
+  <div class="dg-head">
+    <h3>논문 준비 한눈에 보기</h3>
+    <p>연구질문을 정하고, 근거를 모으고, 결과를 설명합니다. 세 단계는 한 방향으로만 가지 않습니다.</p>
+  </div>
+  <div class="dg-body">
+    <div class="dg-flow c3">
+      <div class="dg-step"><span class="dg-n">1</span><h4>연구질문 정하기</h4><p>관심사와 문제를 찾고 선행연구를 검토해 질문과 범위를 구체화합니다.</p></div>
+      <div class="dg-step"><span class="dg-n">2</span><h4>근거 모으기</h4><p>자료와 방법을 선택해 수집·분석·평가하고 근거의 한계를 확인합니다.</p></div>
+      <div class="dg-step"><span class="dg-n">3</span><h4>논문으로 설명하기</h4><p>결과를 연구질문과 연결하고 의미·기여·한계·후속연구를 정리합니다.</p></div>
+    </div>
+    <p class="dg-back">필요하면 앞 단계로 돌아가 범위를 조정합니다</p>
+  </div>
+</div>
 
 </div></header>
 
 <section id="meaning"><div class="wrap">
-  <div class="template-card" style="margin-bottom:32px;">
-    <span class="tag">먼저, 용어부터</span>
-    <p style="font-family:var(--font-body); font-size:14.5px; line-height:1.8; color:var(--accent-ink);">둘 다 대학원에서 학위논문을 쓰고 심사를 통과해야 받는 학위라는 점은 같습니다. 다른 것은 그 논문이 무엇을 증명해야 하는가입니다. <b>석사(Master's degree)</b>는 연구방법론을 처음부터 끝까지 한 번 제대로 수행했음을 보이면 됩니다(석사, 2025). <b>박사(Ph.D.)</b>는 해당 분야에 아직 없던 독자적인 학술적 기여를 실제로 만들어냈음을 증명해야 하는, 학위 체계에서 가장 높은 학위입니다. "Philosophy(Ph.D.)"는 좁은 의미의 철학이 아니라 중세 유럽 대학의 기초학부를 가리키던 말에서 왔습니다(박사, 2026).</p>
-    <p style="font-size:13px; color:var(--ink-faint); margin-top:10px; padding-top:10px; border-top:1px dashed var(--line);">비유하면: 인류의 지식을 큰 원이라 할 때, 석사는 자기 전공 영역을 좀 더 깊이 파고드는 것이고, 박사는 그 지식의 "경계"까지 나아가 몇 년간 밀어붙여 경계에 작은 돌기 하나를 만들어내는 것입니다(Might, 2010).</p>
-    <p style="font-size:12px; color:var(--ink-faint); margin-top:8px;">과정별 요건과 참고자료는 <span class="mono">04_석사와_박사의_차이.md</span>에 정리했습니다.</p>
+  <div class="defs">
+    <div class="defs-head">
+      <span class="tag">먼저, 용어부터</span>
+      <p>둘 다 대학원에서 학위논문을 쓰고 심사를 통과해야 받는 학위입니다. 다른 것은 <b>그 논문이 무엇을 증명해야 하는가</b>입니다.</p>
+    </div>
+    <div class="defs-grid">
+      <div class="def-card m">
+        <span class="def-kicker">석사의 정의</span>
+        <h4>석사 <span>Master&#39;s degree</span></h4>
+        <p class="def-lead">연구방법론을 처음부터 끝까지 <b>한 번 제대로 수행했음</b>을 보이면 됩니다.</p>
+        <dl>
+          <div><dt>받는 조건</dt><dd>학사 학위 취득 후 석사과정에서 자격요건을 충족하고, 지도교수 지도 아래 학위논문을 써서 심사를 통과</dd></div>
+          <div><dt>논문이 증명할 것</dt><dd>방법론을 올바르게 적용했는가</dd></div>
+          <div><dt>말의 유래</dt><dd>"Master"는 스승·장인을 뜻했습니다. 학위명 "석사"는 한국과 중화권에서 쓰고, 일본은 "슈시" 또는 "박사전기"라고 합니다</dd></div>
+        </dl>
+      </div>
+      <div class="def-card d">
+        <span class="def-kicker">박사의 정의</span>
+        <h4>박사 <span>Ph.D. · Doctor of Philosophy</span></h4>
+        <p class="def-lead">그 분야에 아직 없던 <b>독자적인 학술적 기여를 실제로 만들어냈음</b>을 증명해야 합니다.</p>
+        <dl>
+          <div><dt>받는 조건</dt><dd>석사 또는 학사 학위 취득 후 박사과정에서 학위논문을 써서 심사를 통과. 학위 체계에서 가장 높은 학위</dd></div>
+          <div><dt>논문이 증명할 것</dt><dd>새로운 지식을 실제로 더했는가</dd></div>
+          <div><dt>말의 유래</dt><dd>"Doctor"는 가르치다라는 뜻의 라틴어 docere에서, "Philosophiae"는 좁은 뜻의 철학이 아니라 중세 유럽 대학의 기초학부에서 왔습니다. 그래서 공학·경영학 박사도 Ph.D.입니다. 한국어 "박사"는 4세기 고구려 태학의 벼슬 이름에서 유래했습니다</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="defs-circle">
+      <svg class="dc-svg" viewBox="0 0 120 120" role="img" aria-label="인류의 지식 전체를 나타내는 큰 원. 가운데 작은 점이 학사, 그것을 감싼 원이 석사, 큰 원의 오른쪽 경계에 튀어나온 작은 돌기가 박사입니다.">
+        <circle cx="56" cy="60" r="46" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+        <circle cx="56" cy="60" r="20" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+        <circle cx="56" cy="60" r="6" fill="var(--ink-faint)"/>
+        <line x1="56" y1="60" x2="100" y2="60" stroke="var(--track-b)" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <circle cx="104" cy="60" r="8" fill="var(--track-b-soft)" stroke="var(--track-b)" stroke-width="2"/>
+      </svg>
+      <div class="dc-items">
+        <div><b>학사</b><span>원 안에서 자기 전공만큼의 작은 영역을 갖습니다</span></div>
+        <div><b>석사</b><span>그 영역을 조금 더 깊이 파고듭니다</span></div>
+        <div><b>박사</b><span>지식의 경계까지 나아가 몇 년간 밀어붙여, 경계에 아주 작은 돌기 하나를 만들어냅니다</span></div>
+      </div>
+    </div>
+    <p class="defs-src">위 정의와 비유는 백과사전 항목(위키백과 "석사" 2025-04-07 판, "박사" 2026-01-02 판)과 Matt Might의 칼럼 The illustrated guide to a Ph.D.(2010)를 정리한 것으로, <b>학교 규정이 아닙니다.</b> 실제 학위요건은 소속 대학원 학칙을 확인하세요. 과정별 요건 비교와 참고문헌은 <span class="mono">04_석사와_박사의_차이.md</span>, 용어 전반은 <span class="mono">14_학위논문_용어정의.md</span>에 있습니다.</p>
   </div>
   <span class="eyebrow">Why</span>
   <h2>학위논문의 의의</h2>
@@ -442,7 +563,7 @@
     <div class="dc-row"><div>핵심 목표</div><div>명확한 질문에 적절한 방법과 근거로 답하는 역량 기르기</div><div>독립적 연구자로서 새로운 지식에 기여했음을 증명하는 것</div></div>
     <div class="dc-row"><div>취득 학점</div><div>24학점 이상</div><div>36학점 이상</div></div>
     <div class="dc-row"><div>논문지도 기간</div><div>2개학기 이상</div><div>3개학기 이상</div></div>
-    <div class="dc-row"><div>심사위원</div><div>3명 · 외부위원 1명까지 가능(필수 아님)</div><div>5명 · 외부위원 1명 이상 필수</div></div>
+    <div class="dc-row"><div>심사위원</div><div>3명 전원 내부</div><div>5명 · 외부위원 1명 이상 필수</div></div>
     <div class="dc-row"><div>심사 횟수</div><div>2회 이상(공개발표 포함)</div><div>3회 이상</div></div>
     <div class="dc-row"><div>합격 판정</div><div>심사위원 2인 이상이 70점 이상</div><div>4인 이상이 80점 이상</div></div>
     <div class="dc-row"><div>제출가능연한</div><div>입학일로부터 6년 이내</div><div>10년 이내</div></div>
@@ -455,11 +576,22 @@
   <span class="eyebrow">Topic &amp; Purpose</span>
   <h2>주제와 연구목적 정하기</h2>
   <p class="section-lede">관심사를 문헌과 자료로 확인할 수 있는 연구질문으로 좁혀 보세요.</p>
-<figure class="guide-slide" aria-labelledby="topic-visual-title" lang="ko">
-  <a class="visual-slide-link" href="assets/research-topic-slide.webp" target="_blank" rel="noopener" aria-label="주제 선정 · 가상 예시 슬라이드 크게 보기 (새 탭)"><img src="assets/research-topic-slide.webp" width="1672" height="941" alt="관심사에서 문제 찾기, 문헌 검토를 거쳐 구체적인 연구질문으로 좁아지는 네 단계." loading="lazy" decoding="async"></a>
-  <figcaption id="topic-visual-title"><div class="slide-caption-row"><b>주제 선정 · 가상 예시</b><span aria-hidden="true">이미지 눌러 확대 ↗</span></div><p>측정 가능성·자료 접근성·연구 가치를 함께 확인하세요.</p></figcaption>
-  <details class="slide-transcript"><summary>그림 설명을 텍스트로 읽기</summary><div class="slide-transcript-body"><ol><li>관심사: AI 서비스에 관심을 갖습니다.</li><li>문제 찾기: 왜 사용을 중단하는지 질문합니다.</li><li>문헌 검토: 기존 설명과 남은 질문을 구분합니다.</li><li>연구질문: 지속사용의도와 관련된 요인이 무엇인지 구체화합니다.</li><li>측정할 수 있는가, 자료를 구할 수 있는가, 답할 가치가 있는가를 점검합니다. 가상 예시이며 문헌과 자료 접근성을 확인하며 범위를 조정합니다.</li></ol></div></details>
-</figure>
+<div class="dg">
+  <div class="dg-head">
+    <h3>주제 선정 <span style="font-weight:400; color:var(--ink-faint); font-size:12.5px;">가상 예시</span></h3>
+    <p>관심사에서 출발해 문헌과 자료로 확인할 수 있는 연구질문까지 좁혀 갑니다.</p>
+  </div>
+  <div class="dg-body">
+    <div class="dg-flow c4">
+      <div class="dg-step"><span class="dg-n">1</span><h4>관심사</h4><p>AI 서비스에 관심을 갖습니다.</p></div>
+      <div class="dg-step"><span class="dg-n">2</span><h4>문제 찾기</h4><p>왜 사용을 중단하는지 질문합니다.</p></div>
+      <div class="dg-step"><span class="dg-n">3</span><h4>문헌 검토</h4><p>기존 설명과 남은 질문을 구분합니다.</p></div>
+      <div class="dg-step"><span class="dg-n">4</span><h4>연구질문</h4><p>지속사용의도와 관련된 요인이 무엇인지 구체화합니다.</p></div>
+    </div>
+    <p class="dg-back">문헌과 자료 접근성을 확인하며 범위를 조정합니다</p>
+    <p class="dg-foot">네 단계를 지난 뒤 <b>측정할 수 있는가 · 자료를 구할 수 있는가 · 답할 가치가 있는가</b> 세 가지를 점검합니다. 아래 카드에서 이어집니다.</p>
+  </div>
+</div>
 <details class="reading-details"><summary>주제 점검 기준과 연구목적 문장틀</summary><div class="reading-details-body">
 <p class="section-lede">관심 있는 현상을 정했다면 무엇을 확인할지 구체화합니다. 아래 세 가지를 점검하면서 문헌, 자료 접근성, 연구 범위를 함께 검토하세요.</p>
 <div class="mcm">
@@ -488,11 +620,23 @@
   <span class="eyebrow">Purpose → Method</span>
   <h2>연구질문에 맞는 방법 고르기</h2>
   <p class="section-lede">연구질문에 답하는 데 필요한 자료와 설계를 먼저 정하세요.</p>
-<figure class="guide-slide" aria-labelledby="method-visual-title" lang="ko">
-  <a class="visual-slide-link" href="assets/research-method-slide.webp" target="_blank" rel="noopener" aria-label="연구방법 선택 슬라이드 크게 보기 (새 탭)"><img src="assets/research-method-slide.webp" width="1672" height="941" alt="연구질문에서 두 경로로 갈라지는 그림. 인식·행동의 관계는 측정·표집·분석으로, 시스템의 차이는 비교 조건·평가지표 설계로 연결됩니다." loading="lazy" decoding="async"></a>
-  <figcaption id="method-visual-title"><div class="slide-caption-row"><b>연구방법 선택</b><span aria-hidden="true">이미지 눌러 확대 ↗</span></div><p>대표적인 두 경로입니다. 질문에 따라 결합하거나 다른 방법을 선택할 수 있습니다.</p></figcaption>
-  <details class="slide-transcript"><summary>그림 설명을 텍스트로 읽기</summary><div class="slide-transcript-body"><ol><li>무엇을 확인하려는지 연구질문을 먼저 정합니다.</li><li>인식·행동·변수 간 관계: 설문 응답·이용 기록·관찰자료를 바탕으로 측정·표집·분석을 설계합니다.</li><li>방법·시스템의 차이: 평가 데이터·실행 로그·측정값을 바탕으로 비교 조건과 평가지표를 설계합니다.</li><li>질문 → 필요한 자료 → 적절한 설계 순으로 검토합니다.</li></ol></div></details>
-</figure>
+<div class="dg">
+  <div class="dg-head">
+    <h3>연구방법 선택</h3>
+    <p>대표적인 두 경로입니다. 질문에 따라 결합하거나 다른 방법을 선택할 수 있습니다.</p>
+  </div>
+  <div class="dg-body">
+    <div class="dg-trunk">
+      <h4>무엇을 확인하려는지 연구질문을 먼저 정합니다</h4>
+      <p>방법이 질문을 정하는 것이 아니라, 질문이 방법을 정합니다.</p>
+    </div>
+    <div class="dg-flow c2 nb">
+      <div class="dg-step ta"><h4>인식·행동·변수 간 관계</h4><p>설문 응답·이용 기록·관찰자료를 바탕으로 측정·표집·분석을 설계합니다.</p></div>
+      <div class="dg-step tb"><h4>방법·시스템의 차이</h4><p>평가 데이터·실행 로그·측정값을 바탕으로 비교 조건과 평가지표를 설계합니다.</p></div>
+    </div>
+    <p class="dg-foot">질문 &#8594; 필요한 자료 &#8594; 적절한 설계 순으로 검토합니다.</p>
+  </div>
+</div>
 <details class="reading-details"><summary>두 연구 경로의 도구·질문·산출물 비교</summary><div class="reading-details-body">
 <p class="section-lede">이 가이드는 설문·관찰자료 연구와 알고리즘·시스템 평가를 중심으로 안내합니다. <b>"이 질문에 답하려면 어떤 자료와 설계가 필요한가?"</b>를 먼저 생각하세요. 두 경로가 모든 연구방법을 나누는 분류는 아닙니다.</p>
 <div class="pm-table">
@@ -552,11 +696,20 @@
 <section id="roadmap"><div class="wrap">
   <span class="eyebrow">4-Semester Roadmap</span>
   <h2>4학기 논문 준비</h2>
-  <figure class="guide-slide" aria-labelledby="semester-slide-title" lang="ko">
-    <a class="visual-slide-link" href="assets/four-semester-roadmap.webp" target="_blank" rel="noopener" aria-label="4학기 논문 준비 로드맵 크게 보기 (새 탭)"><img src="assets/four-semester-roadmap.webp" width="1672" height="941" alt="1학기 주제·문헌 탐색, 2학기 연구설계, 3학기 자료수집·분석, 4학기 원고완성·심사로 이어지는 네 학기 흐름." loading="lazy" decoding="async"></a>
-    <figcaption id="semester-slide-title"><div class="slide-caption-row"><b>학기별 목표와 결과물</b><span aria-hidden="true">이미지 눌러 확대 ↗</span></div></figcaption>
-    <details class="slide-transcript"><summary>그림 설명을 텍스트로 읽기</summary><div class="slide-transcript-body"><ol><li>1학기: 주제 후보·핵심문헌표·연구질문 정리</li><li>2학기: 연구계획서 작성, 수집 전 필요한 승인·파일럿 점검</li><li>3학기: 자료수집·분석, 결과표와 본문 초안 작성</li><li>4학기: 전체 원고 검토·수정, 발표·심사·최종 제출</li></ol></div></details>
-  </figure>
+  <div class="dg">
+  <div class="dg-head">
+    <h3>학기별 목표와 결과물</h3>
+    <p>각 학기가 끝났을 때 손에 남아 있어야 하는 것입니다. 시간 배분은 아래 간트차트에서 이어집니다.</p>
+  </div>
+  <div class="dg-body">
+    <div class="dg-flow c4">
+      <div class="dg-step"><span class="dg-n">1학기</span><h4>탐색</h4><p>주제 후보, 핵심문헌표, 연구질문 정리</p></div>
+      <div class="dg-step"><span class="dg-n">2학기</span><h4>설계</h4><p>연구계획서 작성, 수집 전 필요한 승인과 파일럿 점검</p></div>
+      <div class="dg-step"><span class="dg-n">3학기</span><h4>수행</h4><p>자료수집·분석, 결과표와 본문 초안 작성</p></div>
+      <div class="dg-step"><span class="dg-n">4학기</span><h4>완성</h4><p>전체 원고 검토·수정, 발표·심사·최종 제출</p></div>
+    </div>
+  </div>
+</div>
   <figure class="semester-gantt" aria-labelledby="semester-gantt-title">
     <figcaption><h3 id="semester-gantt-title">4학기 간트차트</h3><p>막대는 중점 진행 학기를 나타냅니다.</p></figcaption>
     <p id="semester-gantt-hint" class="semester-gantt-hint">표를 좌우로 움직여 확인하세요.</p>
