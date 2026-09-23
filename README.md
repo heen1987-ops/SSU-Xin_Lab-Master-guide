@@ -4,11 +4,13 @@
 
 파일을 내려받지 않고 브라우저에서 바로 볼 수 있습니다.
 
-- **[과정 선택](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/)** — 석사과정과 박사과정 중 고르는 첫 화면. 규정상 수치가 다른 항목을 나란히 보여줍니다
-- [석사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/석사과정.html) — 의의·주제와 목적·방법 선택·전체 일정·논문 양식
-- [박사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/박사과정.html) — 석사와 다른 점, 연구실적 요건, 학술지 사분위 Q1~Q4, 심사
-- [실증논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실증논문가이드.html) — 설문·SEM 트랙
-- [실험논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/실험논문가이드.html) — 비교실험 트랙
+- **[과정 선택 (홈)](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/)** — 석사과정과 박사과정 중 고르는 첫 화면. 규정상 수치가 다른 항목을 나란히 비교
+- **[석사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/master.html)** (`/master.html`) — 의의·주제와 목적·방법 선택·전체 일정·논문 양식
+- **[박사과정 가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/phd.html)** (`/phd.html`) — 석사와 다른 점, 연구실적 요건, 학술지 사분위 Q1~Q4, 심사
+- **[실증논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/empirical.html)** (`/empirical.html`) — 설문·SEM 트랙
+- **[실험논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/experiment.html)** (`/experiment.html`) — 비교실험 트랙
+
+> 💡 **웹 뷰어 편의 기능**: 빠른 검색(`Ctrl + K`), 라이트/다크 테마 토글, 목차·서식 원클릭 복사, 본문 바로가기 스킵링크 지원
 
 ## 이 자료는 무엇인가
 
