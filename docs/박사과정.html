@@ -484,6 +484,9 @@
   .no-list li{position:relative; padding:7px 0 7px 22px; border-top:1px dashed var(--line); font-size:12.5px; line-height:1.7;}
   .no-list li:first-child{border-top:none;}
   .no-list li::before{content:""; position:absolute; left:4px; top:14px; width:9px; height:2px; background:var(--track-b);}
+  a.mono{color:var(--accent-ink); text-decoration:none; border-bottom:1px solid color-mix(in srgb, var(--accent-ink) 35%, transparent);}
+  a.mono:hover{border-bottom-color:var(--accent-ink);}
+  a.mono:focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px; border-radius:2px;}
   .backlink{display:inline-block; margin-bottom:10px; font-size:12.5px; color:var(--ink-faint); text-decoration:none;}
   .backlink:hover{color:var(--accent-ink);}
 </style>
@@ -491,6 +494,7 @@
 <nav class="nav"><div class="nav-inner" id="navlinks">
   <a href="index.html">과정 선택</a>
   <a href="#diff">석사와 다른 점</a>
+  <a href="#track">연구 트랙</a>
   <a href="#exam">종합시험</a>
   <a href="#record">연구실적 요건</a>
   <a href="#quartile">학술지 사분위</a>
@@ -536,7 +540,22 @@
     <div class="dc-row"><div>가제본 제출 부수</div><div>3부</div><div>5부</div></div>
     <div class="dc-row"><div>완본 하드커버</div><div>4부</div><div>5부</div></div>
     <div class="dc-row"><div>제출가능연한</div><div>입학일로부터 6년 이내</div><div>10년 이내</div></div>
-    <p class="dc-note">지도교수 배정 시기(3월 초 / 9월 초), 연구윤리교육, 논문 구비 순서와 쪽번호 체계, 제출 절차 6단계는 두 과정이 같습니다. 출처는 <span class="mono">06_논문제출절차와체크리스트.md</span>·<span class="mono">11_심사위원_후보와_구성.md</span>·<span class="mono">04_석사와_박사의_차이.md</span>에서 <span class="mono">grad.ssu.ac.kr</span> 공지 원문, 학과 "학위논문 심사방법"·"학위논문 진행순서" 페이지, 학칙시행세칙(대학원)으로 확인한 값입니다(확인일 2026-09-22).</p>
+    <p class="dc-note">지도교수 배정 시기(3월 초 / 9월 초), 연구윤리교육, 논문 구비 순서와 쪽번호 체계, 제출 절차 6단계는 두 과정이 같습니다. 출처는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/06_%EB%85%BC%EB%AC%B8%EC%A0%9C%EC%B6%9C%EC%A0%88%EC%B0%A8%EC%99%80%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8.md" target="_blank" rel="noopener">06_논문제출절차와체크리스트.md</a>·<a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/11_%EC%8B%AC%EC%82%AC%EC%9C%84%EC%9B%90_%ED%9B%84%EB%B3%B4%EC%99%80_%EA%B5%AC%EC%84%B1.md" target="_blank" rel="noopener">11_심사위원_후보와_구성.md</a>·<a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/04_%EC%84%9D%EC%82%AC%EC%99%80_%EB%B0%95%EC%82%AC%EC%9D%98_%EC%B0%A8%EC%9D%B4.md" target="_blank" rel="noopener">04_석사와_박사의_차이.md</a>에서 <span class="mono">grad.ssu.ac.kr</span> 공지 원문, 학과 "학위논문 심사방법"·"학위논문 진행순서" 페이지, 학칙시행세칙(대학원)으로 확인한 값입니다(확인일 2026-09-22).</p>
+  </div>
+
+  <div class="dg" id="track" style="margin-top:28px;">
+    <div class="dg-head">
+      <h3>연구 트랙은 석사와 같습니다</h3>
+      <p>박사도 실증(설문·SEM)과 실험(비교실험) 중 연구질문에 맞는 쪽을 고릅니다. 장 구성·분량 배분·인용 스타일·방법론은 두 과정이 같은 자료를 씁니다.</p>
+    </div>
+    <div class="dg-body">
+      <div class="dg-flow c2 nb">
+        <div class="dg-step ta"><h4><a href="실증논문가이드.html">실증논문 작성가이드</a></h4><p>사람의 인식·태도·행동을 설문·관찰자료로 설명하려는 경우. 이론과 가설, 측정·표본, 인과추론, APA 7판 인용.</p></div>
+        <div class="dg-step tb"><h4><a href="실험논문가이드.html">실험논문 작성가이드</a></h4><p>알고리즘·시스템의 성능·비용·한계를 비교실험으로 평가하려는 경우. 방법론 팩, 설계 감사, IEEE 인용.</p></div>
+      </div>
+      <p class="dg-foot">트랙을 아직 못 정했으면 <a href="석사과정.html#method">석사과정 가이드의 방법 선택 절</a>에서 목적 문장부터 세우세요. 두 경로가 모든 연구방법을 나누는 분류는 아닙니다.</p>
+    </div>
+    <p class="dg-src"><b>주의</b>: 트랙 가이드와 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/10_%EC%98%88%EC%83%81%EC%9D%BC%EC%A0%95_2027%EB%85%842%ED%95%99%EA%B8%B0_%EA%B0%84%ED%8A%B8%EC%B0%A8%ED%8A%B8.md" target="_blank" rel="noopener">10_예상일정_2027년2학기_간트차트.md</a>의 WBS는 <b>석사 4학기 기준</b>으로 작성되어 있습니다. 장 구성과 방법론은 그대로 쓸 수 있지만 일정은 본인 과정 기간에 맞춰 늘려 잡으세요. 박사 기준 일정표는 이 가이드에 아직 없습니다.</p>
   </div>
 </div></section>
 
@@ -565,7 +584,7 @@
         <div><b>휴학 시</b><span>휴학생은 지원할 수 없고, 응시했더라도 <b>결과발표일 이전에 휴학하면 평가대상에서 제외</b>됩니다</span></div>
       </div>
     </div>
-    <p class="fmt-foot">출처: <a href="https://itpm.ssu.ac.kr/page/exam.php" target="_blank" rel="noopener">IT정책경영학과 자격시험(종합시험) 안내</a> 원문을 2026-09-23에 직접 확인했습니다. <b>합격 기준 점수와 재응시 횟수 제한은 이 페이지에서 확인되지 않았습니다</b> - 아래 "확인이 필요한 것"에 남겨 두었습니다. 종합시험 시행결과는 논문발표 학기 초에 발표되며, 이 결과로 발표자격이 최종 확인됩니다(<span class="mono">06_논문제출절차와체크리스트.md</span>).</p>
+    <p class="fmt-foot">출처: <a href="https://itpm.ssu.ac.kr/page/exam.php" target="_blank" rel="noopener">IT정책경영학과 자격시험(종합시험) 안내</a> 원문을 2026-09-23에 직접 확인했습니다. <b>합격 기준 점수와 재응시 횟수 제한은 이 페이지에서 확인되지 않았습니다</b> - 아래 "확인이 필요한 것"에 남겨 두었습니다. 종합시험 시행결과는 논문발표 학기 초에 발표되며, 이 결과로 발표자격이 최종 확인됩니다(<a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/06_%EB%85%BC%EB%AC%B8%EC%A0%9C%EC%B6%9C%EC%A0%88%EC%B0%A8%EC%99%80%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8.md" target="_blank" rel="noopener">06_논문제출절차와체크리스트.md</a>).</p>
   </div>
 </div></section>
 
@@ -591,7 +610,7 @@
         <div><b>학위논문과의 관계</b><span>같은 데이터로 학위논문과 학술논문을 함께 냈다면 그 관계를 밝혀야 합니다. 분량 증가나 문장 재서술은 실질적 확장이 아닙니다</span></div>
       </div>
     </div>
-    <p class="fmt-foot">투고처 선정·검증 절차는 <span class="mono">12_단계별_지침_라이브러리/23_학술지_학술대회투고처선정검증.md</span>, 사분위 판정 기록은 <span class="mono">24_JCR_Scopus_Q1Q2판정기록.md</span>, 학위논문을 학술논문으로 전환할 때의 중복·확장 판정은 <span class="mono">26_중복확장저작권.md</span>에 있습니다.</p>
+    <p class="fmt-foot">투고처 선정·검증 절차는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/23_%ED%95%99%EC%88%A0%EC%A7%80_%ED%95%99%EC%88%A0%EB%8C%80%ED%9A%8C%ED%88%AC%EA%B3%A0%EC%B2%98%EC%84%A0%EC%A0%95%EA%B2%80%EC%A6%9D.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/23_학술지_학술대회투고처선정검증.md</a>, 사분위 판정 기록은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/24_JCR_Scopus_Q1Q2%ED%8C%90%EC%A0%95%EA%B8%B0%EB%A1%9D.md" target="_blank" rel="noopener">24_JCR_Scopus_Q1Q2판정기록.md</a>, 학위논문을 학술논문으로 전환할 때의 중복·확장 판정은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/26_%EC%A4%91%EB%B3%B5%ED%99%95%EC%9E%A5%EC%A0%80%EC%9E%91%EA%B6%8C.md" target="_blank" rel="noopener">26_중복확장저작권.md</a>에 있습니다.</p>
   </div>
 </div></section>
 
@@ -616,7 +635,7 @@
         <div class="q3"><b>Q3</b></div><div>0.50 초과 0.75 이하</div><div>상위 50~75% 구간</div>
         <div class="q4"><b>Q4</b></div><div>0.75 초과 1.00 이하</div><div>하위 25% 구간</div>
       </div>
-      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;"><b>동률 때문에 각 구간에 정확히 25%씩 들어가지 않을 수 있습니다.</b> 경계값에 걸린 학술지는 특히 주의하세요. Q1·Q2의 구간 정의는 <span class="mono">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</span> 2절에서 확인한 것이고, Q3·Q4는 같은 규칙을 이어서 적용한 것입니다.</p>
+      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;"><b>동률 때문에 각 구간에 정확히 25%씩 들어가지 않을 수 있습니다.</b> 경계값에 걸린 학술지는 특히 주의하세요. Q1·Q2의 구간 정의는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/24_JCR_Scopus_Q1Q2%ED%8C%90%EC%A0%95%EA%B8%B0%EB%A1%9D.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</a> 2절에서 확인한 것이고, Q3·Q4는 같은 규칙을 이어서 적용한 것입니다.</p>
     </div>
 
     <div class="fmt-band">
@@ -642,7 +661,7 @@
         <div><b>6</b><span>졸업·장학·실적 공고가 요구하는 데이터베이스와 판정연도를 대조한다</span></div>
         <div><b>7</b><span>다중 분야·경계값·색인변경은 담당부서에 공식 판정을 확인하고 지도교수와 일정을 조정한다</span></div>
       </div>
-      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;">기록할 항목은 <b>학술지명 · ISSN · 데이터베이스 · 지표명 · 기준연도 · 주제분야 · Rank/전체 수 · Percentile · Quartile · 확인일 · 공식 URL · 증빙파일 · 적용 공고</b>입니다. 표 양식은 <span class="mono">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</span> 3절에 있습니다.</p>
+      <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;">기록할 항목은 <b>학술지명 · ISSN · 데이터베이스 · 지표명 · 기준연도 · 주제분야 · Rank/전체 수 · Percentile · Quartile · 확인일 · 공식 URL · 증빙파일 · 적용 공고</b>입니다. 표 양식은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/24_JCR_Scopus_Q1Q2%ED%8C%90%EC%A0%95%EA%B8%B0%EB%A1%9D.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</a> 3절에 있습니다.</p>
     </div>
 
     <div class="fmt-band">
@@ -682,7 +701,7 @@
       <p style="font-size:12px; line-height:1.7; color:var(--ink-faint); margin-top:11px;">JCR과 Scopus는 기관 구독이 필요할 수 있습니다. 숭실대 도서관을 통해 접근하세요. SCImago와 KCI, Master Journal List는 로그인 없이 열립니다(확인일 2026-09-23).</p>
     </div>
 
-    <p class="fmt-foot">전체 판정 절차와 기록표는 <span class="mono">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</span>, 투고처 선정과 검증은 <span class="mono">23_학술지_학술대회투고처선정검증.md</span>에 있습니다.</p>
+    <p class="fmt-foot">전체 판정 절차와 기록표는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/24_JCR_Scopus_Q1Q2%ED%8C%90%EC%A0%95%EA%B8%B0%EB%A1%9D.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/24_JCR_Scopus_Q1Q2판정기록.md</a>, 투고처 선정과 검증은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/23_%ED%95%99%EC%88%A0%EC%A7%80_%ED%95%99%EC%88%A0%EB%8C%80%ED%9A%8C%ED%88%AC%EA%B3%A0%EC%B2%98%EC%84%A0%EC%A0%95%EA%B2%80%EC%A6%9D.md" target="_blank" rel="noopener">23_학술지_학술대회투고처선정검증.md</a>에 있습니다.</p>
   </div>
 </div></section>
 
@@ -704,7 +723,7 @@
       </div>
       <p class="dg-foot"><b>심사 3회 이상</b>을 거치고, <b>5명 중 4인 이상이 100점 만점에 80점 이상</b>을 주어야 합격입니다. 불합격하면 1학기 이상 경과 후 1회에 한해 재심사할 수 있습니다. 심사방법은 논문심사와 구술시험이며 심사위원장이 정한 장소·시간에 시행합니다.</p>
     </div>
-    <p class="dg-src">근거: <span class="mono">11_심사위원_후보와_구성.md</span> 0절이 학과 <a href="https://itpm.ssu.ac.kr/page/thesis_evaluation.php" target="_blank" rel="noopener">학위논문 심사방법</a> 페이지와 <span class="mono">grad.ssu.ac.kr</span> 공지 원문에서 확인한 내용입니다(확인일 2026-09-22). 후보 명단은 석사 기준으로 정리되어 있어 박사 외부위원 후보는 포함되어 있지 않습니다.</p>
+    <p class="dg-src">근거: <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/11_%EC%8B%AC%EC%82%AC%EC%9C%84%EC%9B%90_%ED%9B%84%EB%B3%B4%EC%99%80_%EA%B5%AC%EC%84%B1.md" target="_blank" rel="noopener">11_심사위원_후보와_구성.md</a> 0절이 학과 <a href="https://itpm.ssu.ac.kr/page/thesis_evaluation.php" target="_blank" rel="noopener">학위논문 심사방법</a> 페이지와 <span class="mono">grad.ssu.ac.kr</span> 공지 원문에서 확인한 내용입니다(확인일 2026-09-22). 후보 명단은 석사 기준으로 정리되어 있어 박사 외부위원 후보는 포함되어 있지 않습니다.</p>
   </div>
 </div></section>
 
@@ -722,7 +741,7 @@
         <div><dt>ISNI</dt><dd>박사 졸업자는 논문 검증 완료 후 국제표준 이름 식별자 신청 가능</dd></div>
       </div>
     </div>
-    <p class="fmt-foot">판형(4&#215;6배판), 지질(70파운드 이상 백상지), 제본형식, 초록 3페이지 이내, 목차 번호 체계, 졸업 년/월 기재 규칙은 석사와 같습니다. 전체 규정은 <span class="mono">07_논문서식_필수안내서.md</span>에 있습니다.</p>
+    <p class="fmt-foot">판형(4&#215;6배판), 지질(70파운드 이상 백상지), 제본형식, 초록 3페이지 이내, 목차 번호 체계, 졸업 년/월 기재 규칙은 석사와 같습니다. 전체 규정은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/07_%EB%85%BC%EB%AC%B8%EC%84%9C%EC%8B%9D_%ED%95%84%EC%88%98%EC%95%88%EB%82%B4%EC%84%9C.md" target="_blank" rel="noopener">07_논문서식_필수안내서.md</a>에 있습니다.</p>
   </div>
 </div></section>
 
@@ -745,13 +764,15 @@
     </ul>
   </div>
 
-  <p class="roadmap-note" style="margin-top:20px;">확인되지 않은 것을 확인된 것처럼 적어 두면 제출 직전에 문제가 됩니다. 물어서 답을 얻으면 학술총무에게 알려 주세요 - 이 목록에서 지우고 근거를 붙이겠습니다. 용어 전반은 <span class="mono">14_학위논문_용어정의.md</span>에 확인 등급과 함께 정리되어 있습니다.</p>
+  <p class="roadmap-note" style="margin-top:20px;">확인되지 않은 것을 확인된 것처럼 적어 두면 제출 직전에 문제가 됩니다. 물어서 답을 얻으면 학술총무에게 알려 주세요 - 이 목록에서 지우고 근거를 붙이겠습니다. 용어 전반은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/14_%ED%95%99%EC%9C%84%EB%85%BC%EB%AC%B8_%EC%9A%A9%EC%96%B4%EC%A0%95%EC%9D%98.md" target="_blank" rel="noopener">14_학위논문_용어정의.md</a>에 확인 등급과 함께 정리되어 있습니다.</p>
 </div></section>
 
 <footer><div class="wrap">
   <div class="guide-links">
     <a href="index.html">과정 선택</a>
     <a href="석사과정.html">석사과정 가이드</a>
+    <a href="실증논문가이드.html">실증논문 작성가이드</a>
+    <a href="실험논문가이드.html">실험논문 작성가이드</a>
   </div>
   <p style="margin-top:14px;">이 페이지는 박사과정에서 석사와 달라지는 부분만 다룹니다. 공통 내용은 석사과정 가이드를 함께 보세요.</p>
   <p>작성일 2026-09-23</p>

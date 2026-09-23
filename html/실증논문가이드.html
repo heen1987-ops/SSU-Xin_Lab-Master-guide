@@ -221,6 +221,9 @@
   .gb-note b{display:grid; place-items:center; padding:10px; background:var(--accent-ink); color:var(--paper); font-size:10.5px; text-align:center;}
   .gb-note p{margin:0; padding:10px 12px; background:var(--accent-soft); color:var(--accent-ink); font-size:11.5px; line-height:1.6;}
 
+  a.mono{color:var(--accent-ink); text-decoration:none; border-bottom:1px solid color-mix(in srgb, var(--accent-ink) 35%, transparent);}
+  a.mono:hover{border-bottom-color:var(--accent-ink);}
+  a.mono:focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px; border-radius:2px;}
   /* ---- 도식 블록 ---- */
   .dg{margin:26px 0; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
   .dg-head{padding:16px 20px 14px; border-bottom:1px solid var(--line);}
@@ -432,7 +435,7 @@
     <p class="dg-foot">다섯 장은 <b>같은 연구질문</b>으로 연결됩니다. 실제 장 제목과 수는 연구 내용과 학과 지침에 맞춰 조정하세요.</p>
     <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/thesis-chapters-slide.webp" target="_blank" rel="noopener"><img src="assets/thesis-chapters-slide.webp" width="1672" height="941" alt="하나의 연구질문으로 연결된 다섯 장. 서론, 선행연구, 연구방법, 결과·논의, 결론의 역할을 보여 줍니다." loading="lazy" decoding="async"></a></details>
   </div>
-  <p class="dg-src">근거: <span class="mono">05_최근논문벤치마킹.md</span>에서 확인한 최근 통과 논문의 장 구성입니다. <b>대학원 공식 안내와 학칙에서 "본문을 반드시 5장으로 구성하라"는 규정은 확인되지 않았습니다</b> — 사례이지 요건이 아닙니다. 장 수는 연구 내용과 학과 지침에 맞춰 조정합니다.</p>
+  <p class="dg-src">근거: <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/05_%EC%B5%9C%EA%B7%BC%EB%85%BC%EB%AC%B8%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9.md" target="_blank" rel="noopener">05_최근논문벤치마킹.md</a>에서 확인한 최근 통과 논문의 장 구성입니다. <b>대학원 공식 안내와 학칙에서 "본문을 반드시 5장으로 구성하라"는 규정은 확인되지 않았습니다</b> — 사례이지 요건이 아닙니다. 장 수는 연구 내용과 학과 지침에 맞춰 조정합니다.</p>
 </div>
 <details class="reading-details"><summary>장별 상세 역할·분량 예시·연결 점검</summary><div class="reading-details-body">
 <p class="section-lede">대학원 공식 안내와 학칙에서 "본문을 반드시 5장으로 구성하라"는 규정은 확인되지 않았지만, 설문/SEM 기반 논문들의 실제 사례는 5장 구성입니다. 학과·지도교수가 별도로 요구할 수 있습니다.</p>
@@ -490,7 +493,7 @@
     </tbody>
   </table>
   </div>
-  <p class="roadmap-note">전체 5장 내용과 형식 요건(인준서·쪽번호)은 <span class="mono">01_실증트랙_경영IS/06_숭실대논문구조.md</span>에 정리했습니다.</p>
+  <p class="roadmap-note">전체 5장 내용과 형식 요건(인준서·쪽번호)은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/01_%EC%8B%A4%EC%A6%9D%ED%8A%B8%EB%9E%99_%EA%B2%BD%EC%98%81IS/06_%EC%88%AD%EC%8B%A4%EB%8C%80%EB%85%BC%EB%AC%B8%EA%B5%AC%EC%A1%B0.md" target="_blank" rel="noopener">01_실증트랙_경영IS/06_숭실대논문구조.md</a>에 정리했습니다.</p>
 </div></details>
 </div></section>
 
@@ -508,7 +511,7 @@
       <p>기본적으로 "지지/미지지/판정 불가"를 쓰고 추정치·CI·p·설계 조건을 함께 적습니다. 비유의 결과를 "효과가 없다"로 바꿔 쓰지 않습니다.</p>
     </div>
   </div>
-  <p class="roadmap-note">이론 후보와 선정 기준의 전체 표는 <span class="mono">01_실증트랙_경영IS/02_이론과가설.md</span>에 있습니다.</p>
+  <p class="roadmap-note">이론 후보와 선정 기준의 전체 표는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/01_%EC%8B%A4%EC%A6%9D%ED%8A%B8%EB%9E%99_%EA%B2%BD%EC%98%81IS/02_%EC%9D%B4%EB%A1%A0%EA%B3%BC%EA%B0%80%EC%84%A4.md" target="_blank" rel="noopener">01_실증트랙_경영IS/02_이론과가설.md</a>에 있습니다.</p>
 </div></section>
 
 <section id="measure"><div class="wrap">
@@ -530,7 +533,7 @@
     <p class="dg-note"><b>설문은 SEM과 같은 뜻이 아니고, 관찰된 관계가 곧 인과를 뜻하지도 않습니다.</b> 분석방법은 연구질문과 자료의 성격에 맞춰 선택합니다.</p>
     <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/empirical-process-slide.webp" target="_blank" rel="noopener"><img src="assets/empirical-process-slide.webp" width="1672" height="941" alt="개념 정의, 측정 설계, 자료 수집, 분석·해석으로 이어지는 네 단계. 설문과 SEM, 관계와 인과를 구분합니다." loading="lazy" decoding="async"></a></details>
   </div>
-  <p class="dg-src">근거: <span class="mono">01_실증트랙_경영IS/03_측정과표본설계.md</span>와 <span class="mono">12_단계별_지침_라이브러리/09_설문측정척도품질.md</span>·<span class="mono">05_표본_검정력_수집종료설계.md</span>의 단계 구성을 옮긴 것입니다.</p>
+  <p class="dg-src">근거: <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/01_%EC%8B%A4%EC%A6%9D%ED%8A%B8%EB%9E%99_%EA%B2%BD%EC%98%81IS/03_%EC%B8%A1%EC%A0%95%EA%B3%BC%ED%91%9C%EB%B3%B8%EC%84%A4%EA%B3%84.md" target="_blank" rel="noopener">01_실증트랙_경영IS/03_측정과표본설계.md</a>와 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/09_%EC%84%A4%EB%AC%B8%EC%B8%A1%EC%A0%95%EC%B2%99%EB%8F%84%ED%92%88%EC%A7%88.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/09_설문측정척도품질.md</a>·<a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/05_%ED%91%9C%EB%B3%B8_%EA%B2%80%EC%A0%95%EB%A0%A5_%EC%88%98%EC%A7%91%EC%A2%85%EB%A3%8C%EC%84%A4%EA%B3%84.md" target="_blank" rel="noopener">05_표본_검정력_수집종료설계.md</a>의 단계 구성을 옮긴 것입니다.</p>
 </div>
 <details class="reading-details"><summary>표본 설계 원칙과 상세 자료</summary><div class="reading-details-body">
 <p class="section-lede">척도 선택부터 번역·문항작성·파일럿·본조사·측정품질 검증까지, 설문을 "문항 모음"이 아니라 타당성 있는 측정도구로 설계합니다.</p>
@@ -538,7 +541,7 @@
     <span class="tag">표본 설계 원칙</span>
     <p>표본수를 관행이나 편의에 맞추지 않고, 추론목표·최소의미효과·설계효과에 근거해 사전에 정하고 수집 종료규칙까지 미리 세웁니다.</p>
   </div>
-  <p class="roadmap-note">척도·표본 설계의 전체 절차는 <span class="mono">01_실증트랙_경영IS/03_측정과표본설계.md</span>, <span class="mono">12_단계별_지침_라이브러리/09_설문측정척도품질.md</span>·<span class="mono">05_표본_검정력_수집종료설계.md</span>에 있습니다.</p>
+  <p class="roadmap-note">척도·표본 설계의 전체 절차는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/01_%EC%8B%A4%EC%A6%9D%ED%8A%B8%EB%9E%99_%EA%B2%BD%EC%98%81IS/03_%EC%B8%A1%EC%A0%95%EA%B3%BC%ED%91%9C%EB%B3%B8%EC%84%A4%EA%B3%84.md" target="_blank" rel="noopener">01_실증트랙_경영IS/03_측정과표본설계.md</a>, <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/09_%EC%84%A4%EB%AC%B8%EC%B8%A1%EC%A0%95%EC%B2%99%EB%8F%84%ED%92%88%EC%A7%88.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/09_설문측정척도품질.md</a>·<a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/05_%ED%91%9C%EB%B3%B8_%EA%B2%80%EC%A0%95%EB%A0%A5_%EC%88%98%EC%A7%91%EC%A2%85%EB%A3%8C%EC%84%A4%EA%B3%84.md" target="_blank" rel="noopener">05_표본_검정력_수집종료설계.md</a>에 있습니다.</p>
 </div></details>
 </div></section>
 
@@ -551,7 +554,7 @@
     <div class="mistake"><span class="idx">02</span><div class="body"><h4>경로 크기와 통계적 유의성 혼동</h4><p>한 집단에서의 유의성과 집단 간 차이, 표본 내 설명력과 표본 밖 예측력을 구분합니다.</p></div></div>
     <div class="mistake"><span class="idx">03</span><div class="body"><h4>횡단 설문 결과를 인과관계로 단정</h4><p>유의한 경로 하나만으로 "원인이다"라고 쓰지 않습니다. 대안설명·경계조건을 함께 논의합니다.</p></div></div>
   </div>
-  <p class="roadmap-note">통제변수 선정·모형점검·강건성 메뉴는 <span class="mono">01_실증트랙_경영IS/04_자료분석.md</span>, <span class="mono">12_단계별_지침_라이브러리/10_실증분석_인과추론_강건성.md</span>에 정리했습니다.</p>
+  <p class="roadmap-note">통제변수 선정·모형점검·강건성 메뉴는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/01_%EC%8B%A4%EC%A6%9D%ED%8A%B8%EB%9E%99_%EA%B2%BD%EC%98%81IS/04_%EC%9E%90%EB%A3%8C%EB%B6%84%EC%84%9D.md" target="_blank" rel="noopener">01_실증트랙_경영IS/04_자료분석.md</a>, <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/10_%EC%8B%A4%EC%A6%9D%EB%B6%84%EC%84%9D_%EC%9D%B8%EA%B3%BC%EC%B6%94%EB%A1%A0_%EA%B0%95%EA%B1%B4%EC%84%B1.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/10_실증분석_인과추론_강건성.md</a>에 정리했습니다.</p>
 </div></section>
 
 <section id="cases"><div class="wrap">
@@ -565,13 +568,13 @@
       <p>공개발표 자료(목차·참고문헌 48건)로 확인. 목차는 실증 5장 구성과 정확히 일치하며, 이론적 기반은 TAM·UTAUT·D&amp;M IS Success·신뢰 모형과 겹칩니다. 본문 전체는 확인하지 못했습니다.</p>
     </div>
   </div>
-  <p class="roadmap-note">김승연의 심사결과보고서도 "학칙시행세칙(대학원) 제48조"를 인용해 논문 구비 순서를 확인하고 있습니다. 상세 비교와 심사결과보고서 확인 내용은 <span class="mono">05_최근논문벤치마킹.md</span>를 참고하세요.</p>
+  <p class="roadmap-note">김승연의 심사결과보고서도 "학칙시행세칙(대학원) 제48조"를 인용해 논문 구비 순서를 확인하고 있습니다. 상세 비교와 심사결과보고서 확인 내용은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/05_%EC%B5%9C%EA%B7%BC%EB%85%BC%EB%AC%B8%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9.md" target="_blank" rel="noopener">05_최근논문벤치마킹.md</a>를 참고하세요.</p>
 </div></section>
 
 <section id="citation"><div class="wrap">
   <span class="eyebrow">Citation</span>
   <h2>인용 스타일 — APA 7</h2>
-  <p class="section-lede">이 가이드는 저자-연도 인용 방식인 <b>APA 7판</b>을 예시로 설명합니다. 연구방법만으로 인용 스타일이 정해지는 것은 아닙니다. <b>APA 규칙과 학교 서식 규정이 다를 수 있습니다</b> — <span class="mono">07_논문서식_필수안내서.md</span> 6절은 저자가 4인 이상이어도 전원 기입하도록 정합니다. 충돌하면 학위논문은 학교 규정을, 학술논문은 제출처 규정을 따릅니다.</p>
+  <p class="section-lede">이 가이드는 저자-연도 인용 방식인 <b>APA 7판</b>을 예시로 설명합니다. 연구방법만으로 인용 스타일이 정해지는 것은 아닙니다. <b>APA 규칙과 학교 서식 규정이 다를 수 있습니다</b> — <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/07_%EB%85%BC%EB%AC%B8%EC%84%9C%EC%8B%9D_%ED%95%84%EC%88%98%EC%95%88%EB%82%B4%EC%84%9C.md" target="_blank" rel="noopener">07_논문서식_필수안내서.md</a> 6절은 저자가 4인 이상이어도 전원 기입하도록 정합니다. 충돌하면 학위논문은 학교 규정을, 학술논문은 제출처 규정을 따릅니다.</p>
   <div class="mcm" style="grid-template-columns:1fr 1fr;">
     <div class="card">
       <h3>본문 인용</h3>
@@ -582,7 +585,7 @@
       <p>저자 성(surname) 알파벳순으로 정렬하고 확인한 DOI를 기재합니다. 참고문헌은 저자 20명까지 모두 표기하며, 21명 이상은 앞의 19명·생략부호·마지막 저자를 씁니다. 본문 인용의 et al. 규칙과 구분하세요.</p>
     </div>
   </div>
-  <p class="roadmap-note">완료기준과 흔한 실수까지 정리한 전체 지침은 <span class="mono">12_단계별_지침_라이브러리/19_APA7인용.md</span>에 있습니다. RefWorks·Zotero 활용법은 <span class="mono">08_공공데이터포털과RefWorks.md</span>를, 서식 자체는 <span class="mono">07_논문서식_필수안내서.md</span> 6절과 대조하세요.</p>
+  <p class="roadmap-note">완료기준과 흔한 실수까지 정리한 전체 지침은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/19_APA7%EC%9D%B8%EC%9A%A9.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/19_APA7인용.md</a>에 있습니다. RefWorks·Zotero 활용법은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/08_%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%8F%AC%ED%84%B8%EA%B3%BCRefWorks.md" target="_blank" rel="noopener">08_공공데이터포털과RefWorks.md</a>를, 서식 자체는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/07_%EB%85%BC%EB%AC%B8%EC%84%9C%EC%8B%9D_%ED%95%84%EC%88%98%EC%95%88%EB%82%B4%EC%84%9C.md" target="_blank" rel="noopener">07_논문서식_필수안내서.md</a> 6절과 대조하세요.</p>
 </div></section>
 
 <section id="resources"><div class="wrap">
@@ -610,8 +613,8 @@
       </div>
     </div>
   </div>
-  <p class="roadmap-note">위 자료는 모두 <b>가입이나 결제 없이 바로 볼 수 있는 것</b>만 골랐습니다. 구매가 필요한 도서 목록은 <span class="mono">03_학습자료_추천.md</span> 맨 뒤에 따로 모아 두었습니다 - 도서관 대출이 되는지 먼저 확인하세요.</p>
-  <p class="roadmap-note">전체 목록과 제외한 후보는 <span class="mono">03_학습자료_추천.md</span>에 정리했습니다.</p>
+  <p class="roadmap-note">위 자료는 모두 <b>가입이나 결제 없이 바로 볼 수 있는 것</b>만 골랐습니다. 구매가 필요한 도서 목록은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/03_%ED%95%99%EC%8A%B5%EC%9E%90%EB%A3%8C_%EC%B6%94%EC%B2%9C.md" target="_blank" rel="noopener">03_학습자료_추천.md</a> 맨 뒤에 따로 모아 두었습니다 - 도서관 대출이 되는지 먼저 확인하세요.</p>
+  <p class="roadmap-note">전체 목록과 제외한 후보는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/03_%ED%95%99%EC%8A%B5%EC%9E%90%EB%A3%8C_%EC%B6%94%EC%B2%9C.md" target="_blank" rel="noopener">03_학습자료_추천.md</a>에 정리했습니다.</p>
 </div></section>
 
 <section id="checklist"><div class="wrap">

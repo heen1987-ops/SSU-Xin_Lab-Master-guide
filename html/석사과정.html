@@ -102,6 +102,9 @@
   }
   .degree-compare .dc-note{padding:14px 22px 20px; font-size:12.5px; color:var(--ink-faint); border-top:1px dashed var(--line); margin-top:4px;}
 
+  a.mono{color:var(--accent-ink); text-decoration:none; border-bottom:1px solid color-mix(in srgb, var(--accent-ink) 35%, transparent);}
+  a.mono:hover{border-bottom-color:var(--accent-ink);}
+  a.mono:focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px; border-radius:2px;}
   /* ---- 도식 블록 ---- */
   .dg{margin:26px 0; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-raised); box-shadow:var(--shadow); overflow:hidden;}
   .dg-head{padding:16px 20px 14px; border-bottom:1px solid var(--line);}
@@ -542,7 +545,7 @@
         <div><b>박사</b><span>지식의 경계까지 나아가 몇 년간 밀어붙여, 경계에 아주 작은 돌기 하나를 만들어냅니다</span></div>
       </div>
     </div>
-    <p class="defs-src">위 정의와 비유는 백과사전 항목(위키백과 "석사" 2025-04-07 판, "박사" 2026-01-02 판)과 Matt Might의 칼럼 The illustrated guide to a Ph.D.(2010)를 정리한 것으로, <b>학교 규정이 아닙니다.</b> 실제 학위요건은 소속 대학원 학칙을 확인하세요. 과정별 요건 비교와 참고문헌은 <span class="mono">04_석사와_박사의_차이.md</span>, 용어 전반은 <span class="mono">14_학위논문_용어정의.md</span>에 있습니다.</p>
+    <p class="defs-src">위 정의와 비유는 백과사전 항목(위키백과 "석사" 2025-04-07 판, "박사" 2026-01-02 판)과 Matt Might의 칼럼 The illustrated guide to a Ph.D.(2010)를 정리한 것으로, <b>학교 규정이 아닙니다.</b> 실제 학위요건은 소속 대학원 학칙을 확인하세요. 과정별 요건 비교와 참고문헌은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/04_%EC%84%9D%EC%82%AC%EC%99%80_%EB%B0%95%EC%82%AC%EC%9D%98_%EC%B0%A8%EC%9D%B4.md" target="_blank" rel="noopener">04_석사와_박사의_차이.md</a>, 용어 전반은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/14_%ED%95%99%EC%9C%84%EB%85%BC%EB%AC%B8_%EC%9A%A9%EC%96%B4%EC%A0%95%EC%9D%98.md" target="_blank" rel="noopener">14_학위논문_용어정의.md</a>에 있습니다.</p>
   </div>
   <span class="eyebrow">Why</span>
   <h2>학위논문의 의의</h2>
@@ -579,7 +582,7 @@
     <div class="dc-row"><div>합격 판정</div><div>심사위원 2인 이상이 70점 이상</div><div>4인 이상이 80점 이상</div></div>
     <div class="dc-row"><div>제출가능연한</div><div>입학일로부터 6년 이내</div><div>10년 이내</div></div>
     <div class="dc-row"><div>연구의 자율성</div><div>지도교수와 질문·방법·해석을 검토하며 수행</div><div>연구 방향을 스스로 이끌어가는 자율성의 비중이 커짐</div></div>
-    <p class="dc-note">학점·심사위원·심사횟수·합격판정·제출가능연한 수치는 <span class="mono">06_논문제출절차와체크리스트.md</span>·<span class="mono">11_심사위원_후보와_구성.md</span>에서 `grad.ssu.ac.kr` 공지 원문과 학과 "학위논문 심사방법" 페이지로 확인한 값입니다(확인일 2026-09-22). 학술논문 게재 등 추가 요건은 적용 학과 내규를 따로 확인하세요. 과정별 상세는 <span class="mono">04_석사와_박사의_차이.md</span>에 있습니다.</p>
+    <p class="dc-note">학점·심사위원·심사횟수·합격판정·제출가능연한 수치는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/06_%EB%85%BC%EB%AC%B8%EC%A0%9C%EC%B6%9C%EC%A0%88%EC%B0%A8%EC%99%80%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8.md" target="_blank" rel="noopener">06_논문제출절차와체크리스트.md</a>·<a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/11_%EC%8B%AC%EC%82%AC%EC%9C%84%EC%9B%90_%ED%9B%84%EB%B3%B4%EC%99%80_%EA%B5%AC%EC%84%B1.md" target="_blank" rel="noopener">11_심사위원_후보와_구성.md</a>에서 `grad.ssu.ac.kr` 공지 원문과 학과 "학위논문 심사방법" 페이지로 확인한 값입니다(확인일 2026-09-22). 학술논문 게재 등 추가 요건은 적용 학과 내규를 따로 확인하세요. 과정별 상세는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/04_%EC%84%9D%EC%82%AC%EC%99%80_%EB%B0%95%EC%82%AC%EC%9D%98_%EC%B0%A8%EC%9D%B4.md" target="_blank" rel="noopener">04_석사와_박사의_차이.md</a>에 있습니다.</p>
   </div>
 </div></section>
 
@@ -603,7 +606,7 @@
     <p class="dg-foot">네 단계를 지난 뒤 <b>측정할 수 있는가 · 자료를 구할 수 있는가 · 답할 가치가 있는가</b> 세 가지를 점검합니다. 아래 카드에서 이어집니다.</p>
     <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/research-topic-slide.webp" target="_blank" rel="noopener"><img src="assets/research-topic-slide.webp" width="1672" height="941" alt="관심사에서 문제 찾기, 문헌 검토를 거쳐 구체적인 연구질문으로 좁아지는 네 단계." loading="lazy" decoding="async"></a></details>
   </div>
-  <p class="dg-src">근거: 아래 MEASURABLE / COLLECTIBLE / MEANINGFUL 카드와 <span class="mono">12_단계별_지침_라이브러리/01_연구주제탐색.md</span>의 후보 비교 절차를 옮긴 것입니다. 본문의 AI 서비스 사례는 <b>가상 예시</b>이며 실제 연구 결과가 아닙니다.</p>
+  <p class="dg-src">근거: 아래 MEASURABLE / COLLECTIBLE / MEANINGFUL 카드와 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/01_%EC%97%B0%EA%B5%AC%EC%A3%BC%EC%A0%9C%ED%83%90%EC%83%89.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/01_연구주제탐색.md</a>의 후보 비교 절차를 옮긴 것입니다. 본문의 AI 서비스 사례는 <b>가상 예시</b>이며 실제 연구 결과가 아닙니다.</p>
 </div>
 <details class="reading-details"><summary>주제 점검 기준과 연구목적 문장틀</summary><div class="reading-details-body">
 <p class="section-lede">관심 있는 현상을 정했다면 무엇을 확인할지 구체화합니다. 아래 세 가지를 점검하면서 문헌, 자료 접근성, 연구 범위를 함께 검토하세요.</p>
@@ -625,7 +628,7 @@
     <span class="tag">목적 문장틀</span>
     <p>"[대상·맥락]에서 [관찰된 현상]이 보고되었다([실제 근거]). 기존 연구는 [설명]을 제시했으나, [확인된 조건]에서는 [구체적 미해결점]이 남는다. 본 연구는 [분석단위·대상]의 [개념/비교]와 [결과·시점]에 관한 <b>[질문·추론 목적]</b>을 [자료·설계]로 검토한다."</p>
   </div>
-  <p class="roadmap-note">이 문장의 <b>[질문·추론 목적]</b> 부분이 다음 절에서 고를 수단(실증/실험)을 결정합니다. 이 목적 문장은 그대로 <b>논문계획서의 핵심 뼈대</b>가 됩니다 — 계획서를 실제로 어떻게 쓰는지는 <span class="mono">13_연구계획서_작성법과_논문작성_팁.md</span>를 참고하세요.</p>
+  <p class="roadmap-note">이 문장의 <b>[질문·추론 목적]</b> 부분이 다음 절에서 고를 수단(실증/실험)을 결정합니다. 이 목적 문장은 그대로 <b>논문계획서의 핵심 뼈대</b>가 됩니다 — 계획서를 실제로 어떻게 쓰는지는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/13_%EC%97%B0%EA%B5%AC%EA%B3%84%ED%9A%8D%EC%84%9C_%EC%9E%91%EC%84%B1%EB%B2%95%EA%B3%BC_%EB%85%BC%EB%AC%B8%EC%9E%91%EC%84%B1_%ED%8C%81.md" target="_blank" rel="noopener">13_연구계획서_작성법과_논문작성_팁.md</a>를 참고하세요.</p>
 </div></details>
 </div></section>
 
@@ -725,7 +728,7 @@
     </div>
     <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/four-semester-roadmap.webp" target="_blank" rel="noopener"><img src="assets/four-semester-roadmap.webp" width="1672" height="941" alt="1학기 주제·문헌 탐색, 2학기 연구설계, 3학기 자료수집·분석, 4학기 원고완성·심사로 이어지는 네 학기 흐름." loading="lazy" decoding="async"></a></details>
   </div>
-  <p class="dg-src">근거: <span class="mono">10_예상일정_2027년2학기_간트차트.md</span>의 WBS 완료 기준(산출물)에서 학기별로 추린 것입니다. 1~3학기 배분은 일반적인 진행 예시이고, 4학기만 26-1·26-2 공식 일정에서 환산한 값입니다.</p>
+  <p class="dg-src">근거: <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/10_%EC%98%88%EC%83%81%EC%9D%BC%EC%A0%95_2027%EB%85%842%ED%95%99%EA%B8%B0_%EA%B0%84%ED%8A%B8%EC%B0%A8%ED%8A%B8.md" target="_blank" rel="noopener">10_예상일정_2027년2학기_간트차트.md</a>의 WBS 완료 기준(산출물)에서 학기별로 추린 것입니다. 1~3학기 배분은 일반적인 진행 예시이고, 4학기만 26-1·26-2 공식 일정에서 환산한 값입니다.</p>
 </div>
   <figure class="semester-gantt" aria-labelledby="semester-gantt-title">
     <figcaption><h3 id="semester-gantt-title">4학기 간트차트</h3><p>막대는 중점 진행 학기를 나타냅니다.</p></figcaption>
@@ -989,7 +992,7 @@
       </div>
     </div>
 
-    <p class="fmt-foot">규격의 근거인 제48조는 2025.11.28 개정으로 판형·색상을 별지 서식 참조로 바꿨으나, 학과가 안내하는 실제 스펙은 위와 동일합니다(확인일 2026-09-22). 양식틀·필수안내서 최신본은 학과 홈페이지에서 직접 받으세요. 전체 규정은 <span class="mono">07_논문서식_필수안내서.md</span>, 제출 절차는 <span class="mono">06_논문제출절차와체크리스트.md</span>에 있습니다.</p>
+    <p class="fmt-foot">규격의 근거인 제48조는 2025.11.28 개정으로 판형·색상을 별지 서식 참조로 바꿨으나, 학과가 안내하는 실제 스펙은 위와 동일합니다(확인일 2026-09-22). 양식틀·필수안내서 최신본은 학과 홈페이지에서 직접 받으세요. 전체 규정은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/07_%EB%85%BC%EB%AC%B8%EC%84%9C%EC%8B%9D_%ED%95%84%EC%88%98%EC%95%88%EB%82%B4%EC%84%9C.md" target="_blank" rel="noopener">07_논문서식_필수안내서.md</a>, 제출 절차는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/06_%EB%85%BC%EB%AC%B8%EC%A0%9C%EC%B6%9C%EC%A0%88%EC%B0%A8%EC%99%80%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8.md" target="_blank" rel="noopener">06_논문제출절차와체크리스트.md</a>에 있습니다.</p>
   </div>
 </div></section>
 
