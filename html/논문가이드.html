@@ -222,6 +222,26 @@
   .gb-note b{display:grid; place-items:center; padding:10px; background:var(--accent-ink); color:var(--paper); font-size:10.5px; text-align:center;}
   .gb-note p{margin:0; padding:10px 12px; background:var(--accent-soft); color:var(--accent-ink); font-size:11.5px; line-height:1.6;}
 
+  /* ---- gantt board: interactive additions (React) ---- */
+  .gb-legend span{cursor:pointer; transition:opacity .15s, box-shadow .15s;}
+  .gb-legend span:hover{opacity:.8;}
+  .gb-legend span.is-filter-active{box-shadow:0 0 0 2px var(--accent);}
+  .gb-filter-hint{margin-top:8px; font-size:11.5px; color:var(--accent-ink); font-weight:700;}
+  .gb-semester-jump{display:flex; gap:6px; margin-top:12px;}
+  .gb-jump-btn{font-family:var(--font-mono); font-size:11px; font-weight:700; padding:5px 11px; border-radius:999px; border:1px solid var(--line); background:var(--paper-raised); color:var(--ink-soft); cursor:pointer;}
+  .gb-jump-btn:hover{border-color:var(--accent); color:var(--accent-ink);}
+  .gb-row{cursor:pointer;}
+  .gb-row.is-dimmed{opacity:.28;}
+  .gb-row.is-selected{background:var(--accent-soft);}
+  .gb-row.is-selected .gb-label{background:var(--accent-soft);}
+  .gb-detail,.gb-detail-hint{margin-top:14px; border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px 16px; background:var(--paper-raised);}
+  .gb-detail-hint{color:var(--ink-faint); font-size:12.5px; text-align:center;}
+  .gb-detail b{display:block; font-family:var(--font-mono); font-size:13px; margin-bottom:8px;}
+  .gb-detail dl{display:grid; grid-template-columns:88px 1fr; gap:6px 12px; margin:0;}
+  .gb-detail dt{color:var(--ink-faint); font-size:11.5px; font-weight:700;}
+  .gb-detail dd{margin:0; font-size:13px; color:var(--ink);}
+  .gb-fallback{color:var(--ink-faint); font-size:13px; padding:16px 0;}
+
   /* ---- structure chapters ---- */
   .chapters{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:28px;}
   @media (max-width:720px){.chapters{grid-template-columns:1fr;}}
@@ -495,55 +515,130 @@
   </figure>
 
   <details class="reading-details"><summary>WBS·상세 간트차트 보기 (17개 작업 · 임계경로)</summary><div class="reading-details-body">
-  <p class="section-lede">작업분류체계(WBS)를 시간 축에 배치한 상세 간트차트입니다. 절대 날짜 대신 <b>학기 시작 후 몇 주차인지</b>로 표시해, 실제 개강일이 언제든 그대로 대입해 쓸 수 있습니다. 항목·완료기준·선행조건 전체 목록은 <span class="mono">10_예상일정_2027년2학기_간트차트.md</span>에 있습니다.</p>
-  <div class="gb-intro">
-    <article><b>WBS</b><span>1~4학기 17개 작업을 번호·완료기준·선행조건으로 정리</span></article>
-    <article><b>GANTT</b><span>학기 시작 후 주차 기준(달력 날짜 아님)</span></article>
-    <article><b>WRITING ORDER</b><span>3장 → 4장 → 5장 → 2장 → 1장</span></article>
-    <article><b>DECISION SCOPE</b><span>연구지도와 공식 심사권한을 구분</span></article>
-  </div>
-  <div class="gb-legend">
-    <span class="critical">임계경로(늦어지면 전체 일정이 밀림)</span>
-    <span class="support">병행 지원작업(여유 있음)</span>
-    <span class="branch">실증·실험 분기</span>
-    <span class="approval">지도교수 결정·승인</span>
-  </div>
-  <div class="gb-scroll"><div class="gb-board">
-    <div class="gb-groups">
-      <b>WORKSTREAM</b>
-      <span style="grid-column:2 / span 4">1학기 · 탐색</span>
-      <span style="grid-column:6 / span 4">2학기 · 설계</span>
-      <span style="grid-column:10 / span 4">3학기 · 수행</span>
-      <span style="grid-column:14 / span 4">4학기 · 완성</span>
-    </div>
-    <div class="gb-head">
-      <b>WBS · 핵심 산출물</b>
-      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
-      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
-      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
-      <span>1–4주</span><span>5–8주</span><span>9–12주</span><span>13–16주</span>
-    </div>
-    <div class="gb-row"><div class="gb-label"><b>1.1–1.2 · 주제·문헌 탐색</b><span>후보 주제 → 문헌표·Gap 정리</span></div><span class="gb-bar critical" style="grid-column:2 / span 2">탐색·검토</span></div>
-    <div class="gb-row"><div class="gb-label"><b>1.3 · 연구질문·목적 확정</b><span>마일스톤: 주제 확정</span></div><span class="gb-bar approval" style="grid-column:4 / span 1">목적 문장 1개</span></div>
-    <div class="gb-row phase-break"><div class="gb-label"><b>2.1–2.2 · 연구설계 초안</b><span>모형/실험설계, 측정도구·환경</span></div><span class="gb-bar critical" style="grid-column:6 / span 2">설계 초안</span></div>
-    <div class="gb-row"><div class="gb-label"><b>2.3 · 연구계획서 승인</b><span>마일스톤: 계획서 승인</span></div><span class="gb-bar approval" style="grid-column:8 / span 1">지도교수 승인</span></div>
-    <div class="gb-row"><div class="gb-label"><b>2.4 · 파일럿·사전점검</b><span>프로토콜 수정본</span></div><span class="gb-bar critical" style="grid-column:9 / span 1">파일럿</span></div>
-    <div class="gb-row phase-break"><div class="gb-label"><b>3.1 · 본 수집·실험 수행</b><span>원자료(raw data)</span></div><span class="gb-bar critical" style="grid-column:10 / span 3">수집·실험·기록</span></div>
-    <div class="gb-row"><div class="gb-label"><b>실증 트랙 분기</b><span>설문·척도 → 측정검증 → 주 분석</span></div><span class="gb-bar branch" style="grid-column:10 / span 3">표본·척도·모형</span></div>
-    <div class="gb-row"><div class="gb-label"><b>실험 트랙 분기</b><span>Baseline·Metric → 반복·Ablation</span></div><span class="gb-bar branch" style="grid-column:10 / span 3">비교·반복·오류분석</span></div>
-    <div class="gb-row"><div class="gb-label"><b>3.2 · 자료 정제·분석</b><span>마일스톤: 분석 완료</span></div><span class="gb-bar critical" style="grid-column:12 / span 2">결과표·그림</span></div>
-    <div class="gb-row"><div class="gb-label"><b>3.3 · 3·4장 초안 작성</b><span>본문 초안</span></div><span class="gb-bar critical" style="grid-column:13 / span 1">초안 작성</span></div>
-    <div class="gb-row phase-break"><div class="gb-label"><b>4.1 · 전체 원고 v1</b><span>1~5장·초록·참고문헌</span></div><span class="gb-bar critical" style="grid-column:14 / span 1">완성 초고</span></div>
-    <div class="gb-row"><div class="gb-label"><b>4.2 · 수료생 연구등록</b><span>공식 절차 · 마일스톤</span></div><span class="gb-bar milestone" style="grid-column:14 / span 1">등록</span></div>
-    <div class="gb-row"><div class="gb-label"><b>4.3 · 공개발표·심사위원 구성</b><span>공식 절차 · 마일스톤</span></div><span class="gb-bar approval" style="grid-column:14 / span 2">발표 → 위원 위촉</span></div>
-    <div class="gb-row"><div class="gb-label"><b>4.4 · 가제본·카피킬러 제출</b><span>공식 절차</span></div><span class="gb-bar critical" style="grid-column:15 / span 2">검사결과 제출</span></div>
-    <div class="gb-row"><div class="gb-label"><b>4.5 · 심사비 납부</b><span>공식 절차 · 4.4와 병행</span></div><span class="gb-bar support" style="grid-column:15 / span 1">납부</span></div>
-    <div class="gb-row"><div class="gb-label"><b>4.6 · 최종심사</b><span>공식 절차 · 마일스톤</span></div><span class="gb-bar critical" style="grid-column:16 / span 2">심사 통과</span></div>
-    <div class="gb-row"><div class="gb-label"><b>4.7 · 최종서류 제출</b><span>마일스톤: 학위논문 완성</span></div><span class="gb-bar milestone" style="grid-column:17 / span 1">제출</span></div>
-  </div></div>
-  <div class="gb-note"><b>일정 보호 원칙</b><p>1.1→1.2→1.3→2.1→2.2→2.3→2.4→3.1→3.2→3.3→4.1→4.2→4.3→4.4→4.6→4.7로 이어지는 임계경로가 늦어지면 전체 일정이 그만큼 밀립니다. 4.5(심사비 납부)처럼 임계경로 밖에 있는 항목부터 조정하고, 지도교수의 전체 원고 검토시간과 공식 마감은 줄이지 않습니다.</p></div>
-  <p class="roadmap-note">4학기(제출학기)의 주차는 실제로 확인된 2026학년도 봄·가을 두 학기의 공식 일정을 환산한 것이며, 1~3학기는 일반적인 진행 예시입니다. 완료기준·선행조건까지 담은 전체 표는 <span class="mono">10_예상일정_2027년2학기_간트차트.md</span>를 참고하세요.</p>
+  <p class="section-lede">작업분류체계(WBS)를 시간 축에 배치한 상세 간트차트입니다. 절대 날짜 대신 <b>학기 시작 후 몇 주차인지</b>로 표시해, 실제 개강일이 언제든 그대로 대입해 쓸 수 있습니다. 막대·범례를 눌러보세요. 항목·완료기준·선행조건 전체 목록은 <span class="mono">10_예상일정_2027년2학기_간트차트.md</span>에 있습니다.</p>
+  <div id="wbs-gantt-root"><p class="gb-fallback">간트차트를 불러오는 중입니다. 계속 보이지 않으면 <span class="mono">10_예상일정_2027년2학기_간트차트.md</span>의 표를 참고하세요.</p></div>
+  <p class="roadmap-note">4학기(제출학기)의 주차는 실제로 확인된 2026학년도 봄·가을 두 학기의 공식 일정을 환산한 것이며, 1~3학기는 일반적인 진행 예시입니다.</p>
   </div></details>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script>
+  (function(){
+    if (!window.React || !window.ReactDOM) return;
+    var e = React.createElement;
+
+    var TYPE_LABEL = {
+      critical: '임계경로 — 늦어지면 전체 일정이 밀림',
+      support: '병행 지원작업 — 여유 있음',
+      branch: '실증·실험 분기',
+      approval: '지도교수 결정·승인',
+      milestone: '마일스톤'
+    };
+
+    var WBS_DATA = [
+      {id:'1', wbs:'1.1–1.2', label:'주제·문헌 탐색', deliverable:'후보 주제 2~3개, 문헌표·Gap 정리', bar:'탐색·검토', col:2, span:2, type:'critical', pre:'–'},
+      {id:'2', wbs:'1.3', label:'연구질문·목적 확정', deliverable:'연구질문·목적 문장 1개', bar:'목적 문장 1개', col:4, span:1, type:'approval', pre:'1.2'},
+      {id:'3', wbs:'2.1–2.2', label:'연구설계 초안', deliverable:'3장 설계 초안, 측정도구·실험환경', bar:'설계 초안', col:6, span:2, type:'critical', pre:'1.3', brk:true},
+      {id:'4', wbs:'2.3', label:'연구계획서 승인', deliverable:'지도교수가 승인한 연구계획서', bar:'지도교수 승인', col:8, span:1, type:'approval', pre:'2.2'},
+      {id:'5', wbs:'2.4', label:'파일럿·사전점검', deliverable:'파일럿 결과, 프로토콜 수정본', bar:'파일럿', col:9, span:1, type:'critical', pre:'2.3'},
+      {id:'6', wbs:'3.1', label:'본 수집·실험 수행', deliverable:'원자료(raw data)', bar:'수집·실험·기록', col:10, span:3, type:'critical', pre:'2.4', brk:true},
+      {id:'7', wbs:'', label:'실증 트랙 분기', deliverable:'설문·척도 → 측정검증 → 주 분석', bar:'표본·척도·모형', col:10, span:3, type:'branch', pre:'3.1'},
+      {id:'8', wbs:'', label:'실험 트랙 분기', deliverable:'Baseline·Metric → 반복·Ablation', bar:'비교·반복·오류분석', col:10, span:3, type:'branch', pre:'3.1'},
+      {id:'9', wbs:'3.2', label:'자료 정제·분석', deliverable:'결과표·그림', bar:'결과표·그림', col:12, span:2, type:'critical', pre:'3.1'},
+      {id:'10', wbs:'3.3', label:'3·4장 초안 작성', deliverable:'3·4장 본문 초안', bar:'초안 작성', col:13, span:1, type:'critical', pre:'3.2'},
+      {id:'11', wbs:'4.1', label:'전체 원고 v1', deliverable:'1~5장·초록·참고문헌 포함 완성 초고', bar:'완성 초고', col:14, span:1, type:'critical', pre:'3.3', brk:true},
+      {id:'12', wbs:'4.2', label:'수료생 연구등록(공식)', deliverable:'등록비·지도비 납부', bar:'등록', col:14, span:1, type:'milestone', pre:'4.1'},
+      {id:'13', wbs:'4.3', label:'공개발표·심사위원 구성(공식)', deliverable:'논문 공개발표, 연구윤리확인서 제출, 심사위원 위촉', bar:'발표 → 위원 위촉', col:14, span:2, type:'approval', pre:'4.2'},
+      {id:'14', wbs:'4.4', label:'가제본·카피킬러 제출(공식)', deliverable:'가제본·표절검사 결과 제출', bar:'검사결과 제출', col:15, span:2, type:'critical', pre:'4.3'},
+      {id:'15', wbs:'4.5', label:'심사비 납부(공식)', deliverable:'심사비 납부 — 4.4와 병행 가능', bar:'납부', col:15, span:1, type:'support', pre:'4.4'},
+      {id:'16', wbs:'4.6', label:'최종심사(공식)', deliverable:'본심사 통과', bar:'심사 통과', col:16, span:2, type:'critical', pre:'4.4, 4.5'},
+      {id:'17', wbs:'4.7', label:'최종서류 제출(공식)', deliverable:'dCollection 업로드, 완본 제출 — 학위논문 완성', bar:'제출', col:17, span:1, type:'milestone', pre:'4.6'}
+    ];
+
+    var LEGEND = [
+      {type:'critical', label:'임계경로(늦어지면 전체 일정이 밀림)'},
+      {type:'support', label:'병행 지원작업(여유 있음)'},
+      {type:'branch', label:'실증·실험 분기'},
+      {type:'approval', label:'지도교수 결정·승인'}
+    ];
+
+    function GanttBoard(){
+      var filterState = React.useState(null);
+      var filterType = filterState[0], setFilterType = filterState[1];
+      var selectedState = React.useState(null);
+      var selectedId = selectedState[0], setSelectedId = selectedState[1];
+      var scrollRef = React.useRef(null);
+      var selected = null;
+      for (var i=0;i<WBS_DATA.length;i++){ if (WBS_DATA[i].id===selectedId) selected = WBS_DATA[i]; }
+
+      function jumpToSemester(sem){
+        var el = scrollRef.current;
+        if (!el) return;
+        var colWidth = el.scrollWidth / 16;
+        el.scrollTo({left:(sem-1)*4*colWidth, behavior:'auto'});
+      }
+      function toggleFilter(type){ setFilterType(filterType===type ? null : type); }
+      function toggleSelect(id){ setSelectedId(selectedId===id ? null : id); }
+      function onRowKey(ev, id){ if (ev.key==='Enter' || ev.key===' '){ ev.preventDefault(); toggleSelect(id); } }
+      function onLegendKey(ev, type){ if (ev.key==='Enter' || ev.key===' '){ ev.preventDefault(); toggleFilter(type); } }
+
+      var weekHead = [];
+      for (var s=0;s<4;s++){ ['1–4주','5–8주','9–12주','13–16주'].forEach(function(lbl,idx){ weekHead.push(e('span',{key:s+'-'+idx},lbl)); }); }
+
+      return e('div', null,
+        e('div', {className:'gb-intro'},
+          e('article', null, e('b',null,'WBS'), e('span',null,'1~4학기 17개 작업을 번호·완료기준·선행조건으로 정리')),
+          e('article', null, e('b',null,'GANTT'), e('span',null,'학기 시작 후 주차 기준(달력 날짜 아님)')),
+          e('article', null, e('b',null,'WRITING ORDER'), e('span',null,'3장 → 4장 → 5장 → 2장 → 1장')),
+          e('article', null, e('b',null,'DECISION SCOPE'), e('span',null,'연구지도와 공식 심사권한을 구분'))
+        ),
+        e('div', {className:'gb-legend'}, LEGEND.map(function(item){
+          var active = filterType===item.type;
+          return e('span', {key:item.type, className:item.type+(active?' is-filter-active':''), role:'button', tabIndex:0, 'aria-pressed':active,
+            onClick:function(){ toggleFilter(item.type); }, onKeyDown:function(ev){ onLegendKey(ev, item.type); }}, item.label);
+        })),
+        filterType ? e('p', {className:'gb-filter-hint'}, '"'+(LEGEND.filter(function(l){return l.type===filterType;})[0]||{label:''}).label+'"만 강조 중 — 다시 누르면 해제') : null,
+        e('div', {className:'gb-semester-jump'}, [1,2,3,4].map(function(sem){
+          return e('button', {key:sem, type:'button', className:'gb-jump-btn', onClick:function(){ jumpToSemester(sem); }}, sem+'학기로 이동');
+        })),
+        e('div', {className:'gb-scroll', ref:scrollRef}, e('div', {className:'gb-board'},
+          e('div', {className:'gb-groups'},
+            e('b', null, 'WORKSTREAM'),
+            e('span', {style:{gridColumn:'2 / span 4'}}, '1학기 · 탐색'),
+            e('span', {style:{gridColumn:'6 / span 4'}}, '2학기 · 설계'),
+            e('span', {style:{gridColumn:'10 / span 4'}}, '3학기 · 수행'),
+            e('span', {style:{gridColumn:'14 / span 4'}}, '4학기 · 완성')
+          ),
+          e.apply(null, ['div', {className:'gb-head'}, e('b', null, 'WBS · 핵심 산출물')].concat(weekHead)),
+          WBS_DATA.map(function(t){
+            var dimmed = filterType && t.type!==filterType;
+            var isSel = t.id===selectedId;
+            return e('div', {key:t.id, className:'gb-row'+(t.brk?' phase-break':'')+(dimmed?' is-dimmed':'')+(isSel?' is-selected':''),
+                role:'button', tabIndex:0, 'aria-expanded':isSel,
+                onClick:function(id){ return function(){ toggleSelect(id); }; }(t.id),
+                onKeyDown:function(id){ return function(ev){ onRowKey(ev, id); }; }(t.id)},
+              e('div', {className:'gb-label'}, e('b', null, (t.wbs?t.wbs+' · ':'')+t.label), e('span', null, t.deliverable)),
+              e('span', {className:'gb-bar '+t.type, style:{gridColumn:t.col+' / span '+t.span}}, t.bar)
+            );
+          })
+        )),
+        e('div', {className:'gb-note'}, e('b',null,'일정 보호 원칙'), e('p',null,'1.1→1.2→1.3→2.1→2.2→2.3→2.4→3.1→3.2→3.3→4.1→4.2→4.3→4.4→4.6→4.7로 이어지는 임계경로가 늦어지면 전체 일정이 그만큼 밀립니다. 4.5(심사비 납부)처럼 임계경로 밖에 있는 항목부터 조정하고, 지도교수의 전체 원고 검토시간과 공식 마감은 줄이지 않습니다.')),
+        selected
+          ? e('div', {className:'gb-detail'},
+              e('b', null, (selected.wbs?selected.wbs+' · ':'')+selected.label),
+              e('dl', null,
+                e('dt', null, '완료 기준'), e('dd', null, selected.deliverable),
+                e('dt', null, '선행조건'), e('dd', null, selected.pre),
+                e('dt', null, '분류'), e('dd', null, TYPE_LABEL[selected.type] || selected.type)
+              )
+            )
+          : e('p', {className:'gb-detail-hint'}, '항목을 클릭하면 완료기준·선행조건이 여기에 표시됩니다.')
+      );
+    }
+
+    var root = document.getElementById('wbs-gantt-root');
+    if (root) { ReactDOM.createRoot(root).render(e(GanttBoard)); }
+  })();
+  </script>
 
   <p class="roadmap-note">개인 진도에 맞춰 조정하세요. 공식 기한·서류는 <a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/06_%EB%85%BC%EB%AC%B8%EC%A0%9C%EC%B6%9C%EC%A0%88%EC%B0%A8%EC%99%80%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8.md">논문 제출 절차</a>에서 확인하세요.</p>
 </div></section>
