@@ -136,6 +136,13 @@
   .dg-step.tb{background:var(--track-b-soft);}
   .dg-step.tb h4{color:var(--track-b-ink);}
   .dg-step.ta p,.dg-step.tb p{color:var(--ink);}
+  .dg-slide{margin-top:12px; border-top:1px dashed var(--line); padding-top:10px;}
+  .dg-slide summary{cursor:pointer; font-size:12px; color:var(--ink-faint); list-style:none; user-select:none;}
+  .dg-slide summary::-webkit-details-marker{display:none;}
+  .dg-slide summary::before{content:""; display:inline-block; vertical-align:middle; margin-right:7px; border-left:5px solid var(--ink-faint); border-top:4px solid transparent; border-bottom:4px solid transparent;}
+  .dg-slide[open] summary::before{border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid var(--ink-faint); border-bottom:none; margin-right:5px;}
+  .dg-slide summary:focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px; border-radius:3px;}
+  .dg-slide img{width:100%; height:auto; margin-top:10px; border:1px solid var(--line); border-radius:var(--radius-sm); display:block;}
   .dg-foot{margin-top:10px; padding:9px 13px; border-radius:var(--radius-sm); background:var(--paper-sunken); font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
 
   /* ---- 용어 정의 블록 ---- */
@@ -484,6 +491,7 @@
       <div class="dg-step"><span class="dg-n">3</span><h4>논문으로 설명하기</h4><p>결과를 연구질문과 연결하고 의미·기여·한계·후속연구를 정리합니다.</p></div>
     </div>
     <p class="dg-back">필요하면 앞 단계로 돌아가 범위를 조정합니다</p>
+    <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/research-journey-slide.webp" target="_blank" rel="noopener"><img src="assets/research-journey-slide.webp" width="1672" height="941" alt="연구질문 정하기, 근거 모으기, 논문으로 설명하기의 세 단계와 앞 단계로 돌아가는 화살표." loading="lazy" decoding="async"></a></details>
   </div>
 </div>
 
@@ -590,6 +598,7 @@
     </div>
     <p class="dg-back">문헌과 자료 접근성을 확인하며 범위를 조정합니다</p>
     <p class="dg-foot">네 단계를 지난 뒤 <b>측정할 수 있는가 · 자료를 구할 수 있는가 · 답할 가치가 있는가</b> 세 가지를 점검합니다. 아래 카드에서 이어집니다.</p>
+    <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/research-topic-slide.webp" target="_blank" rel="noopener"><img src="assets/research-topic-slide.webp" width="1672" height="941" alt="관심사에서 문제 찾기, 문헌 검토를 거쳐 구체적인 연구질문으로 좁아지는 네 단계." loading="lazy" decoding="async"></a></details>
   </div>
 </div>
 <details class="reading-details"><summary>주제 점검 기준과 연구목적 문장틀</summary><div class="reading-details-body">
@@ -635,6 +644,7 @@
       <div class="dg-step tb"><h4>방법·시스템의 차이</h4><p>평가 데이터·실행 로그·측정값을 바탕으로 비교 조건과 평가지표를 설계합니다.</p></div>
     </div>
     <p class="dg-foot">질문 &#8594; 필요한 자료 &#8594; 적절한 설계 순으로 검토합니다.</p>
+    <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/research-method-slide.webp" target="_blank" rel="noopener"><img src="assets/research-method-slide.webp" width="1672" height="941" alt="연구질문에서 두 경로로 갈라지는 그림. 인식·행동의 관계는 측정·표집·분석으로, 시스템의 차이는 비교 조건·평가지표 설계로 연결됩니다." loading="lazy" decoding="async"></a></details>
   </div>
 </div>
 <details class="reading-details"><summary>두 연구 경로의 도구·질문·산출물 비교</summary><div class="reading-details-body">
@@ -708,6 +718,7 @@
       <div class="dg-step"><span class="dg-n">3학기</span><h4>수행</h4><p>자료수집·분석, 결과표와 본문 초안 작성</p></div>
       <div class="dg-step"><span class="dg-n">4학기</span><h4>완성</h4><p>전체 원고 검토·수정, 발표·심사·최종 제출</p></div>
     </div>
+    <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/four-semester-roadmap.webp" target="_blank" rel="noopener"><img src="assets/four-semester-roadmap.webp" width="1672" height="941" alt="1학기 주제·문헌 탐색, 2학기 연구설계, 3학기 자료수집·분석, 4학기 원고완성·심사로 이어지는 네 학기 흐름." loading="lazy" decoding="async"></a></details>
   </div>
 </div>
   <figure class="semester-gantt" aria-labelledby="semester-gantt-title">
