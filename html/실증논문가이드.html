@@ -10,11 +10,11 @@
 
   :root{
     --paper:#FFFFFF; --paper-raised:#FFFFFF; --paper-sunken:#F7F6F3;
-    --ink:#37352F; --ink-soft:#787774; --ink-faint:#9B9A97;
+    --ink:#37352F; --ink-soft:#5F5E5A; --ink-faint:#6F6E69;
     --line:#E9E9E7;
     --accent:#2383E2; --accent-ink:#0B6BCB; --accent-soft:#E7F3F8;
     --track-a:#2383E2; --track-a-soft:#E7F3F8; --track-a-ink:#0B6BCB;
-    --track-b:#E03E3E; --track-b-soft:#FBE4E4; --track-b-ink:#C4314B;
+    --track-b:#E03E3E; --track-b-soft:#FBE4E4; --track-b-ink:#A32A3F;
     --radius:6px; --radius-sm:4px;
     --shadow:0 1px 2px rgba(15,15,15,.05), 0 10px 28px -16px rgba(15,15,15,.12);
     --font-display:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
@@ -25,7 +25,7 @@
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --paper:#191919; --paper-raised:#252525; --paper-sunken:#141414;
-      --ink:#D4D4D4; --ink-soft:#9B9A97; --ink-faint:#6F6F6F;
+      --ink:#D4D4D4; --ink-soft:#B4B3B0; --ink-faint:#9B9A97;
       --line:#373737;
       --accent:#529CCA; --accent-ink:#8CC2E6; --accent-soft:#1C3243;
       --track-a:#529CCA; --track-a-soft:#1C3243; --track-a-ink:#8CC2E6;
@@ -35,7 +35,7 @@
   }
   :root[data-theme="dark"]{
     --paper:#191919; --paper-raised:#252525; --paper-sunken:#141414;
-    --ink:#D4D4D4; --ink-soft:#9B9A97; --ink-faint:#6F6F6F;
+    --ink:#D4D4D4; --ink-soft:#B4B3B0; --ink-faint:#9B9A97;
     --line:#373737;
     --accent:#529CCA; --accent-ink:#8CC2E6; --accent-soft:#1C3243;
     --track-a:#529CCA; --track-a-soft:#1C3243; --track-a-ink:#8CC2E6;
@@ -181,7 +181,7 @@
   /* ---- gantt board (원본 "신랩 논문가이드 플랫폼" 워크스트림 보드 재현) ---- */
   .gb-intro{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin-top:20px; border:1px solid var(--line); background:var(--line);}
   @media (max-width:760px){.gb-intro{grid-template-columns:1fr 1fr;}}
-  .gb-intro article{padding:10px 12px; background:var(--paper-raised);}
+  .gb-intro article{padding:10px 12px; background:var(--paper-sunken);}
   .gb-intro b{display:block; color:var(--ink); font-size:11px;}
   .gb-intro span{display:block; margin-top:4px; color:var(--ink-soft); font-size:10.5px; line-height:1.5;}
 
@@ -189,7 +189,7 @@
   .gb-legend span{padding:4px 9px; border:1px solid var(--line); font-size:11px; font-weight:700; border-radius:4px;}
   .gb-legend .critical{background:var(--ink); color:var(--paper); border-color:var(--ink);}
   .gb-legend .support{background:var(--paper-sunken); color:var(--ink);}
-  .gb-legend .branch{background:var(--paper-raised); color:var(--ink); border-style:dashed;}
+  .gb-legend .branch{background:var(--paper-raised); color:var(--ink); border:1px dashed var(--ink);}
   .gb-legend .approval{background:var(--paper-raised); color:var(--ink); border:2px solid var(--ink); padding:3px 8px;}
 
   .gb-scroll{margin-top:14px; overflow-x:auto; border:1px solid var(--line); background:var(--paper-raised); border-radius:var(--radius-sm);}
@@ -236,7 +236,7 @@
   @media (max-width:720px){.mcm{grid-template-columns:1fr;}}
   .mcm .card h3{font-family:var(--font-mono); font-size:14px; letter-spacing:.02em;}
   .template-card{margin-top:24px; background:var(--accent-soft); border:1px solid var(--accent); border-radius:var(--radius); padding:22px 24px; position:relative;}
-  .template-card .tag{position:absolute; top:-11px; left:20px; background:var(--accent); color:var(--paper-raised); font-family:var(--font-mono); font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px;}
+  .template-card .tag{position:absolute; top:-11px; left:20px; background:var(--accent-ink); color:var(--paper); font-family:var(--font-mono); font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px;}
   .template-card p{font-family:var(--font-display); font-size:16.5px; line-height:1.9; color:var(--accent-ink);}
 
   /* ---- checklist ---- */
@@ -248,7 +248,7 @@
   .mistakes{margin-top:16px; display:grid; gap:12px;}
   .mistake{display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--line);}
   .mistake:first-child{border-top:none;}
-  .mistake .idx{font-family:var(--font-mono); font-weight:700; color:var(--track-b); flex:none; width:1.6em;}
+  .mistake .idx{font-family:var(--font-mono); font-weight:700; color:var(--track-b-ink); flex:none; width:1.6em;}
   .mistake .body h4{font-size:14.5px; font-weight:700; margin-bottom:3px;}
   .mistake .body p{font-size:13.5px; color:var(--ink-soft);}
 
@@ -585,7 +585,7 @@
     </div>
     <div class="more-card">
       <h4>공통 허브 · 실험논문 작성가이드</h4>
-      <p>일정·파이프라인·간트차트, 제출 실무(카피킬러·서식·RefWorks), 심사위원 후보 명단은 공통 허브에 있습니다.</p>
+      <p>1~4학기 일정·WBS·간트차트는 공통 허브에 있습니다. 제출 실무(카피킬러·서식·RefWorks)는 06·07·08번 문서, 심사위원 후보 명단은 11번 문서를 보세요.</p>
       <div class="guide-links" style="margin-top:10px;">
         <a href="https://claude.ai/artifact/VyviZUMv45NF7kax7AL8t6">공통 허브</a>
         <a href="https://claude.ai/artifact/F2HNkajDJ1fryb9h3DvXuh">실험논문 작성가이드</a>
