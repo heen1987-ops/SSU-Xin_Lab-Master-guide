@@ -10,7 +10,7 @@
 - **[실증논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/empirical.html)** (`/empirical.html`) — 설문·SEM 트랙
 - **[실험논문 작성가이드](https://heen1987-ops.github.io/SSU-Xin_Lab-Master-guide/experiment.html)** (`/experiment.html`) — 비교실험 트랙
 
-> 💡 **웹 뷰어 편의 기능**: 빠른 검색(`Ctrl + K`), 라이트/다크 테마 토글, 목차·서식 원클릭 복사, 본문 바로가기 스킵링크 지원
+> **웹 뷰어 편의 기능**: 빠른 검색(`Ctrl + K`), 라이트/다크 테마 토글, 목차·서식 원클릭 복사, 본문 바로가기 스킵링크 지원
 
 ## 이 자료는 무엇인가
 
