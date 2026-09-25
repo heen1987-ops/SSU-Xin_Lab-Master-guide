@@ -1,6 +1,6 @@
 <meta charset="utf-8">
-<meta name="description" content="숭실대학교 인공지능융합연구실(Xin Lab) 석사 및 박사 학위논문 종합 가이드 허브입니다.">
-<meta property="og:description" content="숭실대학교 인공지능융합연구실(Xin Lab) 석사 및 박사 학위논문 종합 가이드 허브입니다.">
+<meta name="description" content="숭실대학교 IT정책경영학과 석사·박사 학위논문 가이드입니다.">
+<meta property="og:description" content="숭실대학교 IT정책경영학과 석사·박사 학위논문 가이드입니다.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>학위논문 가이드</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -514,6 +514,9 @@
 .back-to-top-btn:hover{background:var(--paper-sunken);color:var(--ink);transform:translateY(-2px);}
 .back-to-top-btn:focus-visible{outline:2px solid var(--accent-ink);outline-offset:2px;}
 
+
+.pick-links.pick-links3{grid-template-columns:1fr 1fr;}
+@media (max-width:480px){.pick-links.pick-links3{grid-template-columns:1fr;}}
 </style>
 <link rel="stylesheet" href="assets/visual-guide.css?v=four-semesters">
 <style>
@@ -602,7 +605,7 @@
 <div style="display:flex;justify-content:flex-end;margin-bottom:12px;"><button class="search-btn search-trigger-btn" type="button" aria-label="가이드 빠른 검색"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg> 검색 <kbd>Ctrl K</kbd></button>&nbsp;&nbsp;<button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="테마 전환"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> 다크 모드</button></div>
   <span class="eyebrow">숭실대학교 IT정책경영학과</span>
   <h1>학위논문 가이드</h1>
-  <p class="lede">과정을 고르면 그 과정에 맞는 안내로 들어갑니다. 석사와 박사는 <b>논문이 증명해야 하는 것</b>부터 심사 규정의 수치까지 다릅니다.</p>
+  <p class="lede">과정을 고르면 그 과정에 맞는 안내로 들어갑니다. 석사와 박사는 <b>논문이 증명해야 하는 것</b>이 다르고, 박사에는 학술지 게재라는 관문이 하나 더 있어 일정을 정하는 항목이 다릅니다.</p>
 </div></header>
 
 <main id="main-content">
@@ -613,12 +616,12 @@
       <h2>석사 학위논문</h2>
       <p class="pick-lead">연구방법론을 처음부터 끝까지 <b>한 번 제대로 수행했음</b>을 보이면 됩니다. 범위가 작아도 됩니다.</p>
       <dl>
-        <div><dt>취득 학점</dt><dd>24학점 이상</dd></div>
-        <div><dt>논문지도 기간</dt><dd>2개학기 이상</dd></div>
-        <div><dt>심사위원</dt><dd>3명 전원 내부</dd></div>
-        <div><dt>심사 횟수</dt><dd>2회 이상</dd></div>
-        <div><dt>합격 판정</dt><dd>2인 이상 70점</dd></div>
-        <div><dt>제출가능연한</dt><dd>입학 후 6년</dd></div>
+        <div><dt>로드맵</dt><dd>4학기. 1학기 주제, 2학기 설계와 계획서, 3학기 수집과 분석, 4학기 논문 제출(예시 배분)</dd></div>
+        <div><dt>학점</dt><dd>24학점. 3학점 과목이면 8과목, 4학기에 걸치면 학기당 2과목(계산)</dd></div>
+        <div><dt>종합시험</dt><dd>응시자격 18학점과 3학기 등록. 3학기가 규정상 첫 응시 시점이자 관행</dd></div>
+        <div><dt>심사위원</dt><dd>3명. 외부 1명까지 가능(필수 아님), 관행상 전원 내부</dd></div>
+        <div><dt>심사</dt><dd>2회 이상(공개발표 포함). 3명 중 2인 이상 70점이면 합격</dd></div>
+        <div><dt>제출연한</dt><dd>입학 후 6년</dd></div>
       </dl>
       <span class="pick-go">석사과정 가이드 열기 &#8594;</span>
     </a>
@@ -627,16 +630,19 @@
       <h2>박사 학위논문</h2>
       <p class="pick-lead">그 분야에 아직 없던 <b>독자적인 학술적 기여를 실제로 만들어냈음</b>을 증명해야 합니다.</p>
       <dl>
-        <div><dt>취득 학점</dt><dd>36학점 이상</dd></div>
-        <div><dt>논문지도 기간</dt><dd>3개학기 이상</dd></div>
-        <div><dt>심사위원</dt><dd>5명, 외부 1명 이상 필수</dd></div>
-        <div><dt>심사 횟수</dt><dd>3회 이상</dd></div>
-        <div><dt>합격 판정</dt><dd>4인 이상 80점</dd></div>
-        <div><dt>제출가능연한</dt><dd>입학 후 10년</dd></div>
+        <div><dt>졸업 학기</dt><dd>4학기 수료 뒤 5학기(조기졸업) 또는 6학기 이상. 어느 쪽인지는 연구실적 점수가 정함</dd></div>
+        <div><dt>연구실적</dt><dd>5학기는 서로 다른 저널 주저자 2건과 부저자 2건 포함 100점, 6학기 이상은 주저자 1건과 부저자 2건 포함 50점(2022.09 기준표, 최신본은 학과 확인). 공개발표 전 주저자 1건 게재완료가 필수라 학술지 게재가 일정을 좌우함</dd></div>
+        <div><dt>학점</dt><dd>36학점. 3학점 과목이면 12과목, 4학기에 걸치면 학기당 3과목(계산)</dd></div>
+        <div><dt>종합시험</dt><dd>응시자격 27학점과 3학기 등록. 3학점 과목이면 9과목(계산). 3학기 응시에 당 학기 수강분이 인정되는지는 확인 못 함</dd></div>
+        <div><dt>심사위원</dt><dd>5명. 외부 1명 이상 필수, 3명까지. 외부위원은 자격확인서 제출</dd></div>
+        <div><dt>심사</dt><dd>3회 이상(공개발표 포함). 5명 중 4인 이상 80점이라 반대는 1명까지만 허용(계산)</dd></div>
+        <div><dt>제출연한</dt><dd>입학 후 10년</dd></div>
       </dl>
       <span class="pick-go">박사과정 가이드 열기 &#8594;</span>
     </a>
   </div>
+
+  <p class="pick-note">석·박사통합과정은 <a href="박사과정.html">박사과정 가이드</a>를 따르되 수료 8학기·60학점, 종합시험 응시자격 45학점과 6학기 등록(석사 중 합격한 자격시험은 인정되지 않음)으로 읽으세요(서식1, <a href="박사과정.html#exam">박사 종합시험 절</a>). 학과 서식과 진행순서 안내에 통합과정 문구는 있으나 현재 모집·운영 여부는 확인하지 못했습니다.</p>
 
   <div class="pick-shared">
     <h3>두 과정이 함께 쓰는 것</h3>
@@ -650,12 +656,16 @@
     <div class="pick-links pick-links2">
       <div><b><a href="실증논문가이드.html">실증논문 작성가이드</a></b><span>설문·SEM 트랙. 두 과정 공용</span></div>
       <div><b><a href="실험논문가이드.html">실험논문 작성가이드</a></b><span>비교실험 트랙. 두 과정 공용</span></div>
-      <div><b><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/03_%ED%95%99%EC%8A%B5%EC%9E%90%EB%A3%8C_%EC%B6%94%EC%B2%9C.md" target="_blank" rel="noopener">학습자료</a></b><span>무료 유튜브와 공개 PDF만</span></div>
-      <div><b><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/README.md" target="_blank" rel="noopener">전체 문서 목록</a></b><span>마크다운 45편의 구성과 읽는 순서</span></div>
+      <div><b><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/03_%ED%95%99%EC%8A%B5%EC%9E%90%EB%A3%8C_%EC%B6%94%EC%B2%9C.md" target="_blank" rel="noopener">학습자료</a></b><span>무료 유튜브·웹 자료를 앞에, 구매 도서는 뒤에</span></div>
+      <div><b><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/README.md" target="_blank" rel="noopener">전체 문서 목록</a></b><span>전체 문서 구성과 읽는 순서</span></div>
+    </div>
+    <div class="pick-links pick-links3">
+      <div><b><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/16_%EC%8B%A4%EB%AC%BC_%EC%84%9C%EB%A5%98%EC%99%80_%EC%88%98%EC%A0%95_%EC%9D%B4%EB%A0%A5.md" target="_blank" rel="noopener">실물 서류와 수정 이력</a></b><span>심사 서류 실물과 원고 파일의 수정 이력. 박사는 석사와 다른 칸만</span></div>
+      <div><b><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/04_%EC%84%9D%EC%82%AC%EC%99%80_%EB%B0%95%EC%82%AC%EC%9D%98_%EC%B0%A8%EC%9D%B4.md" target="_blank" rel="noopener">석사와 박사의 차이</a></b><span>두 카드의 근거 문서. 논문이 증명할 것부터 제출연한까지</span></div>
     </div>
   </div>
 
-  <p class="pick-note">위 수치는 <b>규정상 석사와 박사가 실제로 다른 항목</b>만 추린 것입니다. 학점·종합시험·연구윤리교육·학위논문 심사를 거치는 구조 자체는 두 과정이 같습니다. 근거는 <span class="mono">06_논문제출절차와체크리스트.md</span>·<span class="mono">11_심사위원_후보와_구성.md</span>에서 <span class="mono">grad.ssu.ac.kr</span> 공지 원문과 학과 "학위논문 심사방법" 페이지로 확인한 값입니다(확인일 2026-09-22). 제출 직전에는 본인 학기의 공식 공지를 다시 확인하세요.</p>
+  <p class="pick-note">두 카드는 <b>그 과정의 일정을 결정하는 항목</b>만 담았습니다. "(계산)"으로 표시한 것은 규정 학점을 3학점 과목 기준으로 나누거나 합격 인원을 위원 수와 견준 산술이며, 실제 개설 과목·학기당 수강 상한·종합시험 응시 시점의 학점 인정 기준은 확인하지 못했으니 학과에 확인하세요. 박사 연구실적의 "주저자 1건"은 학과 서식1 문구이고, 교학팀 계열별 기준(공학계열은 SCI(E) 1건 또는 등재후보지 2건)과 학과의 계열 판정은 <a href="박사과정.html#record">박사 연구실적 절</a>에서 확인하세요. 근거: 학과 논문심사자격 통과 체크리스트 서식1과 2022학년도 박사논문 연구실적 점수표(2022.09 기준, 파일 날짜 2023-03-09, 학과 배포 서식이며 최신본은 학과 확인), 학과 "학위논문 심사방법" 페이지(확인일 2026-09-23), <span class="mono">04_석사와_박사의_차이.md</span>·<span class="mono">06_논문제출절차와체크리스트.md</span>·<span class="mono">11_심사위원_후보와_구성.md</span>·<span class="mono">14_학위논문_용어정의.md</span>(<span class="mono">grad.ssu.ac.kr</span> 공지와 학과 페이지 원문, 확인일 2026-09-22). 석사 종합시험 3학기 응시는 규정상 첫 허용 시점이자 관행이고, 석사 위원 전원 내부는 규정이 아니라 관행입니다(학술총무 확인). 박사의 응시 관행은 확인하지 못했습니다. 제출 직전에는 본인 학기의 공식 공지를 다시 확인하세요.</p>
 </div></section>
 </main>
 
@@ -665,5 +675,5 @@
     <a href="박사과정.html">박사과정</a>
   </div>
   <p style="margin-top:14px;">이 자료는 학위논문을 준비하는 원우를 돕고자 만든 기초자료입니다. 학사요건과 제출서식은 최신 공식 공지를 우선합니다.</p>
-  <p>작성일 2026-09-21 · 내용 정리 2026-09-23</p>
+  <p>작성일 2026-09-21 · 내용 정리 2026-09-25</p>
 </div></footer>
