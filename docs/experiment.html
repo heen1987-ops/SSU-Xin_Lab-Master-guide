@@ -460,8 +460,8 @@
   <p class="lede">제안한 알고리즘·모델·시스템이 <b>어떤 조건에서 어떤 차이를 보이는지</b>를 비교실험으로 평가하는 트랙입니다. 성능 향상뿐 아니라 차이가 없거나 성능이 낮아지는 조건도 함께 보고합니다. 이 문서는 <span class="mono">02_실험트랙_공학컴공/</span> 폴더와 단계별 지침 라이브러리의 실험 관련 문서를 바탕으로, 실험 트랙에서 실제로 확인해야 할 것만 모았습니다.</p>
   <div class="badges">
     <span class="pill">비교실험 · Baseline</span>
-    <span class="pill">IEEE 인용</span>
-    <span class="pill">5장 구성</span>
+    <span class="pill">IEEE 인용 예시</span>
+    <span class="pill">질문·근거 중심 구성</span>
   </div>
   <div class="guide-links">
     <a href="index.html">← 논문 가이드</a>
@@ -469,7 +469,7 @@
     <a href="empirical.html">실증논문 작성가이드 →</a>
   </div>
   <div class="disclaimer">
-    <span>이 자료는 석사·박사과정 원우의 논문작성을 돕고자 만든 기초자료입니다.</span>
+    <span>이 자료는 연구자의 논문 설계·집필·검토를 돕는 안내입니다.</span>
   </div>
 </div></header>
 
@@ -486,81 +486,7 @@
   <p class="roadmap-note">아직 트랙을 정하지 못했다면 공통 허브의 "방법 선택" 절에서 먼저 목적 문장을 세우세요 — 이 문서는 실험 트랙으로 정한 뒤부터 필요한 내용입니다.</p>
 </div></section>
 
-<section id="structure"><div class="wrap">
-  <span class="eyebrow">Structure</span>
-  <h2>실험논문은 어떻게 구성할까?</h2>
-  <p class="section-lede">각 장의 역할을 먼저 파악하고, 내 연구질문에 맞게 목차를 구성하세요. 아래는 5장 구성 예시입니다.</p>
-<div class="dg">
-  <div class="dg-head">
-    <h3>논문 구성 <span style="font-weight:400; color:var(--ink-faint); font-size:12.5px;">5장 예시</span></h3>
-    <p>각 장이 답하는 질문입니다. 장 수와 제목은 고정 요건이 아닙니다.</p>
-  </div>
-  <div class="dg-body">
-    <div class="dg-flow c5 neutral">
-      <div class="dg-step"><span class="dg-n">1장</span><h4>서론</h4><p>어떤 문제인가?</p></div>
-      <div class="dg-step"><span class="dg-n">2장</span><h4>선행연구</h4><p>무엇이 남아 있는가?</p></div>
-      <div class="dg-step"><span class="dg-n">3장</span><h4>연구방법</h4><p>어떻게 확인할 것인가?</p></div>
-      <div class="dg-step"><span class="dg-n">4장</span><h4>결과·논의</h4><p>무엇을 확인했는가?</p></div>
-      <div class="dg-step"><span class="dg-n">5장</span><h4>결론</h4><p>무엇을 기여했는가?</p></div>
-    </div>
-    <p class="dg-foot">다섯 장은 <b>같은 연구질문</b>으로 연결됩니다. 실제 장 제목과 수는 연구 내용과 학과 지침에 맞춰 조정하세요.</p>
-    <details class="dg-slide"><summary>원본 슬라이드 이미지 보기</summary><a href="assets/thesis-chapters-slide.webp" target="_blank" rel="noopener"><img src="assets/thesis-chapters-slide.webp" width="1672" height="941" alt="하나의 연구질문으로 연결된 다섯 장. 서론, 선행연구, 연구방법, 결과·논의, 결론의 역할을 보여 줍니다." loading="lazy" decoding="async"></a></details>
-  </div>
-  <p class="dg-src">근거: <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/05_%EC%B5%9C%EA%B7%BC%EB%85%BC%EB%AC%B8%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9.md" target="_blank" rel="noopener">05_최근논문벤치마킹.md</a>에서 확인한 최근 통과 논문의 장 구성입니다. <b>대학원 공식 안내와 학칙에서 "본문을 반드시 5장으로 구성하라"는 규정은 확인되지 않았습니다</b> — 사례이지 요건이 아닙니다. 장 수는 연구 내용과 학과 지침에 맞춰 조정합니다. 05번의 실험 사례 2편(김희섭·전헌환)과 실증 사례 1편은 모두 2026년 석사 학위논문이며, 박사 사례는 05번 문서의 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/05_%EC%B5%9C%EA%B7%BC%EB%85%BC%EB%AC%B8%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9.md#%EA%B0%99%EC%9D%80-%ED%95%99%EA%B3%BC-%EB%B0%95%EC%82%AC%EB%85%BC%EB%AC%B8-%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9-riss-%ED%99%95%EC%9D%B8-20212026-%EC%88%98%EC%97%AC-33%ED%8E%B8" target="_blank" rel="noopener">박사 절</a>(RISS 서지·목차 확인 42편, 2026-09-23)을 참고하세요.</p>
-</div>
-<details class="reading-details"><summary>장별 상세 역할·분량 예시·연결 점검</summary><div class="reading-details-body">
-<p class="section-lede"><b>2026년(20.5기)에 실제로 통과한 실험 트랙 석사논문 2편은 모두 5장으로 구성되어 있었습니다.</b> 이 사례를 참고해 5장 구성을 소개합니다. 제안 방법과 구현·실험 설계를 분리하는 등 장 수를 조정할 수 있으며, 사례의 장 수가 학교의 필수 기준을 뜻하지는 않습니다.</p>
-
-
-
-  <div class="chapters" style="grid-template-columns:1fr;">
-    <div class="chapter-list b">
-      <div class="head">실험 · 5장 구성 예시</div>
-      <li><span class="n">1</span> 서론 — 어떤 문제이며 왜 중요한가. 연구 범위·목적·방법·논문 구성</li>
-      <li><span class="n">2</span> 관련 연구 — 개념/기술 개요, 기존 방법의 한계, 본 연구와의 차이</li>
-      <li><span class="n">3</span> 제안하는 방법 — 전체 구조, 데이터 수집·전처리, 모델/파이프라인 설계, 학습 프로세스, 판별/추론 로직</li>
-      <li><span class="n">4</span> 실험 및 성능 평가 — 평가환경·데이터셋, 정확도/성능 지표 분석, 비교·검증 결과</li>
-      <li><span class="n">5</span> 결론 — 결과 요약, 학술적·기술적·실무적 시사점, 한계 및 향후 연구</li>
-    </div>
-  </div>
-  <p class="roadmap-note">3장에서는 제안 방법의 설계와 구현을 재현할 수 있도록 설명합니다. 내용이 많으면 별도 장으로 나눌 수 있습니다. 어느 장이 가장 길어야 하는지는 정해져 있지 않으며, 방법과 결과를 설명하는 데 필요한 분량을 배정합니다.</p>
-
-  <div class="status-now">
-    <span><b>아래는 전체 80쪽 안팎을 가정한 분량 배분 예시입니다.</b> 학교의 공식 분량 기준이 아니며, 실제 분량은 연구질문·방법·결과에 필요한 설명을 기준으로 지도교수와 정합니다.</span>
-  </div>
-
-  <div class="ratio-bar">
-    <span style="flex-grow:8.1; background:color-mix(in srgb, var(--track-b) 35%, var(--paper-raised)); color:var(--track-b-ink);">1장 8.1%</span>
-    <span style="flex-grow:12.5; background:color-mix(in srgb, var(--track-b) 55%, var(--paper-raised)); color:var(--track-b-ink);">2장 12.5%</span>
-    <span style="flex-grow:26.9; background:color-mix(in srgb, var(--track-b) 80%, var(--paper-raised)); color:var(--paper);">3장 26.9%</span>
-    <span style="flex-grow:27.5; background:var(--track-b); color:var(--paper);">4장 27.5%</span>
-    <span style="flex-grow:10.6; background:color-mix(in srgb, var(--track-b) 55%, var(--paper-raised)); color:var(--track-b-ink);">5장 10.6%</span>
-  </div>
-  <p class="roadmap-note" style="margin-top:10px;">위 비율은 아래 표의 실험·시스템형 쪽수 범위(각 장의 중간값)를 전체 80쪽 기준으로 환산한 것입니다. 본문(1~5장)이 약 85.6%를 차지하고, 나머지 약 14.4%는 앞부분·초록·참고문헌·부록입니다.</p>
-
-  <div class="table-scroll">
-  <table class="data-table">
-    <thead><tr><th>장</th><th>실험·시스템형 쪽수</th><th>작성 초점</th></tr></thead>
-    <tbody>
-      <tr><td>제1장</td><td>5–8쪽</td><td>배경보다 문제·목적·RQ를 빠르게 제시</td></tr>
-      <tr><td>제2장</td><td>8–12쪽</td><td>기존 방법의 한계를 제안 방법과 직접 연결</td></tr>
-      <tr><td>제3장</td><td>18–25쪽</td><td>재현 가능한 절차와 조건 설명</td></tr>
-      <tr><td>제4장</td><td>20–24쪽</td><td>연구질문에 답하는 핵심 증거</td></tr>
-      <tr><td>제5장</td><td>7–10쪽</td><td>RQ별 답과 의의를 명확히 제시</td></tr>
-    </tbody>
-  </table>
-  </div>
-
-  <h3 class="sub-h">장간 연결 체크리스트</h3>
-  <div class="checklist" style="margin-top:14px;">
-    <div class="check-item"><input type="checkbox" id="s1"><label for="s1">2장에서 찾은 "기존 방법의 한계"가 3장의 제안 방법이 실제로 해결하는 문제와 일치하는가</label></div>
-    <div class="check-item"><input type="checkbox" id="s2"><label for="s2">4장의 실험 설계(데이터, 비교 기준, 평가지표)가 3장에서 주장한 개선점을 실제로 검증할 수 있는가</label></div>
-    <div class="check-item"><input type="checkbox" id="s3"><label for="s3">4장의 결과가 "어떤 조건에서" 개선되는지 명시하는가 — 조건 없는 일반화를 피한다</label></div>
-    <div class="check-item"><input type="checkbox" id="s4"><label for="s4">5장의 기여·한계가 실제로 수행한 실험 범위 안에 있는가</label></div>
-  </div>
-  <p class="roadmap-note">전체 5장 내용과 최신 벤치마킹은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/02_%EC%8B%A4%ED%97%98%ED%8A%B8%EB%9E%99_%EA%B3%B5%ED%95%99%EC%BB%B4%EA%B3%B5/01_%ED%95%99%EC%9C%84%EB%85%BC%EB%AC%B8%EA%B5%AC%EC%84%B1.md" target="_blank" rel="noopener">02_실험트랙_공학컴공/01_학위논문구성.md</a>·<a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/05_%EC%B5%9C%EA%B7%BC%EB%85%BC%EB%AC%B8%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9.md" target="_blank" rel="noopener">05_최근논문벤치마킹.md</a>에 정리했습니다.</p>
-</div></details>
-</div></section>
+<section id="structure"><div class="wrap"><h2>질문과 근거에 맞춰 논문 구성하기</h2><p class="section-lede">서론·선행연구·방법·결과·논의·결론의 기능을 연결하고 실제 제출처의 형식에 맞게 묶거나 나눕니다. 장 수·분량·집필 순서는 연구방법이나 학위명으로 고정하지 않습니다.</p><ol class="action-list"><li>문제와 공백에서 연구질문을 도출합니다.</li><li>질문에 필요한 자료·설계·분석 또는 증명을 설명합니다.</li><li>실제 결과와 조건·불확실성을 보고합니다.</li><li>결과가 지지하는 기여·한계와 대안 설명을 제시합니다.</li></ol><p>아직 실행하지 않은 부분은 계획과 미실행 상태로 남깁니다. 방법·결과 초안을 먼저 쓸 수도 있으며 문헌·설계 검토는 선행·반복합니다.</p><div class="guide-links"><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/02_%EC%8B%A4%ED%97%98%ED%8A%B8%EB%9E%99_%EA%B3%B5%ED%95%99%EC%BB%B4%EA%B3%B5/01_%ED%95%99%EC%9C%84%EB%85%BC%EB%AC%B8%EA%B5%AC%EC%84%B1.md">실험 연구의 구성·연결 점검</a><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/05_%EC%B5%9C%EA%B7%BC%EB%85%BC%EB%AC%B8%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9.md">사례와 확인 범위</a><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/19_%ED%86%B5%ED%95%A9_%EB%85%BC%EB%AC%B8%EA%B0%80%EC%9D%B4%EB%93%9C.md#%EA%B3%B5%ED%86%B5-%EC%A0%81%EC%9A%A9-%EA%B8%B0%EC%A4%80">공통 적용 기준</a></div></div></section>
 
 <section id="methodpack"><div class="wrap">
   <span class="eyebrow">Method Pack</span>
@@ -628,7 +554,7 @@
 <section id="cases"><div class="wrap">
   <span class="eyebrow">Benchmarking</span>
   <h2>최근 사례로 확인하기 (2026, 20.5기)</h2>
-  <p class="section-lede">가장 최근에, 같은 학과·같은 지도교수 아래 실제로 통과한 실험 트랙 논문 2편입니다.</p>
+  <p class="section-lede">기존 자료에서 확인한 기술 연구 사례 2편입니다. 제출 원고 확인을 학위수여·원문 재검수 완료와 동일시하지 않습니다.</p>
   <div class="case-grid">
     <div class="case-card">
       <span class="who">김희섭 · 2026.06</span>
@@ -644,22 +570,7 @@
   <p class="roadmap-note">김희섭·김승연·전헌환 세 명의 심사결과보고서가 모두 "학칙시행세칙(대학원) 제48조"를 인용해 논문 구비 순서를 확인하고 있습니다. 김희섭의 제출 파일 목록에는 카피킬러 표절검사 결과확인서(기본·요약)가 별도로 있었습니다. 상세 비교는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/05_%EC%B5%9C%EA%B7%BC%EB%85%BC%EB%AC%B8%EB%B2%A4%EC%B9%98%EB%A7%88%ED%82%B9.md" target="_blank" rel="noopener">05_최근논문벤치마킹.md</a>를 참고하세요.</p>
 </div></section>
 
-<section id="citation"><div class="wrap">
-  <span class="eyebrow">Citation</span>
-  <h2>인용 스타일 — IEEE</h2>
-  <p class="section-lede">이 가이드는 번호형 인용 방식인 <b>IEEE</b>를 예시로 설명합니다. 연구방법만으로 인용 스타일이 정해지는 것은 아닙니다. <b>아래 IEEE 규칙은 학교 서식 규정과 충돌할 수 있습니다</b> — <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/07_%EB%85%BC%EB%AC%B8%EC%84%9C%EC%8B%9D_%ED%95%84%EC%88%98%EC%95%88%EB%82%B4%EC%84%9C.md" target="_blank" rel="noopener">07_논문서식_필수안내서.md</a> 6절은 참고문헌을 저자의 성 기준 알파벳순으로 배열하고 저자가 4인 이상이어도 전원 기입하도록 정합니다. 충돌하면 학위논문은 학교 규정을, 학술논문은 제출처 규정을 따릅니다.</p>
-  <div class="mcm" style="grid-template-columns:1fr 1fr;">
-    <div class="card">
-      <h3>본문 인용</h3>
-      <p>등장 순서대로 번호를 매기고 대괄호로 표기합니다: <span class="mono">[1]</span>, <span class="mono">[2], [3]</span>. 저자명이 문장의 의미에 필요한 경우에는 이름과 인용번호를 함께 쓸 수 있습니다.</p>
-    </div>
-    <div class="card">
-      <h3>참고문헌 배열</h3>
-      <p>가나다·알파벳순이 아니라 <b>본문 등장 순서</b>로 배열합니다. 저자가 6명을 넘으면 <span class="mono">et al.</span>로 축약합니다.</p>
-    </div>
-  </div>
-  <p class="roadmap-note">완료기준과 흔한 실수까지 정리한 전체 지침은 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/20_IEEE%EC%9D%B8%EC%9A%A9.md" target="_blank" rel="noopener">12_단계별_지침_라이브러리/20_IEEE인용.md</a>에 있습니다. 서식 자체는 <a class="mono" href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/07_%EB%85%BC%EB%AC%B8%EC%84%9C%EC%8B%9D_%ED%95%84%EC%88%98%EC%95%88%EB%82%B4%EC%84%9C.md" target="_blank" rel="noopener">07_논문서식_필수안내서.md</a> 6절과 대조하세요.</p>
-</div></section>
+<section id="citation"><div class="wrap"><h2>제출처에 맞는 인용 형식 선택</h2><p class="section-lede">IEEE는 이 페이지의 인용 형식 예시입니다. 연구방법만으로 형식을 정하지 않습니다. 적용 지침의 판본을 확인하고 본문 인용과 참고문헌을 같은 체계로 대조하세요.</p><p>자동 서식화·서지 확인은 원문 주장의 검증을 대신하지 않습니다. 실제 읽은 페이지와 인용할 조건을 연결합니다.</p><div class="guide-links"><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/12_%EB%8B%A8%EA%B3%84%EB%B3%84_%EC%A7%80%EC%B9%A8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/20_IEEE%EC%9D%B8%EC%9A%A9.md">IEEE 상세 지침</a><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/07_%EB%85%BC%EB%AC%B8%EC%84%9C%EC%8B%9D_%ED%95%84%EC%88%98%EC%95%88%EB%82%B4%EC%84%9C.md">학위논문 서식</a><a href="https://github.com/heen1987-ops/SSU-Xin_Lab-Master-guide/blob/main/22_%EC%9B%90%EB%AC%B8%EA%B2%80%EC%88%98%EC%99%80_%EA%B7%BC%EA%B1%B0%EC%B6%94%EC%A0%81.md">원문 근거 확인</a></div></div></section>
 
 <section id="resources"><div class="wrap">
   <span class="eyebrow">Learn more</span>
@@ -698,7 +609,7 @@
     <div class="check-item"><input type="checkbox" id="e3"><label for="e3">결과가 시드(seed)나 실행 조건에 따라 얼마나 흔들리는지 확인했다(반복 실행)</label></div>
     <div class="check-item"><input type="checkbox" id="e4"><label for="e4">제안 방법이 기존보다 못한 조건(실패 사례)도 함께 보고했다</label></div>
     <div class="check-item"><input type="checkbox" id="e5"><label for="e5">재현에 필요한 코드·데이터·환경을 최소 예제로 재현해봤다</label></div>
-    <div class="check-item"><input type="checkbox" id="e6"><label for="e6">IEEE 인용·참고문헌 배열이 등장 순서와 일치하는지 확인했다</label></div>
+    <div class="check-item"><input type="checkbox" id="e6"><label for="e6">실제 제출처의 인용·참고문헌 배열 규정을 확인했다</label></div>
   </div>
 </div></section>
 
