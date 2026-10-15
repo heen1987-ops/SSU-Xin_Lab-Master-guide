@@ -57,12 +57,6 @@ if ('IntersectionObserver' in window) {
 
 // 검색은 현재 페이지의 절과 공통 진입점을 찾아 연결한다. 입력은 HTML로 해석하지 않는다.
 const searchEntries = [
-  { title:'학술총무 운영 · 검토 접수·수정·재검토·인수인계', href:'coordinator.html' },
-  { title:'석박사 검토 기준 · 연구 범위·독립성·기여', href:'degree-review.html' },
-  { title:'연구방법별 검토 · 실증·실험·혼합·질적·이론', href:'method-review.html' },
-  { title:'SSU 논문 스킬 · ssu-paper 요청문·판본·결과 확인', href:'skill-workflow.html' },
-  { title:'검토 서식 · 요청서·현황판·수정·기여·인수인계·규정', href:'templates.html' },
-  { title:'운영 핸드북 · 전체 문서 지도', href:'handbook.html' },
   { title:'논문 가이드 · 전체 연구 단계', href:'index.html#stages' },
   { title:'실증연구 · 설문·측정·표집·분석', href:'empirical.html' },
   { title:'실험연구 · 비교군·실험·성능평가', href:'experiment.html' },
