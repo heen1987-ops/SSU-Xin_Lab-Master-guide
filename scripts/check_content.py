@@ -59,7 +59,7 @@ FORBIDDEN = {
 }
 
 markdowns = list(ROOT.glob('*.md'))
-for directory in ('01_실증트랙_경영IS', '02_실험트랙_공학컴공', '12_단계별_지침_라이브러리'):
+for directory in ('01_실증트랙_경영IS', '02_실험트랙_공학컴공', '12_단계별_지침_라이브러리', 'handbook', 'templates'):
     markdowns.extend((ROOT/directory).glob('*.md'))
 markdowns.append(ROOT/'docs/assets/research-workbook.md')
 cache = {p.resolve(): heading_ids(p.read_text(encoding='utf-8-sig')) for p in markdowns}
