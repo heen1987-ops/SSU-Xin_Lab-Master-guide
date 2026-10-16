@@ -3,11 +3,13 @@ from pathlib import Path
 from html import escape, unescape
 from urllib.parse import urlsplit, urlunsplit
 import argparse
+import hashlib
 import json
 import re
 import markdown
 
 ROOT = Path(__file__).resolve().parents[1]
+CSS_VERSION = hashlib.sha256((ROOT/'docs/assets/guide.css').read_text(encoding='utf-8').encode('utf-8')).hexdigest()[:12]
 PAGES = {
     'index': '작성 과정', 'case-study': '초안 → 제출본', 'methods': '연구방법',
     'empirical': '설문·관찰 연구', 'experiment': '비교실험',
@@ -79,7 +81,7 @@ def render_page(slug):
 <meta name="description" content="{escape(description,quote=True)}">
 <meta name="source" content="content/{slug}.md">
 <title>{escape(title)} · Xin Lab</title>
-<link rel="stylesheet" href="assets/guide.css">
+<link rel="stylesheet" href="assets/guide.css?v={CSS_VERSION}">
 </head>
 <body>
 <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -101,7 +103,7 @@ if (legacy[fragment]) {{ location.replace(location.pathname + location.search + 
 
 def render_alias(slug,target):
     return f'''<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>논문 작성 가이드로 이동</title><link rel="stylesheet" href="assets/guide.css"></head>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>논문 작성 가이드로 이동</title><link rel="stylesheet" href="assets/guide.css?v={CSS_VERSION}"></head>
 <body><main class="redirect"><h1>논문 작성 가이드</h1><p><a href="{target}.html">{PAGES[target]} 읽기</a></p></main>
 <script>location.replace({json.dumps(target+'.html')} + location.search + location.hash);</script></body></html>
 '''
