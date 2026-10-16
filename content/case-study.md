@@ -10,6 +10,8 @@
 <a href="#scope">01 목적</a><a href="#literature">02 문헌</a><a href="#method">03 방법</a><a href="#results">04 결과</a><a href="#discussion">05 논의</a><a href="#submission">06 제출</a>
 </nav>
 
+각 장을 처음 쓰는 순서와 문단 구성이 궁금하다면 [서론부터 결론까지 쓰는 법](chapter-writing.md)을 이어 읽으세요. 제출본의 실제 문단을 문장 역할별로 풀어 설명합니다.
+
 ## 01. 목적: 무엇으로 어디까지 검증하는가 {#scope}
 
 <div class="quote-pair" role="group" aria-label="연구 목적의 원문 비교">

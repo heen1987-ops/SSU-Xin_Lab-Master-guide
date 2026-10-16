@@ -34,6 +34,9 @@ li{margin:8px 0}
 ul,ol{padding-left:23px;margin:18px 0 24px}
 blockquote{margin:22px 0;padding:12px 20px;border-left:3px solid #8aa0b4;background:var(--soft)}
 blockquote p:last-child{margin:0}
+.paragraph-example{margin:22px 0 25px}
+.paragraph-example blockquote{margin:0 0 10px}
+.excerpt-source{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
 .quote-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:25px 0 28px}
 .quote-version{min-width:0;border-top:2px solid #8aa0b4;padding-top:12px}
 .quote-label{font-size:13px;font-weight:700;color:var(--blue);margin:0 0 12px}
