@@ -7,9 +7,10 @@
 | 내용 | 원고 |
 |---|---|
 | 작성 과정 | [주제부터 심사·제출까지](content/index.md) |
-| 실제 사례 | [김희섭 논문의 초안과 제출본 비교](content/case-study.md) |
 | 연구방법 | [방법 선택](content/methods.md), [설문·관찰](content/empirical.md), [비교실험](content/experiment.md) |
-| 집필 | [인용·표·그림](content/writing.md) |
+| 장별 작성 | [서론부터 결론까지의 문단과 집필 순서](content/chapter-writing.md) |
+| 표현 정리 | [인용·표·그림·초록](content/writing.md) |
+| 수정 사례 | [김희섭 논문의 초안과 제출본 비교](content/case-study.md) |
 | 제출 | [학위·제출 요건](content/requirements.md) |
 | 출처 | [공식 안내와 참고자료](content/references.md) |
 

@@ -13,9 +13,9 @@ CSS_VERSION = hashlib.sha256((ROOT/'docs/assets/guide.css').read_text(encoding='
 PAGES = {
     'index': '작성 과정', 'case-study': '초안 → 제출본', 'chapter-writing': '장별 작성', 'methods': '연구방법',
     'empirical': '설문·관찰 연구', 'experiment': '비교실험',
-    'writing': '인용·표·그림', 'requirements': '학위·제출 요건', 'references': '참고자료',
+    'writing': '인용·표·그림·초록', 'requirements': '학위·제출 요건', 'references': '참고자료',
 }
-PRIMARY = ['index', 'case-study', 'chapter-writing', 'methods', 'writing', 'requirements', 'references']
+PRIMARY = ['index', 'methods', 'chapter-writing', 'writing', 'case-study', 'requirements', 'references']
 ALIASES = {
     'master': 'index', 'phd': 'index', '석사과정': 'index', '박사과정': 'index',
     '실증논문가이드': 'empirical', '실험논문가이드': 'experiment',
@@ -68,6 +68,16 @@ def render_page(slug):
     # Scope header cells to make the reading order explicit for assistive technology.
     body=body.replace('<th>', '<th scope="col">').replace('<th style=', '<th scope="col" style=')
     nav=''.join(f'<a href="{s}.html"'+(' aria-current="page"' if s==slug else '')+f'>{PAGES[s]}</a>' for s in PRIMARY)
+    if slug in ('empirical', 'experiment'):
+        previous, following = 'methods', 'chapter-writing'
+    else:
+        position = PRIMARY.index(slug)
+        previous = PRIMARY[position-1] if position else None
+        following = PRIMARY[position+1] if position+1 < len(PRIMARY) else None
+    before = f'<a href="{previous}.html">← {PAGES[previous]}</a>' if previous else '<a href="#main">맨 위로 ↑</a>'
+    next_label = '초안에서 제출본까지' if following == 'case-study' else PAGES.get(following, '')
+    after = f'<a href="{following}.html">다음: {next_label} →</a>' if following else '<a href="index.html">작성 과정으로 돌아가기 →</a>'
+    reading_nav = f'<nav class="page-end" aria-label="읽기 순서">{before}{after}</nav>'
     if slug in ('empirical','experiment'):
         body='<p class="breadcrumb"><a href="methods.html">연구방법</a> / '+PAGES[slug]+'</p>'+body
     description=source.split('\n\n')[1]
@@ -89,7 +99,7 @@ def render_page(slug):
 <div class="layout">
 <aside><nav aria-label="이 페이지의 목차"><p>이 페이지에서</p>{md.toc}</nav></aside>
 <main id="main"><p class="eyebrow">석사·박사 공통 안내</p><details class="mobile-toc"><summary>이 페이지의 목차</summary>{md.toc}</details><article>{body}</article>
-<div class="page-end"><a href="index.html">작성 과정</a><a href="#main">맨 위로 ↑</a></div></main>
+{reading_nav}</main>
 </div>
 <footer>Xin Lab · 질문과 근거를 연결하는 논문 작성 안내</footer>
 <script>
