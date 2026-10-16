@@ -37,6 +37,14 @@ blockquote p:last-child{margin:0}
 .paragraph-example{margin:22px 0 25px}
 .paragraph-example blockquote{margin:0 0 10px}
 .excerpt-source{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.example-title{font-size:15px;font-weight:700;margin:24px 0 10px}
+.example-title+.table-scroll{margin-top:0}
+.thesis-figure{margin:24px 0 12px}
+.thesis-figure img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.thesis-figure figcaption{font-size:14px;font-weight:700;line-height:1.75;margin-top:10px}
+.figure-actions{font-size:13px;margin:10px 0 18px}
+.figure-values{margin:18px 0 24px;font-size:14px}
+.figure-values summary{cursor:pointer;color:var(--blue)}
 .quote-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:25px 0 28px}
 .quote-version{min-width:0;border-top:2px solid #8aa0b4;padding-top:12px}
 .quote-label{font-size:13px;font-weight:700;color:var(--blue);margin:0 0 12px}
