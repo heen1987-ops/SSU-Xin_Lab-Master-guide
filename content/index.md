@@ -31,7 +31,7 @@
 
 ## 02. 선행연구를 비교하고 내 연구의 자리를 찾기 {#literature}
 
-문헌검토는 읽은 논문을 차례대로 요약하는 작업이 아닙니다. 같은 문제를 다룬 연구를 비교해 **무엇을 알고 있고, 무엇이 충분히 밝혀지지 않았는지** 설명하는 작업입니다. 대학의 문헌검토 안내도 관련 연구의 평가·종합과 연구질문의 연결을 강조합니다. [UNSW 문헌검토 안내](https://www.student.unsw.edu.au/getting-started-your-literature-review)
+문헌검토는 읽은 논문을 차례대로 요약하는 작업이 아닙니다. 같은 문제를 다룬 연구를 비교해 **무엇을 알고 있고, 무엇이 충분히 밝혀지지 않았는지** 설명하는 작업입니다. 대학의 문헌검토 안내도 관련 연구의 평가·종합과 연구질문의 연결을 강조합니다. [UNSW 문헌검토 안내](https://www.unsw.edu.au/student/managing-your-studies/academic-skills-support/toolkit/honours-postgraduate/literature-review)
 
 주제의 핵심 개념을 한국어·영어 검색어로 나누고, RISS·Google Scholar·전공 데이터베이스에서 검색합니다. 중요한 논문은 참고문헌과 후속 인용을 따라가며 찾습니다. 검색어·검색일·선정 이유를 간단히 남겨 나중에 빠진 연구를 다시 확인할 수 있게 합니다.
 

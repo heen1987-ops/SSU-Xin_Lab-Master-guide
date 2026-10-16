@@ -12,12 +12,11 @@
 | [학위논문 심사방법](https://itpm.ssu.ac.kr/page/thesis_evaluation.php) | 심사위원 구성, 심사 횟수와 평가 |
 | [논문체제 및 작성법](https://itpm.ssu.ac.kr/page/thesis.php) | 국문·영문 양식과 작성 안내서 |
 | [일반대학원 공지사항](https://grad.ssu.ac.kr/정보광장/공지사항/) | 해당 학기의 신청·심사·제출 공지 |
-| [숭실대 dCollection](https://ssu.dcollection.net/) | 온라인 제출 안내 |
+| [중앙도서관 학위논문 온라인 제출](https://oasis.ssu.ac.kr/research/submission) | 제출 방법과 dCollection 연결 |
 
 ## 연구와 글쓰기 {#writing-sources}
 
-- [UNSW: 문헌검토 시작하기](https://www.student.unsw.edu.au/getting-started-your-literature-review) — 질문을 중심으로 문헌을 찾고 평가·종합하는 방법.
-- [UNSW: 문헌검토](https://www.student.unsw.edu.au/literature-review) — 문헌을 연구질문과 연결해 서술하는 안내.
+- [UNSW: 문헌검토](https://www.unsw.edu.au/student/managing-your-studies/academic-skills-support/toolkit/honours-postgraduate/literature-review) — 질문을 중심으로 문헌을 찾고 평가·종합해 서술하는 방법.
 - [UNSW: 학위논문 쓰기](https://www.phys.unsw.edu.au/~jw/thesis.html) — 개요와 장별 역할을 생각하는 자료. 오래된 안내이므로 학교 서식이나 특정 분량의 근거로 사용하지 않습니다.
 - [APA: 본문 인용](https://apastyle.apa.org/style-grammar-guidelines/citations) — APA를 선택한 원고의 직접 인용·바꿔쓰기·재인용 규칙. 모든 전공에 APA를 강제하는 기준은 아닙니다.
 
@@ -37,6 +36,6 @@
 
 ## 보관된 작성 지침과 강의자료 {#course-sources}
 
-학업영역의 학위논문 작성 안내서와 2026-1학기 온라인 제출 매뉴얼은 서식·제출 점검의 참고자료로 대조했습니다. 날짜와 부수는 현재 학기 규정을 우선합니다.
+학업영역의 학위논문 작성 안내서와 2026-1학기 온라인 제출 매뉴얼은 서식·제출 점검의 참고자료로 대조했습니다. 기한과 제출 서류는 현재 학기 공지를 우선합니다.
 
 실증논문 특강의 「과학적 조사와 연구」, 「연구모형과 가설설정」, 「자료수집 및 설문지 작성」, 「표본선정과 척도」, 「타당성과 신뢰성」, 「논문작성의 개요」, 「논문의 구성과 학술지와 학위논문의 차이」는 질문–측정–자료–분석–집필의 연결을 검토하는 데 참고했습니다. 강의자료의 특정 예시나 통계 기준을 모든 연구의 의무로 옮기지는 않았습니다. 강의 원본은 이 사이트에서 재배포하지 않습니다.
