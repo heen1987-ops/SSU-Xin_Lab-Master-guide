@@ -34,6 +34,13 @@ li{margin:8px 0}
 ul,ol{padding-left:23px;margin:18px 0 24px}
 blockquote{margin:22px 0;padding:12px 20px;border-left:3px solid #8aa0b4;background:var(--soft)}
 blockquote p:last-child{margin:0}
+.quote-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:25px 0 28px}
+.quote-version{min-width:0;border-top:2px solid #8aa0b4;padding-top:12px}
+.quote-label{font-size:13px;font-weight:700;color:var(--blue);margin:0 0 12px}
+.quote-version blockquote{margin:0 0 14px;padding:0;border:0;background:transparent;font-size:15px;line-height:1.9}
+.quote-version .quote-source{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+@media(max-width:640px){.quote-pair{grid-template-columns:1fr;gap:22px}}
+@media print{.quote-pair{display:block}.quote-version{break-inside:avoid;margin-bottom:16px}.quote-version blockquote{font-size:10pt}.quote-version .quote-source{font-size:8pt}}
 code{font-size:.91em;background:#f0f3f6;border-radius:3px;padding:2px 5px}
 .steps{display:flex;flex-wrap:wrap;gap:6px 18px;margin:30px 0;padding:17px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}
 .steps a{text-decoration:none;white-space:nowrap}
