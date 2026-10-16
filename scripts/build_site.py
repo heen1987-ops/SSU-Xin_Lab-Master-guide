@@ -11,11 +11,11 @@ import markdown
 ROOT = Path(__file__).resolve().parents[1]
 CSS_VERSION = hashlib.sha256((ROOT/'docs/assets/guide.css').read_text(encoding='utf-8').encode('utf-8')).hexdigest()[:12]
 PAGES = {
-    'index': '작성 과정', 'case-study': '초안 → 제출본', 'methods': '연구방법',
+    'index': '작성 과정', 'case-study': '초안 → 제출본', 'chapter-writing': '장별 작성', 'methods': '연구방법',
     'empirical': '설문·관찰 연구', 'experiment': '비교실험',
     'writing': '인용·표·그림', 'requirements': '학위·제출 요건', 'references': '참고자료',
 }
-PRIMARY = ['index', 'case-study', 'methods', 'writing', 'requirements', 'references']
+PRIMARY = ['index', 'case-study', 'chapter-writing', 'methods', 'writing', 'requirements', 'references']
 ALIASES = {
     'master': 'index', 'phd': 'index', '석사과정': 'index', '박사과정': 'index',
     '실증논문가이드': 'empirical', '실험논문가이드': 'experiment',
